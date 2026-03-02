@@ -1,4 +1,26 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/sontra-villa/",
+      "permanent": false
+    },
+    {
+      "source": "/index",
+      "destination": "/sontra-villa/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/sontra-villa/",
+      "permanent": false
+    },
+    {
+      "source": "/sontra-villa",
+      "destination": "/sontra-villa/",
+      "permanent": false
+    }
+  ]
 }

@@ -52,3 +52,10 @@ function toggleWifi() {
     }, 300);
   }
 }
+
+// Safety: prevent clicking the "Get Directions" button from also triggering the parent card's onclick
+document.addEventListener('click', function (e) {
+  const target = e.target;
+  const mapBtn = target && target.closest ? target.closest('a.rec-map-btn') : null;
+  if (mapBtn) e.stopPropagation();
+});
