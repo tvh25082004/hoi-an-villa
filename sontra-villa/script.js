@@ -74,7 +74,32 @@ const I18N_MAP = {
     wifi_password_label: '🔑 Password',
     maps_link: 'Google Maps Location',
     hoian_tour_link: 'Hoi An Tour List',
-    local_rec_link: 'Local Recommendations'
+    local_rec_link: 'Local Recommendations',
+    // support view
+    back_btn: 'Go Back',
+    support_title: 'Quick Support',
+    support_subtitle: 'Select a contact method below for assistance',
+    support_call: 'Direct Call (+84 862 852 258)',
+    support_zalo: 'Zalo (+84862852258)',
+    support_whatsapp: 'WhatsApp Chat',
+    support_kakao: 'KakaoTalk (Coming Soon)',
+    // recommendations view
+    rec_title: '🌟 Local Highlights',
+    rec_subtitle: '80+ hand-picked spots for food, drinks & vibes in Hoi An',
+    rec_tab_all: 'All',
+    rec_tab_bar: '🍺 Bars',
+    rec_tab_cocktail: '🍸 Cocktails',
+    rec_tab_hotfood: '🍜 Hot Food',
+    rec_tab_snack: '🥨 Snacks',
+    rec_tab_cafe: '☕ Cafés',
+    rec_tab_shop: '🛍️ Shops',
+    // tour list view
+    tour_title: '🗺️ Discovery Tours 2026',
+    tour_subtitle: 'Hand-picked authentic experiences in & around Hoi An',
+    tour_tab_all: '🌏 ALL',
+    tour_tab_hoian: '🏮 Hoi An',
+    tour_tab_hue: '🏯 Hue',
+    tour_tab_danang: '🌉 Da Nang'
   },
   vi: {
     support_link: 'Hỗ Trợ Nhanh',
@@ -88,7 +113,32 @@ const I18N_MAP = {
     wifi_password_label: '🔑 Mật khẩu',
     maps_link: 'Vị Trí Google Maps',
     hoian_tour_link: 'Danh Sách Tour Hội An',
-    local_rec_link: 'Gợi Ý Địa Phương'
+    local_rec_link: 'Gợi Ý Địa Phương',
+    // support view
+    back_btn: 'Quay Lại',
+    support_title: 'Hỗ Trợ Nhanh',
+    support_subtitle: 'Chọn cách liên hệ bên dưới để được hỗ trợ',
+    support_call: 'Gọi Trực Tiếp (+84 862 852 258)',
+    support_zalo: 'Zalo (+84862852258)',
+    support_whatsapp: 'Chat WhatsApp',
+    support_kakao: 'KakaoTalk (Sắp Có)',
+    // recommendations view
+    rec_title: '🌟 Gợi Ý Địa Phương',
+    rec_subtitle: 'Hơn 80 địa điểm ăn uống, vui chơi được chọn lọc tại Hội An',
+    rec_tab_all: 'Tất Cả',
+    rec_tab_bar: '🍺 Quán Bar',
+    rec_tab_cocktail: '🍸 Cocktail',
+    rec_tab_hotfood: '🍜 Món Nóng',
+    rec_tab_snack: '🥨 Ăn Vặt',
+    rec_tab_cafe: '☕ Quán Cà Phê',
+    rec_tab_shop: '🛍️ Cửa Hàng',
+    // tour list view
+    tour_title: '🗺️ Discovery Tours 2026',
+    tour_subtitle: 'Các trải nghiệm chân thật được chọn lọc tại & quanh Hội An',
+    tour_tab_all: '🌏 Tất Cả',
+    tour_tab_hoian: '🏮 Hội An',
+    tour_tab_hue: '🏯 Huế',
+    tour_tab_danang: '🌉 Đà Nẵng'
   }
 };
 
@@ -111,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const tourCards = document.querySelectorAll('#tour-list-container .tour-card');
   tourCards.forEach((card) => {
     const onclick = card.getAttribute('onclick') || '';
-    const match = onclick.match(/openTourModal\\('([^']+)'\\)/);
+    const match = onclick.match(/openTourModal\('([^']+)'\)/);
     if (!match) return;
     const tourId = match[1];
     const tour = (typeof TOUR_DATA !== 'undefined') ? TOUR_DATA[tourId] : null;
@@ -154,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function setLang(lang) {
     currentLang = lang;
     document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'vi' ? 'vi' : 'en');
     pills.forEach((btn) => {
       btn.classList.toggle('lang-active', btn.dataset.lang === lang);
     });
