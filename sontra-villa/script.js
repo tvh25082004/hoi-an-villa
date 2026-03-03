@@ -105,6 +105,7 @@ const I18N_MAP = {
     tour_tab_hoian: '🏮 Hoi An',
     tour_tab_hue: '🏯 Hue',
     tour_tab_danang: '🌉 Da Nang',
+    tour_card_hint: 'Tap to see details →',
     // tour modal labels
     modal_highlights_title: '✨ Highlights',
     modal_itinerary_title: '🗓️ Itinerary',
@@ -151,6 +152,7 @@ const I18N_MAP = {
     tour_tab_hoian: '🏮 Hội An',
     tour_tab_hue: '🏯 Huế',
     tour_tab_danang: '🌉 Đà Nẵng',
+    tour_card_hint: 'Nhấn để xem chi tiết →',
     // tour modal labels
     modal_highlights_title: '✨ Điểm nổi bật',
     modal_itinerary_title: '🗓️ Lịch trình chi tiết',
