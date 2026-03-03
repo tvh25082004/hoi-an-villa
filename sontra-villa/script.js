@@ -106,6 +106,51 @@ document.addEventListener('DOMContentLoaded', function () {
   const pills = document.querySelectorAll('.lang-pill');
   let currentLang = 'en';
 
+  // cache bilingual content for tour cards
+  const tourCardState = [];
+  const tourCards = document.querySelectorAll('#tour-list-container .tour-card');
+  tourCards.forEach((card) => {
+    const onclick = card.getAttribute('onclick') || '';
+    const match = onclick.match(/openTourModal\\('([^']+)'\\)/);
+    if (!match) return;
+    const tourId = match[1];
+    const tour = (typeof TOUR_DATA !== 'undefined') ? TOUR_DATA[tourId] : null;
+    if (!tour) return;
+
+    const titleEl = card.querySelector('.tour-info h3');
+    const descEl = card.querySelector('.tour-info p');
+    const metaEls = card.querySelectorAll('.tour-meta-item');
+
+    const viTitle = titleEl ? titleEl.textContent.trim() : '';
+    const viDesc = descEl ? descEl.textContent.trim() : '';
+    const viMeta = Array.from(metaEls).map(el => el.textContent.trim());
+
+    const enTitle = tour.title || viTitle;
+    const enDesc = tour.desc_card || tour.description || viDesc;
+    const enMeta = (tour.meta || []).map(pair => Array.isArray(pair) ? (pair[0] + ' ' + pair[1]) : String(pair));
+
+    tourCardState.push({ titleEl, descEl, metaEls, viTitle, viDesc, viMeta, enTitle, enDesc, enMeta });
+  });
+
+  function setTourCardsLang(lang) {
+    tourCardState.forEach((state) => {
+      if (!state.titleEl || !state.descEl) return;
+      if (lang === 'vi') {
+        state.titleEl.textContent = state.viTitle;
+        state.descEl.textContent = state.viDesc;
+        state.metaEls.forEach((el, idx) => {
+          if (state.viMeta[idx]) el.textContent = state.viMeta[idx];
+        });
+      } else {
+        state.titleEl.textContent = state.enTitle;
+        state.descEl.textContent = state.enDesc;
+        state.metaEls.forEach((el, idx) => {
+          if (state.enMeta[idx]) el.textContent = state.enMeta[idx];
+        });
+      }
+    });
+  }
+
   function setLang(lang) {
     currentLang = lang;
     document.documentElement.setAttribute('data-lang', lang);
@@ -113,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.classList.toggle('lang-active', btn.dataset.lang === lang);
     });
     applyLanguage(lang);
+    setTourCardsLang(lang);
   }
 
   pills.forEach((btn) => {
@@ -124,6 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // initial render: default English
+  // initial render: default English (also for tour cards)
   setLang('en');
 });
