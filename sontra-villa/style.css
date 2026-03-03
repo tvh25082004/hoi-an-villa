@@ -1043,6 +1043,60 @@ body {
   color: var(--primary);
 }
 
+/* ===== LANGUAGE TOGGLE (EN / VI) ===== */
+.lang-toggle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+  backdrop-filter: blur(10px);
+  z-index: 40;
+}
+
+.lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-light);
+  transition: background 0.25s cubic-bezier(0.4,0,0.2,1),
+              color 0.25s cubic-bezier(0.4,0,0.2,1),
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.lang-pill .flag {
+  font-size: 13px;
+}
+
+.lang-pill .code {
+  letter-spacing: 0.08em;
+}
+
+.lang-pill.lang-active {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(4, 120, 87, 0.45);
+  transform: translateY(-1px);
+}
+
+.lang-pill:hover:not(.lang-active) {
+  background: rgba(15, 23, 42, 0.05);
+  transform: translateY(-1px);
+}
+
 /* ===== UTILITY ===== */
 .hidden { display: none !important; }
 
