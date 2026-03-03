@@ -65,6 +65,15 @@
       </div>
 
       <div class="links">
+        <!-- 1. WiFi -->
+        <a href="#" class="link-card" onclick="toggleWifi(); return false;" id="wifi-link-card">
+          <div class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="link-text">Villa WiFi</div>
+        </a>
+
+        <!-- 2. Google Maps -->
         <a href="https://maps.app.goo.gl/nEVGZpJQ335PyLaVA" class="link-card" target="_blank" rel="noopener noreferrer">
           <div class="link-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -72,6 +81,7 @@
           <div class="link-text">Google Maps Location</div>
         </a>
 
+        <!-- 3. Hoi An Tour List -->
         <a href="#" class="link-card" onclick="toggleView('tour'); return false;">
           <div class="link-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
@@ -79,18 +89,12 @@
           <div class="link-text">Hoi An Tour List</div>
         </a>
 
+        <!-- 4. Local Recommendations -->
         <a href="#" class="link-card" onclick="toggleView('recommendations'); return false;">
           <div class="link-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
           <div class="link-text">Local Recommendations</div>
-        </a>
-
-        <a href="#" class="link-card" onclick="toggleWifi(); return false;" id="wifi-link-card">
-          <div class="link-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-          </div>
-          <div class="link-text">Villa WiFi</div>
         </a>
 
         <!-- WiFi Details (hidden, slides open on click) -->
