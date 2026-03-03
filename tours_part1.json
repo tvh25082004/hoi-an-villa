@@ -1,0 +1,1629 @@
+{
+  "t01": {
+    "title": "Market Tour, Basket Boat & Cooking Class",
+    "badge": "🍳 Culinary",
+    "region": "hoian",
+    "image": "hoian_cooking_signature.png",
+    "desc_card": "Experience rural Hoi An life and Vietnamese cuisine. Visit the morning market, paddle a basket boat through the water coconut forest, and join a 1.5-hour cooking class with a local chef.",
+    "highlights": [
+      "🛒 Market Tour",
+      "🛶 Basket Boat Ride",
+      "👨‍🍳 Cooking Class",
+      "🌿 Cam Thanh Village",
+      "🍜 Local Dishes",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00 / 13:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel in Hoi An."
+      },
+      {
+        "time": "08:30 / 13:30",
+        "title": "Hoi An Market Visit",
+        "desc": "Explore the local market — learn about ingredients for cooking."
+      },
+      {
+        "time": "09:30 / 14:30",
+        "title": "Transfer to Cam Thanh",
+        "desc": "Drive to Cam Thanh Water Coconut Village by van."
+      },
+      {
+        "time": "10:00 / 15:00",
+        "title": "Basket Boat Ride",
+        "desc": "Paddle bamboo basket boats through the lush water coconut forest."
+      },
+      {
+        "time": "11:00 / 16:00",
+        "title": "1.5-hour Cooking Class",
+        "desc": "Cook Banh Xeo, Pho Bo, Banh Cuon, and Che with a local chef."
+      },
+      {
+        "time": "12:30 / 17:30",
+        "title": "Enjoy Your Meal",
+        "desc": "Taste the dishes you cooked."
+      },
+      {
+        "time": "13:30 / 18:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup & drop-off"
+      },
+      {
+        "ok": true,
+        "text": "1 bottle of water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "5 hours"
+      ],
+      [
+        "📍",
+        "Cam Thanh"
+      ],
+      [
+        "🍳",
+        "Cooking"
+      ]
+    ],
+    "notes": "Duration: 5 hours. Morning (8:00–13:30) or Afternoon (13:00–18:00). By Hoi An Cooking School."
+  },
+  "t02": {
+    "title": "Sidewalk Food Tour of Hoi An",
+    "badge": "🥘 Street Food",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Discover Hoi An street food with an English-speaking guide — taste 9 signature dishes at the most beloved local spots. Small group (max 6).",
+    "highlights": [
+      "🍜 9 Local Dishes",
+      "☕ Vietnamese Coffee",
+      "🥖 Banh Mi",
+      "🍲 Cao Lau",
+      "🦆 Balut Egg",
+      "🚶 Walking Tour"
+    ],
+    "itinerary": [
+      {
+        "time": "07:00 / 15:30",
+        "title": "Hotel Pickup",
+        "desc": "Meet at your hotel or a designated point."
+      },
+      {
+        "time": "+15m",
+        "title": "Walking Through Old Town",
+        "desc": "Stroll through the atmospheric streets of Hoi An."
+      },
+      {
+        "time": "+30m",
+        "title": "9 Dishes Tasting",
+        "desc": "Vietnamese Coffee, Banh Mi, Banh Uot, Mi Quang/Cao Lau, Banh Xeo, Grilled Meat, Chicken Rice, Sugarcane Juice, Balut Egg."
+      },
+      {
+        "time": "+2hrs",
+        "title": "History & Culture",
+        "desc": "Learn about Hoi An history and food culture along the way."
+      },
+      {
+        "time": "10:00 / 18:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transportation (pickup/drop-off)"
+      },
+      {
+        "ok": true,
+        "text": "9 dishes & drinks"
+      },
+      {
+        "ok": true,
+        "text": "English-speaking guide"
+      },
+      {
+        "ok": true,
+        "text": "Insurance"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "3–4 hours"
+      ],
+      [
+        "📍",
+        "Old Town"
+      ],
+      [
+        "🍜",
+        "9 Dishes"
+      ]
+    ],
+    "notes": "3–4 hours. Morning (7:00–10:00) or Afternoon (15:30–18:30). Max 6 guests."
+  },
+  "t03": {
+    "title": "Buffalo Riding & Basket Boat & Cycling",
+    "badge": "🐃 Eco",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Explore rural Hoi An by bicycle — ride through rice paddies, ride a water buffalo, paddle basket boats, and enjoy a traditional local lunch.",
+    "highlights": [
+      "🚲 Cycling",
+      "🐃 Buffalo Riding",
+      "🛶 Basket Boat",
+      "🌾 Rice Paddies",
+      "🍽️ Local Lunch",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "08:15 / 13:15",
+        "title": "Hotel Pickup by Bicycle",
+        "desc": "Cycle from your hotel through the countryside."
+      },
+      {
+        "time": "+30m",
+        "title": "Eco Village",
+        "desc": "Visit the eco village — see rice fields, ride a water buffalo."
+      },
+      {
+        "time": "+1h 30m",
+        "title": "Basket Boat in Coconut Forest",
+        "desc": "Paddle basket boats through the water coconut canals."
+      },
+      {
+        "time": "+2h 30m",
+        "title": "Traditional Lunch/Dinner",
+        "desc": "At a local restaurant. Deep Fried Spring Rolls, Steamed Red Snapper, Banana Salad, Stir Fried Morning Glory, Dessert."
+      },
+      {
+        "time": "12:30 / 18:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel by bicycle."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Bicycle"
+      },
+      {
+        "ok": true,
+        "text": "Buffalo riding"
+      },
+      {
+        "ok": true,
+        "text": "Basket boat"
+      },
+      {
+        "ok": true,
+        "text": "Lunch/Dinner (5 dishes)"
+      },
+      {
+        "ok": true,
+        "text": "English guide"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "5 hours"
+      ],
+      [
+        "📍",
+        "Eco Village"
+      ],
+      [
+        "🚲",
+        "Cycling"
+      ]
+    ],
+    "notes": ""
+  },
+  "t04": {
+    "title": "Basket Boat Ride & Coconut Tour",
+    "badge": "🛶 Fun",
+    "region": "hoian",
+    "image": "hoian_eco_signature.png",
+    "desc_card": "Experience bamboo basket boats on the water coconut canals. Enjoy spinning boats, folk singing, fishing nets, and crab catching. Fun for all ages!",
+    "highlights": [
+      "🛶 Basket Boat",
+      "🎶 Folk Music",
+      "🦀 Crab Catching",
+      "🎡 Boat Spinning",
+      "📸 Photos",
+      "👨‍👩‍👧 Family Friendly"
+    ],
+    "itinerary": [
+      {
+        "time": "Flexible",
+        "title": "Hotel Pickup",
+        "desc": "Driver picks you up at your hotel (available 8:00–16:00 daily)."
+      },
+      {
+        "time": "+15m",
+        "title": "Welcome at Dragon Restaurant",
+        "desc": "Greeted at the coconut forest entrance."
+      },
+      {
+        "time": "+30m",
+        "title": "1 Hour Basket Boat Ride",
+        "desc": "Spinning basket boats, karaoke on water, fishing nets, crab catching."
+      },
+      {
+        "time": "+1h 15m",
+        "title": "Traditional Music Show",
+        "desc": "Enjoy a traditional folk music performance."
+      },
+      {
+        "time": "+1h 30m",
+        "title": "End of Tour",
+        "desc": "Return to the dock and transfer back to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup & drop-off"
+      },
+      {
+        "ok": true,
+        "text": "1 hour basket boat ride"
+      },
+      {
+        "ok": true,
+        "text": "1 bottle of water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "1 hour"
+      ],
+      [
+        "📍",
+        "Coconut Forest"
+      ],
+      [
+        "🦀",
+        "Crabs"
+      ]
+    ],
+    "notes": ""
+  },
+  "t05": {
+    "title": "Basket Boat Ride & Vietnamese Food",
+    "badge": "🍲 Combo",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Combine a basket boat ride in the historic water coconut forest with a traditional Vietnamese meal at a local restaurant.",
+    "highlights": [
+      "🛶 Basket Boat",
+      "🍲 Vietnamese Lunch",
+      "🦀 Crab Catching",
+      "🎶 Karaoke",
+      "🌿 Forest",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "09:30 / 15:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel."
+      },
+      {
+        "time": "+30m",
+        "title": "Historic Coconut Forest",
+        "desc": "Transfer to the historic water coconut forest."
+      },
+      {
+        "time": "+45m",
+        "title": "1 Hour Basket Boat",
+        "desc": "Spinning boats, karaoke, fishing nets, crab catching."
+      },
+      {
+        "time": "+1h 45m",
+        "title": "Vietnamese Lunch/Dinner",
+        "desc": "Steamed Red Snapper, Spring Rolls, Morning Glory, Banana Flower Salad at local restaurant."
+      },
+      {
+        "time": "11:30 / 17:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup & drop-off"
+      },
+      {
+        "ok": true,
+        "text": "1 hour basket boat ride"
+      },
+      {
+        "ok": true,
+        "text": "Vietnamese meal (4 dishes)"
+      },
+      {
+        "ok": true,
+        "text": "1 bottle of water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "2 hours"
+      ],
+      [
+        "📍",
+        "Coconut Forest"
+      ],
+      [
+        "🍽️",
+        "Meal"
+      ]
+    ],
+    "notes": ""
+  },
+  "t06": {
+    "title": "Lantern Making, Market, Cooking & Basket Boat",
+    "badge": "🏮 Ultimate",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "The most complete Hoi An experience: handmade lantern workshop, market visit, cooking class, and basket boat ride — all in one tour!",
+    "highlights": [
+      "🏮 Lantern Making",
+      "🛒 Market Tour",
+      "👨‍🍳 Cooking Class",
+      "🛶 Basket Boat",
+      "🎨 Handcraft",
+      "📸 Souvenirs"
+    ],
+    "itinerary": [
+      {
+        "time": "08:30 / 13:30",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel."
+      },
+      {
+        "time": "+30m",
+        "title": "Local Market Visit",
+        "desc": "Explore the market and buy cooking ingredients."
+      },
+      {
+        "time": "+1h 30m",
+        "title": "Basket Boat Ride",
+        "desc": "Paddle through the water coconut forest."
+      },
+      {
+        "time": "+2h 30m",
+        "title": "Cooking Class",
+        "desc": "Cook Pho Bo, Banh Xeo, Banh Cuon, and Che."
+      },
+      {
+        "time": "+3h 15m",
+        "title": "Enjoy Your Meal",
+        "desc": "Taste your handmade dishes."
+      },
+      {
+        "time": "+3h 30m",
+        "title": "Lantern Making Workshop",
+        "desc": "Create your own handmade Hoi An silk lantern to take home."
+      },
+      {
+        "time": "12:30 / 18:00",
+        "title": "Drop-off",
+        "desc": "End at the lantern workshop in the Old Town."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup"
+      },
+      {
+        "ok": true,
+        "text": "Basket boat & cooking class"
+      },
+      {
+        "ok": true,
+        "text": "1 handmade lantern"
+      },
+      {
+        "ok": true,
+        "text": "All ingredients & meal"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "4 hours"
+      ],
+      [
+        "📍",
+        "Old Town & Forest"
+      ],
+      [
+        "🎨",
+        "Craft"
+      ]
+    ],
+    "notes": ""
+  },
+  "t07": {
+    "title": "Cham Island Snorkeling Daily Tour",
+    "badge": "🌟 Popular",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Explore the stunning biosphere reserve. Includes speedboat, snorkeling at Bai Xep (45 mins), and a fresh seafood BBQ lunch on the island.",
+    "highlights": [
+      "🚤 Speedboat",
+      "🤿 Snorkeling",
+      "🦞 Seafood BBQ",
+      "🏝️ Beach",
+      "⛩️ Culture",
+      "🐠 UNESCO"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel in Hoi An (or Da Nang/Port)."
+      },
+      {
+        "time": "08:30",
+        "title": "Speedboat to Cham Island",
+        "desc": "Depart from Cua Dai Port to Cham Island by high-speed boat."
+      },
+      {
+        "time": "09:00",
+        "title": "Bai Lang Visit",
+        "desc": "Ancient Cham Well, Hai Tang Pagoda, and local market."
+      },
+      {
+        "time": "10:30",
+        "title": "Snorkeling",
+        "desc": "Snorkeling at Bai Xep or Hon Dai."
+      },
+      {
+        "time": "12:00",
+        "title": "Lunch",
+        "desc": "Seafood Set Menu Lunch at an island restaurant."
+      },
+      {
+        "time": "13:00",
+        "title": "Beach Relaxation",
+        "desc": "Swimming and resting on the beach."
+      },
+      {
+        "time": "14:00",
+        "title": "Return",
+        "desc": "Return to Hoi An. Hotel drop-off."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Round-trip transport (vehicle & speedboat)"
+      },
+      {
+        "ok": true,
+        "text": "Guide"
+      },
+      {
+        "ok": true,
+        "text": "Snorkeling gear"
+      },
+      {
+        "ok": true,
+        "text": "Lunch"
+      },
+      {
+        "ok": true,
+        "text": "Entrance tickets"
+      },
+      {
+        "ok": true,
+        "text": "Water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "Full Day"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🌊",
+        "Snorkel"
+      ]
+    ],
+    "notes": "Cham Island says NO to plastic bags."
+  },
+  "t08": {
+    "title": "Cham Island Handicraft Tour",
+    "badge": "🧶 Heritage",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Experience UNESCO-recognized traditional crafts on Cham Island: hammock weaving, fishing net making, Banh It La Gai cake, and visit the Whale Temple.",
+    "highlights": [
+      "🧶 Hammock Weaving",
+      "🎣 Net Making",
+      "🍡 Banh It La Gai",
+      "⛩️ Whale Temple",
+      "🤿 Snorkeling",
+      "🏝️ Island Life"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up in Hoi An."
+      },
+      {
+        "time": "08:45",
+        "title": "Speedboat to Cham Island",
+        "desc": "Depart from Cua Dai."
+      },
+      {
+        "time": "09:30",
+        "title": "Traditional Crafts",
+        "desc": "Weave hammocks with rattan, learn fishing net making with locals."
+      },
+      {
+        "time": "10:30",
+        "title": "Banh It La Gai",
+        "desc": "Learn to make the island's traditional sticky rice cakes."
+      },
+      {
+        "time": "11:00",
+        "title": "Whale Temple",
+        "desc": "Visit the sacred Whale Temple (Lang Ong)."
+      },
+      {
+        "time": "11:30",
+        "title": "Snorkeling",
+        "desc": "45 min snorkeling at Bai Xep / Hon Dai."
+      },
+      {
+        "time": "12:30",
+        "title": "Seafood BBQ Lunch",
+        "desc": "Fresh seafood BBQ."
+      },
+      {
+        "time": "14:00",
+        "title": "Return to Hoi An",
+        "desc": "Speedboat back, transfer to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Vehicle & Speedboat"
+      },
+      {
+        "ok": true,
+        "text": "Guide"
+      },
+      {
+        "ok": true,
+        "text": "Snorkeling gear & Lunch"
+      },
+      {
+        "ok": true,
+        "text": "Activities fees & Insurance"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "8:00–14:00"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🎨",
+        "Heritage"
+      ]
+    ],
+    "notes": "Min 2, Max 15 pax."
+  },
+  "t09": {
+    "title": "Cham Island 2 Days 1 Night (Homestay)",
+    "badge": "🏕️ Overnight",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Stay overnight on Cham Island in a local homestay. Two snorkeling sessions, island exploration, and authentic island dining experience.",
+    "highlights": [
+      "🏕️ Homestay",
+      "🤿 2x Snorkeling",
+      "🏝️ Island Life",
+      "🌅 Nature",
+      "🍽️ All Meals",
+      "🌊 Beach Time"
+    ],
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Transfer & Island Tour",
+        "desc": "Hotel pickup, speedboat to island, visit Bai Lang village."
+      },
+      {
+        "time": "Day 1 PM",
+        "title": "Snorkeling Session 1",
+        "desc": "Guided snorkeling, lunch, check-in to homestay."
+      },
+      {
+        "time": "Day 1 Eve",
+        "title": "Free Exploration",
+        "desc": "Free time to explore, dinner at homestay."
+      },
+      {
+        "time": "Day 2 AM",
+        "title": "Morning & Snorkeling 2",
+        "desc": "Breakfast at homestay, second snorkeling session (10:00–10:30)."
+      },
+      {
+        "time": "Day 2 PM",
+        "title": "Return",
+        "desc": "Lunch, beach time, speedboat back to Hoi An (14:00–14:30)."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup/drop-off"
+      },
+      {
+        "ok": true,
+        "text": "Homestay"
+      },
+      {
+        "ok": true,
+        "text": "Meals (L, D, B, L)"
+      },
+      {
+        "ok": true,
+        "text": "Guide & Tickets"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "2D 1N"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🏕️",
+        "Homestay"
+      ]
+    ],
+    "notes": "Min 2 guests."
+  },
+  "t10": {
+    "title": "Cham Island Snorkeling Tour",
+    "badge": "🤿 Deep Dive",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Advanced snorkeling at 2 premium spots in Cham Island Marine Park. Includes Vietnamese lunch at Bai Ong and beach swimming.",
+    "highlights": [
+      "🤿 2 Dive Spots",
+      "🐠 Coral Reefs",
+      "🍽️ Lunch",
+      "🏖️ Beach Time",
+      "☕ Tea & Coffee",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "07:30",
+        "title": "Hotel Pickup",
+        "desc": "Pick up in Hoi An."
+      },
+      {
+        "time": "08:30",
+        "title": "Depart Cua Dai Port",
+        "desc": "Speedboat to Cham Island."
+      },
+      {
+        "time": "09:30",
+        "title": "Snorkeling Spot 1",
+        "desc": "First intensive snorkeling session."
+      },
+      {
+        "time": "11:00",
+        "title": "Snorkeling Spot 2",
+        "desc": "Second intensive snorkeling session."
+      },
+      {
+        "time": "12:30",
+        "title": "Lunch",
+        "desc": "Vietnamese Lunch at Bai Ong or Bai Lang, beach swimming & rest."
+      },
+      {
+        "time": "14:30",
+        "title": "Depart Island",
+        "desc": "Leave the island."
+      },
+      {
+        "time": "15:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel in Hoi An."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport & Speedboat"
+      },
+      {
+        "ok": true,
+        "text": "Snorkeling instructor & gear"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & drinks on boat"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "7:30–15:30"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🤿",
+        "2 Spots"
+      ]
+    ],
+    "notes": ""
+  },
+  "t11": {
+    "title": "Cham Island Try Dive Tour (Beginners)",
+    "badge": "🌊 Try Dive",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Scuba diving for absolute beginners — no certification needed. 1-on-1 instructor, max depth 6–12m. Explore vibrant coral gardens.",
+    "highlights": [
+      "🤿 No License Needed",
+      "👤 1-on-1 Guide",
+      "🐠 Coral Gardens",
+      "🏖️ Beach Lunch",
+      "📸 Photos",
+      "🎓 1-2 Dives"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up in Hoi An."
+      },
+      {
+        "time": "08:45",
+        "title": "Depart Cua Dai",
+        "desc": "Speedboat to Cham Island."
+      },
+      {
+        "time": "10:00",
+        "title": "Dive Sessions",
+        "desc": "Visit 2 dive spots, minimum 1 hour per spot. 1-to-1 instruction."
+      },
+      {
+        "time": "12:30",
+        "title": "Beach Lunch",
+        "desc": "Lunch at Bai Chong, swimming and relaxation."
+      },
+      {
+        "time": "15:00",
+        "title": "Return",
+        "desc": "Leave Bai Chong."
+      },
+      {
+        "time": "16:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to Hoi An hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport"
+      },
+      {
+        "ok": true,
+        "text": "Full dive gear"
+      },
+      {
+        "ok": true,
+        "text": "English Dive Instructor"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & Marine Park fee"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "8:00–16:00"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🎓",
+        "No Cert"
+      ]
+    ],
+    "notes": ""
+  },
+  "t12": {
+    "title": "Cham Island Fun Dive (Certified Divers)",
+    "badge": "🎓 PADI",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "For certified PADI divers. Explore rich marine life: nudibranchs, seahorses, lionfish, and reef sharks. Depth 10–25m.",
+    "highlights": [
+      "🎓 PADI Required",
+      "🦈 Reef Sharks",
+      "🐡 Seahorses",
+      "🪸 Deep Coral",
+      "📸 Photos",
+      "🏖️ Beach Lunch"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up in Hoi An."
+      },
+      {
+        "time": "08:45",
+        "title": "Depart Cua Dai",
+        "desc": "Speedboat to Cham Island."
+      },
+      {
+        "time": "10:00",
+        "title": "Fun Dives",
+        "desc": "Visit 2 dive spots, minimum 1 hour per spot at 10-25m depth."
+      },
+      {
+        "time": "12:30",
+        "title": "Lunch at Bai Chong",
+        "desc": "Lunch and beach relaxation."
+      },
+      {
+        "time": "15:00",
+        "title": "Return",
+        "desc": "Leave Bai Chong."
+      },
+      {
+        "time": "16:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to Hoi An."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport"
+      },
+      {
+        "ok": true,
+        "text": "Full dive gear"
+      },
+      {
+        "ok": true,
+        "text": "English Dive Master"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & Marine Park fee"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "8:00–16:00"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🦈",
+        "10-25m"
+      ]
+    ],
+    "notes": ""
+  },
+  "t13": {
+    "title": "Walking Underwater at Cham Island",
+    "badge": "🪖 Seawalker",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Walk on the ocean floor — no swimming or diving skills needed. Wear an air-pumped helmet and stroll among colorful fish and coral.",
+    "highlights": [
+      "🪖 Seawalker Helmet",
+      "🐠 Walk Among Fish",
+      "🪸 Coral Reef",
+      "🤿 Snorkeling",
+      "🍽️ Seafood",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "07:30",
+        "title": "Hotel Pickup",
+        "desc": "Pick up in Hoi An, transfer to Cua Dai Port."
+      },
+      {
+        "time": "09:00",
+        "title": "Speedboat to Cham Island",
+        "desc": "20-minute ride to the island."
+      },
+      {
+        "time": "10:00",
+        "title": "Walking Underwater",
+        "desc": "Walk on the seabed at Bai Nhon with air helmet, followed by free snorkeling."
+      },
+      {
+        "time": "11:00",
+        "title": "Seafood Lunch",
+        "desc": "Fresh seafood lunch at Bai Chong, beach swimming."
+      },
+      {
+        "time": "14:00",
+        "title": "Return to Hoi An",
+        "desc": "Speedboat back, return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport & Speedboat"
+      },
+      {
+        "ok": true,
+        "text": "Seawalker & Snorkeling gear"
+      },
+      {
+        "ok": true,
+        "text": "Seafood lunch"
+      },
+      {
+        "ok": true,
+        "text": "Towel & Guide"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "7:30–14:00"
+      ],
+      [
+        "📍",
+        "Cham Island"
+      ],
+      [
+        "🪸",
+        "No Swimmimg"
+      ]
+    ],
+    "notes": ""
+  },
+  "t14": {
+    "title": "Cam Thanh Village & Basket Boat",
+    "badge": "🎭 Culture",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Navigate the lush coconut waterways in a traditional bamboo basket boat. Experience crab catching and local fishing techniques.",
+    "highlights": [
+      "🛶 Basket Boat",
+      "🎣 Fishing",
+      "🌿 Forest",
+      "🏡 Eco Village",
+      "🍽️ Lunch",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "09:00 / 15:00",
+        "title": "Hotel Pickup",
+        "desc": "Guide picks you up at your hotel."
+      },
+      {
+        "time": "09:15 / 15:15",
+        "title": "Transfer to Cam Thanh",
+        "desc": "Travel to Cam Thanh Village by boat or vehicle."
+      },
+      {
+        "time": "10:00 / 16:00",
+        "title": "Basket Boat Experience",
+        "desc": "History lesson, fishing nets, boat racing, crab catching."
+      },
+      {
+        "time": "11:00 / 17:00",
+        "title": "Local Lunch/Dinner",
+        "desc": "Visit a local home, welcome drinks, and traditional meal at a local restaurant."
+      },
+      {
+        "time": "11:30 / 17:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to your hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Tour vehicle"
+      },
+      {
+        "ok": true,
+        "text": "Bamboo basket boat"
+      },
+      {
+        "ok": true,
+        "text": "English guide"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & water"
+      },
+      {
+        "ok": true,
+        "text": "Entrance tickets"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "Half Day"
+      ],
+      [
+        "📍",
+        "Coconut Forest"
+      ],
+      [
+        "🛶",
+        "Adventure"
+      ]
+    ],
+    "notes": ""
+  },
+  "t15": {
+    "title": "Cam Thanh Cooking Tour",
+    "badge": "🍳 Cooking",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Market visit, basket boat ride, and cook 5 traditional Hoi An dishes at Cam Thanh Village.",
+    "highlights": [
+      "🛒 Market Tour",
+      "🛶 Basket Boat",
+      "👨‍🍳 5-Dish Cooking",
+      "🌿 Cam Thanh",
+      "🍽️ Lunch",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "08:15 / 13:15",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel."
+      },
+      {
+        "time": "08:45 / 13:45",
+        "title": "Hoi An Market",
+        "desc": "Visit local market to shop for ingredients."
+      },
+      {
+        "time": "09:30 / 14:30",
+        "title": "Cam Thanh Basket Boat",
+        "desc": "Basket boat ride through the coconut forest."
+      },
+      {
+        "time": "10:30 / 15:30",
+        "title": "Cooking Class",
+        "desc": "Cook: Banana Salad, Spring Rolls, Banh Xeo, Pho, Caramelized Fish."
+      },
+      {
+        "time": "11:30 / 16:30",
+        "title": "Enjoy Your Meal",
+        "desc": "Taste your creations + Morning Glory, Rice, Dessert."
+      },
+      {
+        "time": "12:40 / 17:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Tour vehicle & basket boat"
+      },
+      {
+        "ok": true,
+        "text": "Cooking class & ingredients"
+      },
+      {
+        "ok": true,
+        "text": "English guide"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "4.5 hours"
+      ],
+      [
+        "📍",
+        "Cam Thanh"
+      ],
+      [
+        "🍽️",
+        "Cooking"
+      ]
+    ],
+    "notes": ""
+  },
+  "t16": {
+    "title": "Hoi An City, Boat & Street Food",
+    "badge": "🏮 Authentic",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Discover the ancient town's secrets, enjoy a romantic flower lantern boat ride, and taste famous local specialties like Banh Mi & Cao Lau.",
+    "highlights": [
+      "🏮 Lantern Release",
+      "⛩️ Fukian Hall",
+      "🌉 Japanese Bridge",
+      "🚣 River Boat",
+      "🍽️ Dinner",
+      "🎭 Art Show"
+    ],
+    "itinerary": [
+      {
+        "time": "14:30",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel."
+      },
+      {
+        "time": "15:00",
+        "title": "Hoi An Market",
+        "desc": "Visit the bustling local market."
+      },
+      {
+        "time": "15:30",
+        "title": "Old Town Attractions",
+        "desc": "Fukian Assembly Hall, Ancient Houses (Phung Hung/Tan Ky), Folk Museum."
+      },
+      {
+        "time": "16:30",
+        "title": "Art Show & Japanese Bridge",
+        "desc": "Traditional art performance and 400-year-old Covered Bridge."
+      },
+      {
+        "time": "17:30",
+        "title": "Dinner",
+        "desc": "Dinner (1 dish: Chicken Rice / Cao Lau / Mi Quang)."
+      },
+      {
+        "time": "18:00",
+        "title": "Boat Ride & Flower Lantern",
+        "desc": "Romantic boat ride on Hoai River, release a flower lantern."
+      },
+      {
+        "time": "18:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Hotel pickup/drop-off"
+      },
+      {
+        "ok": true,
+        "text": "English guide"
+      },
+      {
+        "ok": true,
+        "text": "All entrance tickets"
+      },
+      {
+        "ok": true,
+        "text": "Dinner (1 dish)"
+      },
+      {
+        "ok": true,
+        "text": "Boat ride & lantern"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "Afternoon"
+      ],
+      [
+        "📍",
+        "Old Town"
+      ],
+      [
+        "🍜",
+        "Foodie"
+      ]
+    ],
+    "notes": "Min 2, Max 15 guests."
+  },
+  "t17": {
+    "title": "Cam Thanh Coconut – Hoi An City – Flower Lantern",
+    "badge": "🌃 Combo",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "The complete experience: water coconut forest in Cam Thanh, Hoi An Ancient Town walking tour, and evening flower lantern boat ride on the river.",
+    "highlights": [
+      "🛶 Coconut Forest",
+      "🏮 Ancient Town",
+      "🌸 Flower Lantern",
+      "🍽️ Dinner",
+      "🌙 Night Walk",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "12:00",
+        "title": "Hotel Pickup",
+        "desc": "Pick up at your hotel."
+      },
+      {
+        "time": "12:30",
+        "title": "Cam Thanh Coconut Forest",
+        "desc": "Basket boat ride through the water coconut channels."
+      },
+      {
+        "time": "14:30",
+        "title": "Hoi An Ancient Town",
+        "desc": "Fukian Hall, ancient houses, Japanese Bridge, museum."
+      },
+      {
+        "time": "17:00",
+        "title": "Dinner",
+        "desc": "Enjoy Hoi An specialty set menu dinner."
+      },
+      {
+        "time": "18:00",
+        "title": "Boat Ride & Flower Lantern",
+        "desc": "Romantic boat ride on Hoai River with flower lantern release."
+      },
+      {
+        "time": "19:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport"
+      },
+      {
+        "ok": true,
+        "text": "Guide"
+      },
+      {
+        "ok": true,
+        "text": "Basket boat & Entrance tickets"
+      },
+      {
+        "ok": true,
+        "text": "Dinner set menu"
+      },
+      {
+        "ok": true,
+        "text": "Lantern & boat"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "12:00–19:30"
+      ],
+      [
+        "📍",
+        "Cam Thanh & Old Town"
+      ],
+      [
+        "🌸",
+        "Combo"
+      ]
+    ],
+    "notes": ""
+  },
+  "t18": {
+    "title": "Bicycle Tour: Cam Thanh & Tra Que",
+    "badge": "🚲 Cycling",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Cycle through Hoi An countryside — visit Cam Thanh coconut forest and Tra Que organic vegetable village. Includes basket boat, farming, and cooking class.",
+    "highlights": [
+      "🚲 Cycling",
+      "🛶 Basket Boat",
+      "🌱 Farming",
+      "👨‍🍳 Cooking",
+      "🌾 Rice Fields",
+      "📸 Photos"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00 / 13:00",
+        "title": "Hotel Pickup by Bicycle",
+        "desc": "Cycle to Cam Thanh Coconut Forest."
+      },
+      {
+        "time": "09:00 / 14:00",
+        "title": "Basket Boat & Fishing",
+        "desc": "Basket boat ride, fishing, local culture experience."
+      },
+      {
+        "time": "10:30 / 15:30",
+        "title": "Cycle to Tra Que",
+        "desc": "Continue cycling to Tra Que Vegetable Village."
+      },
+      {
+        "time": "11:00 / 16:00",
+        "title": "Farming Experience",
+        "desc": "Work with local farmers in the organic garden."
+      },
+      {
+        "time": "11:30 / 16:30",
+        "title": "Cooking Class",
+        "desc": "Cook: Papaya Salad, Banh Xeo, Spring Rolls, Caramelized Fish."
+      },
+      {
+        "time": "12:30 / 17:30",
+        "title": "Enjoy Your Meal",
+        "desc": "Taste your creations."
+      },
+      {
+        "time": "13:30 / 18:30",
+        "title": "Hotel Drop-off",
+        "desc": "Cycle back to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Bicycle & guided tour"
+      },
+      {
+        "ok": true,
+        "text": "Basket boat"
+      },
+      {
+        "ok": true,
+        "text": "Farming activity"
+      },
+      {
+        "ok": true,
+        "text": "Cooking class & meal"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "5.5 hours"
+      ],
+      [
+        "📍",
+        "Countryside"
+      ],
+      [
+        "🚲",
+        "Cycling"
+      ]
+    ],
+    "notes": "Min 2 guests."
+  },
+  "t19": {
+    "title": "Tra Que Cooking Class Tour",
+    "badge": "🌱 Farm-to-Table",
+    "region": "hoian",
+    "image": "hoian_eco_signature.png",
+    "desc_card": "Cooking class at Tra Que Organic Village — market visit, farming, foot massage, and cook 4 traditional dishes.",
+    "highlights": [
+      "🌱 Organic Farm",
+      "👨‍🍳 4-Dish Cooking",
+      "💆 Foot Massage",
+      "🛒 Market Tour",
+      "🌿 Garden",
+      "🍽️ Lunch"
+    ],
+    "itinerary": [
+      {
+        "time": "08:30 / 13:30",
+        "title": "Hotel Pickup",
+        "desc": "Pick up and drive to Hoi An Market."
+      },
+      {
+        "time": "09:00 / 14:00",
+        "title": "Tra Que Village",
+        "desc": "Cycle roughly to Tra Que, explore the organic garden."
+      },
+      {
+        "time": "09:30 / 14:30",
+        "title": "Farming Experience",
+        "desc": "Work with farmers — dig, sow, plant, and harvest."
+      },
+      {
+        "time": "10:00 / 15:00",
+        "title": "Foot Massage",
+        "desc": "Traditional herbal foot massage."
+      },
+      {
+        "time": "10:30 / 15:30",
+        "title": "Cooking Class",
+        "desc": "Cook: Papaya Salad, Banh Xeo, Spring Rolls, Caramelized Fish."
+      },
+      {
+        "time": "12:00 / 17:00",
+        "title": "Enjoy Meal",
+        "desc": "Taste your creations."
+      },
+      {
+        "time": "13:30 / 18:00",
+        "title": "Hotel Drop-off",
+        "desc": "Return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Transport"
+      },
+      {
+        "ok": true,
+        "text": "Cooking class & Chef"
+      },
+      {
+        "ok": true,
+        "text": "Herbal foot massage"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & water"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "4.5 hours"
+      ],
+      [
+        "📍",
+        "Tra Que Village"
+      ],
+      [
+        "💆",
+        "Foot Massage"
+      ]
+    ],
+    "notes": "Min 2 guests."
+  },
+  "t20": {
+    "title": "Lantern Making & Farming at Tra Que Village",
+    "badge": "🏮 Crafts",
+    "region": "hoian",
+    "image": "hoian_signature.png",
+    "desc_card": "Cycle through rice paddies to Tra Que Village for farming, then learn traditional Hoi An lantern making and take home your handmade lantern.",
+    "highlights": [
+      "🏮 Lantern Workshop",
+      "🌱 Farming",
+      "🚲 Cycling",
+      "🌾 Rice Fields",
+      "🎁 Take Home",
+      "🍽️ Lunch"
+    ],
+    "itinerary": [
+      {
+        "time": "08:00",
+        "title": "Hotel Pickup",
+        "desc": "Cycle through rice paddies and shrimp ponds."
+      },
+      {
+        "time": "09:00",
+        "title": "Tra Que Village",
+        "desc": "Dig, sow, plant, and harvest vegetables with farmers."
+      },
+      {
+        "time": "10:00",
+        "title": "Enjoy Local Tea",
+        "desc": "Enjoy Tra Que's special herbal tea."
+      },
+      {
+        "time": "10:30",
+        "title": "Lantern Workshop",
+        "desc": "Cycle to workshop, learn lantern craft from artisans."
+      },
+      {
+        "time": "12:00",
+        "title": "Make Your Lantern",
+        "desc": "Create your own handmade silk lantern to take home."
+      },
+      {
+        "time": "13:00",
+        "title": "Local Lunch",
+        "desc": "Traditional lunch included."
+      },
+      {
+        "time": "13:30",
+        "title": "Hotel Drop-off",
+        "desc": "Return to hotel."
+      }
+    ],
+    "included": [
+      {
+        "ok": true,
+        "text": "Bicycle"
+      },
+      {
+        "ok": true,
+        "text": "1 handmade lantern"
+      },
+      {
+        "ok": true,
+        "text": "Farming experience"
+      },
+      {
+        "ok": true,
+        "text": "Lunch & water"
+      },
+      {
+        "ok": true,
+        "text": "Guide"
+      }
+    ],
+    "meta": [
+      [
+        "⏱",
+        "5.5 hours"
+      ],
+      [
+        "📍",
+        "Tra Que"
+      ],
+      [
+        "🎁",
+        "Take Home"
+      ]
+    ],
+    "notes": "Min 2 guests."
+  }
+}

@@ -1820,16 +1820,25 @@
       </button>
       
       <div class="profile">
-        <h2 class="title" style="margin-top: 20px;">Discovery Tours</h2>
-        <p class="subtitle">Hand-picked authentic experiences in &amp; around Hoi An</p>
+        <h2 class="title" style="margin-top: 20px;">🗺️ 2026 Signature Tours</h2>
+        <p class="subtitle">Curated experiences – Hoi An, Hue &amp; Da Nang</p>
       </div>
 
-      <div class="tour-list">
+      <!-- Region Filter Tabs -->
+      <div class="rec-tabs">
+        <button class="rec-tab active" onclick="filterTour('all', this)">🌏 ALL</button>
+        <button class="rec-tab" onclick="filterTour('hoian', this)">🏮 Hoi An</button>
+        <button class="rec-tab" onclick="filterTour('hue', this)">🏯 Hue</button>
+        <button class="rec-tab" onclick="filterTour('danang', this)">🌉 Da Nang</button>
+      </div>
+
+      <div class="tour-list" id="tour-list-container">
+
         <!-- Tour 1: Cham Island Snorkeling -->
-        <div class="tour-card fade-in-up" style="animation-delay: 0.1s;" onclick="openTourModal('cham-snorkeling')">
-          <div class="tour-badge">Popular</div>
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.1s;" onclick="openTourModal('t07')">
+          <div class="tour-badge">🌟 Popular</div>
           <div class="tour-image-container">
-            <img src="cham_island.png" alt="Cham Island Tour">
+            <img src="cham_island.png" alt="Cham Island Snorkeling Daily Tour">
           </div>
           <div class="tour-info">
             <h3>Cham Island Snorkeling Daily Tour</h3>
@@ -1844,10 +1853,10 @@
         </div>
 
         <!-- Tour 2: Cam Thanh Basket Boat -->
-        <div class="tour-card fade-in-up" style="animation-delay: 0.2s;" onclick="openTourModal('basket-boat')">
-          <div class="tour-badge">Culture</div>
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.2s;" onclick="openTourModal('t14')">
+          <div class="tour-badge">🎭 Culture</div>
           <div class="tour-image-container">
-            <img src="basket_boat.png" alt="Cam Thanh Basket Boat">
+            <img src="basket_boat.png" alt="Cam Thanh Village & Basket Boat">
           </div>
           <div class="tour-info">
             <h3>Cam Thanh Village &amp; Basket Boat</h3>
@@ -1862,10 +1871,10 @@
         </div>
 
         <!-- Tour 3: Ba Na Hills -->
-        <div class="tour-card fade-in-up" style="animation-delay: 0.3s;" onclick="openTourModal('bana-hills')">
-          <div class="tour-badge">Must See</div>
+        <div class="tour-card fade-in-up" data-region="danang" style="animation-delay: 0.3s;" onclick="openTourModal('t27')">
+          <div class="tour-badge">✨ Must See</div>
           <div class="tour-image-container">
-            <img src="golden_bridge.png" alt="Ba Na Hills">
+            <img src="golden_bridge.png" alt="Ba Na Hills & Golden Bridge">
           </div>
           <div class="tour-info">
             <h3>Ba Na Hills &amp; Golden Bridge</h3>
@@ -1880,10 +1889,10 @@
         </div>
 
         <!-- Tour 4: Hoi An City -->
-        <div class="tour-card fade-in-up" style="animation-delay: 0.4s;" onclick="openTourModal('hoian-city')">
-          <div class="tour-badge">Authentic</div>
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.4s;" onclick="openTourModal('t16')">
+          <div class="tour-badge">🏮 Authentic</div>
           <div class="tour-image-container">
-            <img src="hoi_an_town.png" alt="Hoi An City Tour">
+            <img src="hoi_an_town.png" alt="Hoi An City, Boat & Street Food">
           </div>
           <div class="tour-info">
             <h3>Hoi An City, Boat &amp; Street Food</h3>
@@ -1898,10 +1907,10 @@
         </div>
 
         <!-- Tour 5: My Son Sanctuary -->
-        <div class="tour-card fade-in-up" style="animation-delay: 0.5s;" onclick="openTourModal('my-son')">
-          <div class="tour-badge">History</div>
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.5s;" onclick="openTourModal('t25')">
+          <div class="tour-badge">🏛️ History</div>
           <div class="tour-image-container">
-            <img src="my_son.png" alt="My Son Sanctuary">
+            <img src="my_son.png" alt="My Son Sanctuary Discovery">
           </div>
           <div class="tour-info">
             <h3>My Son Sanctuary Discovery</h3>
@@ -1914,6 +1923,672 @@
           </div>
           <div class="tour-card-click-hint">Tap for full details →</div>
         </div>
+
+
+        <!-- t01 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t01')">
+          <div class="tour-badge">🍳 Culinary</div>
+          <div class="tour-image-container">
+            <img src="hoian_cooking_signature.png" alt="Market Tour, Basket Boat & Cooking Class">
+          </div>
+          <div class="tour-info">
+            <h3>Market Tour, Basket Boat & Cooking Class</h3>
+            <p>Experience rural Hoi An life and Vietnamese cuisine. Visit the morning market, paddle a basket boat through the water coconut forest, and join a 1.5-hour cooking class with a local chef.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5 hours</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🍳 Cooking</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t02 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t02')">
+          <div class="tour-badge">🥘 Street Food</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Sidewalk Food Tour of Hoi An">
+          </div>
+          <div class="tour-info">
+            <h3>Sidewalk Food Tour of Hoi An</h3>
+            <p>Discover Hoi An street food with an English-speaking guide — taste 9 signature dishes at the most beloved local spots. Small group (max 6).</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 3–4 hours</div>
+              <div class="tour-meta-item">📍 Old Town</div>
+              <div class="tour-meta-item">🍜 9 Dishes</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t03 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t03')">
+          <div class="tour-badge">🐃 Eco</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Buffalo Riding & Basket Boat & Cycling">
+          </div>
+          <div class="tour-info">
+            <h3>Buffalo Riding & Basket Boat & Cycling</h3>
+            <p>Explore rural Hoi An by bicycle — ride through rice paddies, ride a water buffalo, paddle basket boats, and enjoy a traditional local lunch.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5 hours</div>
+              <div class="tour-meta-item">📍 Eco Village</div>
+              <div class="tour-meta-item">🚲 Cycling</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t04 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t04')">
+          <div class="tour-badge">🛶 Fun</div>
+          <div class="tour-image-container">
+            <img src="hoian_eco_signature.png" alt="Basket Boat Ride & Coconut Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Basket Boat Ride & Coconut Tour</h3>
+            <p>Experience bamboo basket boats on the water coconut canals. Enjoy spinning boats, folk singing, fishing nets, and crab catching. Fun for all ages!</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 1 hour</div>
+              <div class="tour-meta-item">📍 Coconut Forest</div>
+              <div class="tour-meta-item">🦀 Crabs</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t05 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t05')">
+          <div class="tour-badge">🍲 Combo</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Basket Boat Ride & Vietnamese Food">
+          </div>
+          <div class="tour-info">
+            <h3>Basket Boat Ride & Vietnamese Food</h3>
+            <p>Combine a basket boat ride in the historic water coconut forest with a traditional Vietnamese meal at a local restaurant.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 2 hours</div>
+              <div class="tour-meta-item">📍 Coconut Forest</div>
+              <div class="tour-meta-item">🍽️ Meal</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t06 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t06')">
+          <div class="tour-badge">🏮 Ultimate</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Lantern Making, Market, Cooking & Basket Boat">
+          </div>
+          <div class="tour-info">
+            <h3>Lantern Making, Market, Cooking & Basket Boat</h3>
+            <p>The most complete Hoi An experience: handmade lantern workshop, market visit, cooking class, and basket boat ride — all in one tour!</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 4 hours</div>
+              <div class="tour-meta-item">📍 Old Town & Forest</div>
+              <div class="tour-meta-item">🎨 Craft</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t08 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t08')">
+          <div class="tour-badge">🧶 Heritage</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cham Island Handicraft Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island Handicraft Tour</h3>
+            <p>Experience UNESCO-recognized traditional crafts on Cham Island: hammock weaving, fishing net making, Banh It La Gai cake, and visit the Whale Temple.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 8:00–14:00</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🎨 Heritage</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t09 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t09')">
+          <div class="tour-badge">🏕️ Overnight</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cham Island 2 Days 1 Night (Homestay)">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island 2 Days 1 Night (Homestay)</h3>
+            <p>Stay overnight on Cham Island in a local homestay. Two snorkeling sessions, island exploration, and authentic island dining experience.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 2D 1N</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🏕️ Homestay</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t10 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t10')">
+          <div class="tour-badge">🤿 Deep Dive</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cham Island Snorkeling Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island Snorkeling Tour</h3>
+            <p>Advanced snorkeling at 2 premium spots in Cham Island Marine Park. Includes Vietnamese lunch at Bai Ong and beach swimming.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:30–15:30</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🤿 2 Spots</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t11 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t11')">
+          <div class="tour-badge">🌊 Try Dive</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cham Island Try Dive Tour (Beginners)">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island Try Dive Tour (Beginners)</h3>
+            <p>Scuba diving for absolute beginners — no certification needed. 1-on-1 instructor, max depth 6–12m. Explore vibrant coral gardens.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 8:00–16:00</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🎓 No Cert</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t12 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t12')">
+          <div class="tour-badge">🎓 PADI</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cham Island Fun Dive (Certified Divers)">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island Fun Dive (Certified Divers)</h3>
+            <p>For certified PADI divers. Explore rich marine life: nudibranchs, seahorses, lionfish, and reef sharks. Depth 10–25m.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 8:00–16:00</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🦈 10-25m</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t13 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t13')">
+          <div class="tour-badge">🪖 Seawalker</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Walking Underwater at Cham Island">
+          </div>
+          <div class="tour-info">
+            <h3>Walking Underwater at Cham Island</h3>
+            <p>Walk on the ocean floor — no swimming or diving skills needed. Wear an air-pumped helmet and stroll among colorful fish and coral.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:30–14:00</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🪸 No Swimmimg</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t15 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t15')">
+          <div class="tour-badge">🍳 Cooking</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cam Thanh Cooking Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Cam Thanh Cooking Tour</h3>
+            <p>Market visit, basket boat ride, and cook 5 traditional Hoi An dishes at Cam Thanh Village.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 4.5 hours</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🍽️ Cooking</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t17 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t17')">
+          <div class="tour-badge">🌃 Combo</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Cam Thanh Coconut – Hoi An City – Flower Lantern">
+          </div>
+          <div class="tour-info">
+            <h3>Cam Thanh Coconut – Hoi An City – Flower Lantern</h3>
+            <p>The complete experience: water coconut forest in Cam Thanh, Hoi An Ancient Town walking tour, and evening flower lantern boat ride on the river.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 12:00–19:30</div>
+              <div class="tour-meta-item">📍 Cam Thanh & Old Town</div>
+              <div class="tour-meta-item">🌸 Combo</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t18 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t18')">
+          <div class="tour-badge">🚲 Cycling</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Bicycle Tour: Cam Thanh & Tra Que">
+          </div>
+          <div class="tour-info">
+            <h3>Bicycle Tour: Cam Thanh & Tra Que</h3>
+            <p>Cycle through Hoi An countryside — visit Cam Thanh coconut forest and Tra Que organic vegetable village. Includes basket boat, farming, and cooking class.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5.5 hours</div>
+              <div class="tour-meta-item">📍 Countryside</div>
+              <div class="tour-meta-item">🚲 Cycling</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t19 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t19')">
+          <div class="tour-badge">🌱 Farm-to-Table</div>
+          <div class="tour-image-container">
+            <img src="hoian_eco_signature.png" alt="Tra Que Cooking Class Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Tra Que Cooking Class Tour</h3>
+            <p>Cooking class at Tra Que Organic Village — market visit, farming, foot massage, and cook 4 traditional dishes.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 4.5 hours</div>
+              <div class="tour-meta-item">📍 Tra Que Village</div>
+              <div class="tour-meta-item">💆 Foot Massage</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t20 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t20')">
+          <div class="tour-badge">🏮 Crafts</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Lantern Making & Farming at Tra Que Village">
+          </div>
+          <div class="tour-info">
+            <h3>Lantern Making & Farming at Tra Que Village</h3>
+            <p>Cycle through rice paddies to Tra Que Village for farming, then learn traditional Hoi An lantern making and take home your handmade lantern.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5.5 hours</div>
+              <div class="tour-meta-item">📍 Tra Que</div>
+              <div class="tour-meta-item">🎁 Take Home</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t21 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t21')">
+          <div class="tour-badge">🚲 Village</div>
+          <div class="tour-image-container">
+            <img src="hoian_eco_signature.png" alt="Cycling, Water Buffalo Riding – Farming & Fishing">
+          </div>
+          <div class="tour-info">
+            <h3>Cycling, Water Buffalo Riding – Farming & Fishing</h3>
+            <p>A comprehensive bicycle tour: ride to Cam Thanh village, meet farmers, ride a buffalo, paddle a basket boat to catch crabs, and learn about local history.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 4.5 hours</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🐃 Buffalo</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t22 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t22')">
+          <div class="tour-badge">🛶 Eco</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Tra Nhieu Eco Tour – Kim Bong Rural Village">
+          </div>
+          <div class="tour-info">
+            <h3>Tra Nhieu Eco Tour – Kim Bong Rural Village</h3>
+            <p>Bicycle tour to explore the traditional Kim Bong Carpentry village, see colorful sleep mat weaving, and paddle a basket boat in Tra Nhieu palm forest.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Afternoon</div>
+              <div class="tour-meta-item">📍 Tra Nhieu & Kim Bong</div>
+              <div class="tour-meta-item">🛶 Eco</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t23 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t23')">
+          <div class="tour-badge">🍳 Cooking</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Rice Paper Making & Cooking at Kim Bong">
+          </div>
+          <div class="tour-info">
+            <h3>Rice Paper Making & Cooking at Kim Bong</h3>
+            <p>Experience traditional handmade rice paper making at Kim Bong village and join a cooking class to prepare 5 traditional Hoi An dishes.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 4.5 hours</div>
+              <div class="tour-meta-item">📍 Kim Bong</div>
+              <div class="tour-meta-item">🍽️ Cooking</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t24 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t24')">
+          <div class="tour-badge">🌅 Sunrise</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="My Son Sunrise Daily Tour">
+          </div>
+          <div class="tour-info">
+            <h3>My Son Sunrise Daily Tour</h3>
+            <p>Beat the crowds and the heat by visiting the My Son Sanctuary at dawn. Explore the 4th-century Hindu temples and enjoy a local breakfast.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5:30–10:00</div>
+              <div class="tour-meta-item">📍 My Son</div>
+              <div class="tour-meta-item">🌅 Sunrise</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t26 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t26')">
+          <div class="tour-badge">🌇 Sunset</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="My Son Sunset Tour">
+          </div>
+          <div class="tour-info">
+            <h3>My Son Sunset Tour</h3>
+            <p>Visit My Son Sanctuary in the afternoon, catch the traditional Cham dance, and enjoy a breathtaking sunset boat cruise back to Hoi An.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 13:00–18:00</div>
+              <div class="tour-meta-item">📍 My Son</div>
+              <div class="tour-meta-item">🌅 Sunset</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t28 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t28')">
+          <div class="tour-badge">🌌 Night Tour</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Afternoon Ba Na Hills & Dragon Bridge at Night">
+          </div>
+          <div class="tour-info">
+            <h3>Afternoon Ba Na Hills & Dragon Bridge at Night</h3>
+            <p>An epic combo: Ba Na Hills Golden Bridge in the afternoon, followed by dinner in Da Nang and the famous Dragon Bridge fire-breathing show at night.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 12:30–20:00</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">🐉 Night Tour</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t29 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t29')">
+          <div class="tour-badge">🚐 Mega Combo</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Da Nang City Sites & Ba Na Hills (Full Day)">
+          </div>
+          <div class="tour-info">
+            <h3>Da Nang City Sites & Ba Na Hills (Full Day)</h3>
+            <p>The ultimate Da Nang tour: Marble Mountains, Son Tra Peninsula (Monkey Mountain), Ba Na Hills Golden Bridge, and Dragon Bridge at night.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:30–20:00</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">⛰️ Mountains</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t30 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t30')">
+          <div class="tour-badge">✨ Highlights</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Monkey Mountain, Marble Mountains & Hoi An Night">
+          </div>
+          <div class="tour-info">
+            <h3>Monkey Mountain, Marble Mountains & Hoi An Night</h3>
+            <p>Afternoon trip from Da Nang to Son Tra Peninsula, Marble Mountains caves, then head to Hoi An Ancient Town for dinner and a flower lantern boat ride.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 13:30–21:00</div>
+              <div class="tour-meta-item">📍 Da Nang -> Hoi An</div>
+              <div class="tour-meta-item">🏮 Night</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t31 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t31')">
+          <div class="tour-badge">🛶 Combo</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Marble Mountains, Hoi An City & River Boat">
+          </div>
+          <div class="tour-info">
+            <h3>Marble Mountains, Hoi An City & River Boat</h3>
+            <p>Explore the mystical cave temples of Marble Mountains before heading to Hoi An's glowing old town for dinner and a flower lantern release.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 13:30–19:00</div>
+              <div class="tour-meta-item">📍 Danang -> Hoian</div>
+              <div class="tour-meta-item">🏮 Romance</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t32 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t32')">
+          <div class="tour-badge">🚢 Cruise</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Monkey Mountain, Marble Mt, Hell Cave & River Cruise">
+          </div>
+          <div class="tour-info">
+            <h3>Monkey Mountain, Marble Mt, Hell Cave & River Cruise</h3>
+            <p>Visit the highlights of Da Nang: Lady Buddha, Marble Mountains, the fascinating 'Hell Cave' (Am Phu), ending with a Han River night cruise.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 14:00–21:15</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">🚢 Night Skyline</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t33 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t33')">
+          <div class="tour-badge">🏺 Heritage</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Monkey Mountain, Marble Mt & My Son Sanctuary">
+          </div>
+          <div class="tour-info">
+            <h3>Monkey Mountain, Marble Mt & My Son Sanctuary</h3>
+            <p>A full-day journey spanning Da Nang's natural landmarks and the ancient Champa ruins of My Son, plus a local rice paper making class.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:30–18:00</div>
+              <div class="tour-meta-item">📍 Da Nang & Duy Xuyen</div>
+              <div class="tour-meta-item">🏛️ Full Day</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t34 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t34')">
+          <div class="tour-badge">⛰️ Core</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Marble Mountains, Monkey Mt & Hell Cave (Morning)">
+          </div>
+          <div class="tour-info">
+            <h3>Marble Mountains, Monkey Mt & Hell Cave (Morning)</h3>
+            <p>A half-day morning tour covering Da Nang's top three mystical sites: Lady Buddha, Marble Mountains summit, and the sprawling Hell Cave.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:30–13:00</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">⛰️ Morning</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t35 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t35')">
+          <div class="tour-badge">🌇 Magic</div>
+          <div class="tour-image-container">
+            <img src="danang_signature_1772543844660.png" alt="Marble Mountains, Monkey Mt & Hell Cave (Sunset)">
+          </div>
+          <div class="tour-info">
+            <h3>Marble Mountains, Monkey Mt & Hell Cave (Sunset)</h3>
+            <p>The afternoon version of Da Nang's core tour — witness the golden sunset light filtering down through the caves of Marble Mountains.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 14:00–18:15</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">🌄 Sunset</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t36 -->
+        <div class="tour-card fade-in-up hidden" data-region="hue" style="animation-delay: 0.0s;" onclick="openTourModal('t36')">
+          <div class="tour-badge">👑 Royal</div>
+          <div class="tour-image-container">
+            <img src="hue_signature_1772543822350.png" alt="Hue Imperial City Tour via Hai Van Pass">
+          </div>
+          <div class="tour-info">
+            <h3>Hue Imperial City Tour via Hai Van Pass</h3>
+            <p>A majestic full-day journey to the ancient capital. Cross the stunning Hai Van Pass, visit the royal Khai Dinh Tomb, the grand Imperial Citadel, and Thien Mu Pagoda.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 7:00–19:00</div>
+              <div class="tour-meta-item">📍 Hue City</div>
+              <div class="tour-meta-item">👑 Full Day</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t37 -->
+        <div class="tour-card fade-in-up hidden" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t37')">
+          <div class="tour-badge">💎 Mega</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="The Ultimate Full Day: Danang + Hoi An + Forests">
+          </div>
+          <div class="tour-info">
+            <h3>The Ultimate Full Day: Danang + Hoi An + Forests</h3>
+            <p>Monkey Mtn, Marble Mountains, Hell Cave, Cam Thanh Coconut Forest, Hoi An Ancient Town walking, and Lantern Boat — literally everything in one day!</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 8:00–20:30</div>
+              <div class="tour-meta-item">📍 Multiple</div>
+              <div class="tour-meta-item">💥 Action Packed</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t38 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t38')">
+          <div class="tour-badge">🛶 Basic</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Bay Mau Coconut Forest: Basic Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Bay Mau Coconut Forest: Basic Tour</h3>
+            <p>A simple and budget-friendly basket boat ride through the Bay Mau coconut forest. Ride on the water and enjoy the greenery.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 1 hour</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🛶 Ride Only</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t39 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t39')">
+          <div class="tour-badge">🎡 Fun</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Bay Mau Coconut Forest: Experience + Spinning">
+          </div>
+          <div class="tour-info">
+            <h3>Bay Mau Coconut Forest: Experience + Spinning</h3>
+            <p>The classic Bay Mau experience featuring the thrilling basket boat spinning dance, local crab catching, and fishing net demonstrations.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 1.5 hours</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🎡 Spinning</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
+
+        <!-- t40 -->
+        <div class="tour-card fade-in-up hidden" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t40')">
+          <div class="tour-badge">🍽️ Full</div>
+          <div class="tour-image-container">
+            <img src="hoian_signature.png" alt="Bay Mau Coconut Forest: Full Package & Dining">
+          </div>
+          <div class="tour-info">
+            <h3>Bay Mau Coconut Forest: Full Package & Dining</h3>
+            <p>The premium Bay Mau package: hotel pickup, the full spinning basket boat and crab catching experience, followed by a delicious local meal at a riverside restaurant.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 3.5 hours</div>
+              <div class="tour-meta-item">📍 Cam Thanh</div>
+              <div class="tour-meta-item">🍽️ Dining</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint">Tap for full details →</div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1929,163 +2604,46 @@
   <script>
   // ===== TOUR DATA (from PDF) =====
   const TOUR_DATA = {
-    'cham-snorkeling': {
-      title: 'Cham Island Snorkeling Daily Tour',
-      badge: '🌟 Popular',
-      image: 'cham_island.png',
-      description: 'Explore the stunning Cham Island UNESCO Biosphere Reserve. A full-day adventure featuring a high-speed boat ride, guided snorkeling at Bai Xep, a delicious fresh seafood BBQ lunch on the island, swimming, and visits to local cultural sites.',
-      highlights: ['🚤 Speedboat Transfer', '🤿 Snorkeling 45 mins', '🦞 Seafood BBQ Lunch', '🏝️ Beach Swimming', '⛩️ Cultural Sites', '🐠 Marine Reserve'],
-      itinerary: [
-        { time: '08:00', title: 'Hotel Pickup', desc: 'Pick up at your hotel in Hoi An. Transfer to Cua Dai Port.' },
-        { time: '09:30', title: 'Speedboat Departure', desc: 'Depart by high-speed boat from Cua Dai Port to Cham Island (~20 min ride).' },
-        { time: '10:00', title: 'Bai Lang Village', desc: 'Visit the Marine Reserve Information Center, ancient Cham Well, Hai Tang Pagoda, and the local market.' },
-        { time: '11:00', title: 'Snorkeling at Bai Xep / Hon Dai', desc: 'Guided snorkeling session at the coral reef — 45 minutes exploring colorful marine life. Equipment provided.' },
-        { time: '12:30', title: 'Seafood BBQ Lunch', desc: 'Enjoy a fresh seafood BBQ lunch at the island restaurant with grilled fish, shrimp, squid, rice & salad.' },
-        { time: '13:30', title: 'Free Beach Time', desc: 'Relax on the beach, swim in the crystal-clear water, or explore the nearby areas at your leisure.' },
-        { time: '14:30', title: 'Return Boat', desc: 'Board the speedboat back to Cua Dai Port, Hoi An.' },
-        { time: '15:30', title: 'Hotel Drop-off', desc: 'Transfer back to your hotel in Hoi An.' },
-      ],
-      included: [
-        { ok: true, text: 'Hotel pickup & drop-off in Hoi An' },
-        { ok: true, text: 'High-speed boat (round trip)' },
-        { ok: true, text: 'English-speaking guide' },
-        { ok: true, text: 'Snorkeling equipment (mask, fins, life jacket)' },
-        { ok: true, text: 'Seafood BBQ lunch on the island' },
-        { ok: true, text: 'Entrance tickets & marine reserve fee' },
-        { ok: true, text: 'Bottled water' },
-        { ok: true, text: 'Travel insurance' },
-        { ok: false, text: 'Drinks & alcoholic beverages' },
-        { ok: false, text: 'Personal expenses & souvenirs' },
-        { ok: false, text: 'Tips for guide & crew (optional)' },
-        { ok: false, text: 'VAT (if applicable)' },
-      ],
-      notes: '⚠️ Cham Island is a plastic-free zone — please do not bring single-use plastic bags. Bring: swimwear, towel, sunscreen, sunglasses, and cash for souvenirs. Tour may be rescheduled due to bad weather or rough seas — safety first!',
-    },
-    'basket-boat': {
-      title: 'Cam Thanh Village & Basket Boat',
-      badge: '🎭 Culture',
-      image: 'basket_boat.png',
-      description: 'Glide through the lush Bay Mau Coconut Forest in a traditional round bamboo basket boat (thung chai). Experience authentic fishing village life — try crab catching, cast a fishing net, and watch the dazzling spinning basket boat dance. Available morning or afternoon.',
-      highlights: ['🛶 Basket Boat Ride', '🦀 Crab Catching', '🎣 Net Casting', '🌴 Coconut Forest', '💃 Boat Dance Show', '🍽️ Local Lunch Option'],
-      itinerary: [
-        { time: '09:00', title: 'Hotel Pickup (Morning session)', desc: 'Transfer from your hotel to Cam Thanh Village, ~ 15 minutes drive.' },
-        { time: '09:30', title: 'Welcome & Introduction', desc: 'Meet your local guide. Brief introduction to the Cam Thanh coconut forest ecosystem and its importance.' },
-        { time: '09:45', title: 'Coconut Forest Boat Ride', desc: 'Board the traditional basket boat and navigate the enchanting water coconut (nipa palm) waterways. Spot crabs, fish, and birds.' },
-        { time: '10:15', title: 'Crab Catching & Net Casting', desc: 'Try your hand at traditional crab catching techniques and learn how to throw a fishing net like a local fisherman.' },
-        { time: '10:45', title: 'Basket Boat Spinning Show', desc: 'Watch expert boatmen perform the famous spinning basket boat dance — a unique and exciting cultural performance!' },
-        { time: '11:15', title: 'Return & Optional Lunch', desc: 'Return to the village. Optional local lunch at a nearby restaurant (additional cost). Transfer back to hotel.' },
-        { time: '11:30', title: 'Hotel Drop-off', desc: 'Return to your hotel in Hoi An. (Also available: afternoon session 15:00–17:30)' },
-      ],
-      included: [
-        { ok: true, text: 'Hotel pickup & drop-off in Hoi An' },
-        { ok: true, text: 'Traditional basket boat ride' },
-        { ok: true, text: 'English-speaking local guide' },
-        { ok: true, text: 'Crab catching & net casting activity' },
-        { ok: true, text: 'Basket boat spinning performance' },
-        { ok: true, text: 'Life jackets' },
-        { ok: true, text: 'Bottled water' },
-        { ok: false, text: 'Lunch (optional, available on request)' },
-        { ok: false, text: 'Drinks & personal expenses' },
-        { ok: false, text: 'Tips (optional & appreciated)' },
-      ],
-      notes: '💡 Sessions available: Morning (09:00 – 11:30) or Afternoon (15:00 – 17:30). Wear comfortable clothes you don\'t mind getting a little wet. Great for families, couples, and all ages!',
-    },
-    'bana-hills': {
-      title: 'Ba Na Hills & Golden Bridge',
-      badge: '✨ Must See',
-      image: 'golden_bridge.png',
-      description: 'Ride the record-breaking cable car to the misty Ba Na Hills mountain peak and cross the world-famous Golden Bridge — held up by two giant stone hands. Explore the charming French Village, beautiful Le Jardin D\'Amour flower gardens, Linh Ung Pagoda, and enjoy a full buffet lunch.',
-      highlights: ['🚠 World\'s Longest Cable Car', '🌉 Iconic Golden Bridge', '🇫🇷 French Village', '🌸 Flower Gardens', '🍽️ Buffet Lunch', '🏔️ Mountain Views'],
-      itinerary: [
-        { time: '07:30', title: 'Hotel Pickup', desc: 'Depart from hotel in Hoi An. Scenic drive to Ba Na Hills in Da Nang (~1.5 hours).' },
-        { time: '09:00', title: 'Cable Car Ascent', desc: 'Board the world\'s longest non-stop single track cable car — enjoy breathtaking views of the Da Nang mountains and coast.' },
-        { time: '09:30', title: 'Golden Bridge', desc: 'Walk across the iconic Golden Bridge (Cau Vang) — supported by two giant stone hands. Perfect photo opportunity!' },
-        { time: '10:00', title: 'French Village', desc: 'Explore the beautifully restored French colonial village, Debay Wine Cellar (est. 1923), and charming European architecture.' },
-        { time: '10:30', title: 'Le Jardin D\'Amour', desc: 'Stroll through 9 themed flower gardens with stunning mountain panoramas and colorful blooms.' },
-        { time: '11:00', title: 'Linh Ung Pagoda', desc: 'Visit the serene Linh Ung Buddhist Pagoda and enjoy peaceful mountain atmosphere.' },
-        { time: '12:30', title: 'Buffet Lunch', desc: 'Enjoy an international buffet lunch at the restaurant within Ba Na Hills complex.' },
-        { time: '14:00', title: 'Free Exploration & Fantasy Park', desc: 'Free time to explore Fantasy Park indoor theme park (entrance included), games, and rides.' },
-        { time: '15:30', title: 'Cable Car Descent', desc: 'Take the cable car down to the base station.' },
-        { time: '17:30', title: 'Hotel Drop-off', desc: 'Return drive to Hoi An. Hotel drop-off approximately 17:30–18:00.' },
-      ],
-      included: [
-        { ok: true, text: 'Hotel pickup & drop-off (Hoi An / Da Nang)' },
-        { ok: true, text: 'Round-trip cable car tickets' },
-        { ok: true, text: 'Ba Na Hills entrance ticket' },
-        { ok: true, text: 'Fantasy Park entrance' },
-        { ok: true, text: 'International buffet lunch' },
-        { ok: true, text: 'English-speaking guide' },
-        { ok: true, text: 'Air-conditioned vehicle' },
-        { ok: false, text: 'Drinks & personal spending' },
-        { ok: false, text: 'Individual game machines inside Fantasy Park' },
-        { ok: false, text: 'Tips (optional)' },
-      ],
-      notes: '🌤️ Ba Na Hills is often cloudy and cool — bring a light jacket even in summer. The Golden Bridge can be very busy on weekends. Comfortable walking shoes recommended.',
-    },
-    'hoian-city': {
-      title: 'Hoi An City, Boat & Street Food',
-      badge: '🏮 Authentic',
-      image: 'hoi_an_town.png',
-      description: 'Dive deep into the soul of Hoi An Ancient Town. Join a guided walking tour through UNESCO-listed heritage sites, taste iconic local street food, and end the day with a magical flower lantern boat ride on the Hoai River under the glow of hundreds of lanterns.',
-      highlights: ['🏮 Lantern Boat Ride', '🥖 Street Food Tasting', '🏛️ Ancient Town Walk', '⛩️ Fukian Assembly Hall', '🌉 Japanese Bridge', '🎭 Cultural Show'],
-      itinerary: [
-        { time: '14:30', title: 'Hotel Pickup', desc: 'Pick up at your hotel and transfer to Hoi An Ancient Town.' },
-        { time: '15:00', title: 'Hoi An Market', desc: 'Start at the bustling Hoi An Market — taste local produce and get introduced to Vietnamese culinary culture.' },
-        { time: '15:30', title: 'Fukian Assembly Hall', desc: 'Visit the stunning Phuc Kien Assembly Hall — a beautifully ornate Chinese temple dedicated to Thien Hau goddess.' },
-        { time: '16:00', title: 'Phung Hung & Tan Ky Ancient Houses', desc: 'Explore 200+ year old merchant houses that blend Vietnamese, Chinese, and Japanese architectural styles.' },
-        { time: '16:30', title: 'Folk Culture Museum', desc: 'Discover folk crafts, traditional tools, and cultural artifacts at the Museum of Folk Culture.' },
-        { time: '17:00', title: 'Traditional Art Performance', desc: 'Watch a live performance of traditional Vietnamese music and dance.' },
-        { time: '17:30', title: 'Street Food Tour', desc: 'Taste Hoi An specialties: Banh Mi Phuong, White Rose Dumplings, Cao Lau noodles, Banh Xeo, and local herbal tea.' },
-        { time: '18:30', title: 'Japanese Covered Bridge', desc: 'Visit the iconic 400-year-old Japanese Covered Bridge (Chua Cau) — the symbol of Hoi An.' },
-        { time: '19:00', title: 'Flower Lantern Boat Ride', desc: 'Board a traditional wooden boat for a romantic lantern boat ride on the Thu Bon River. Release a flower lantern into the river for good luck.' },
-        { time: '19:45', title: 'Hotel Drop-off', desc: 'Return transfer to your hotel.' },
-      ],
-      included: [
-        { ok: true, text: 'Hotel pickup & drop-off in Hoi An' },
-        { ok: true, text: 'English-speaking guide throughout' },
-        { ok: true, text: 'Ancient Town entrance tickets' },
-        { ok: true, text: 'Fukian Assembly Hall & Ancient House tickets' },
-        { ok: true, text: 'Street food tastings (5+ local dishes)' },
-        { ok: true, text: 'Flower lantern boat ride on the river' },
-        { ok: true, text: 'Flower lantern (1 per person)' },
-        { ok: false, text: 'Additional food & drinks' },
-        { ok: false, text: 'Shopping & personal expenses' },
-        { ok: false, text: 'Tips (optional)' },
-      ],
-      notes: '🌙 This tour runs in the afternoon/evening to catch the most magical lighting of the ancient town. Wear comfortable walking shoes. Full moon nights (14th–15th lunar month) are especially magical — the town turns off electric lights and uses only lanterns!',
-    },
-    'my-son': {
-      title: 'My Son Sanctuary Discovery',
-      badge: '🏛️ History',
-      image: 'my_son.png',
-      description: 'Journey to the sacred heart of the ancient Champa Kingdom. My Son Sanctuary is a UNESCO World Heritage Site — a complex of remarkable Hindu towers and temples built between the 4th and 14th centuries, nestled in a lush jungle valley. Experience a unique morning or sunset boat return option.',
-      highlights: ['🏛️ UNESCO World Heritage', '⛩️ Cham Temples (4th–14th C)', '💃 Traditional Cham Dance', '⛵ River Boat Return', '🌅 Sunrise Tour Option', '🌆 Sunset Tour Option'],
-      itinerary: [
-        { time: '08:00', title: 'Hotel Pickup', desc: 'Pick up from your hotel in Hoi An. Drive approximately 40 minutes to My Son Sanctuary.' },
-        { time: '08:45', title: 'Arrive at My Son', desc: 'Enter the sanctuary grounds. Your guide provides historical context on the Champa civilization and the significance of the site.' },
-        { time: '09:00', title: 'Temple Groups A, B, C, D', desc: 'Guided walking tour through the main temple groups. Admire intricate Cham stonework, carvings, and ancient inscriptions.' },
-        { time: '10:00', title: 'Traditional Cham Dance Performance', desc: 'Watch an authentic Cham traditional dance performance performed by local cultural artists within the sanctuary.' },
-        { time: '10:30', title: 'Free Exploration', desc: 'Free time to explore lesser-visited temple ruins, take photos, and soak in the peaceful jungle atmosphere.' },
-        { time: '11:00', title: 'Thu Bon River Boat', desc: 'Board a traditional wooden boat on the Thu Bon River for a scenic 1.5-hour cruise back toward Hoi An. Enjoy the countryside views.' },
-        { time: '11:30', title: 'Kim Bong Carpentry Village', desc: 'Brief stop at Kim Bong traditional wood carpentry village — a 300-year-old craft village on the riverbank.' },
-        { time: '12:30', title: 'Arrive Hoi An by Boat', desc: 'Arrive at Hoi An wharf by boat.' },
-        { time: '13:00', title: 'Hotel Drop-off', desc: 'Transfer back to your hotel. (Lunch at optional riverside restaurant available on request.)' },
-      ],
-      included: [
-        { ok: true, text: 'Hotel pickup & drop-off in Hoi An' },
-        { ok: true, text: 'Air-conditioned vehicle to My Son' },
-        { ok: true, text: 'My Son Sanctuary entrance tickets' },
-        { ok: true, text: 'English-speaking expert guide' },
-        { ok: true, text: 'Cham Dance cultural show' },
-        { ok: true, text: 'Traditional boat ride on Thu Bon River' },
-        { ok: true, text: 'Kim Bong Village stop' },
-        { ok: true, text: 'Bottled water' },
-        { ok: false, text: 'Lunch (optional, available on request)' },
-        { ok: false, text: 'Personal expenses & photography tips' },
-        { ok: false, text: 'Gratuities (optional)' },
-      ],
-      notes: '☀️ Morning Tour (08:00–13:00): Best light for photos, cooler temperatures. Sunrise Tour (05:00–10:30): Witness My Son at dawn — magical and crowd-free. Sunset Tour (13:00–19:00): Arrive by road, return by boat at sunset. Bring insect repellent and comfortable walking shoes. Modest dress recommended (cover shoulders & knees) as this is a religious site.',
-    },
+    't01': {"title": "Market Tour, Basket Boat & Cooking Class", "badge": "🍳 Culinary", "region": "hoian", "image": "hoian_cooking_signature.png", "desc_card": "Experience rural Hoi An life and Vietnamese cuisine. Visit the morning market, paddle a basket boat through the water coconut forest, and join a 1.5-hour cooking class with a local chef.", "highlights": ["🛒 Market Tour", "🛶 Basket Boat Ride", "👨‍🍳 Cooking Class", "🌿 Cam Thanh Village", "🍜 Local Dishes", "📸 Photos"], "itinerary": [{"time": "08:00 / 13:00", "title": "Hotel Pickup", "desc": "Pick up at your hotel in Hoi An."}, {"time": "08:30 / 13:30", "title": "Hoi An Market Visit", "desc": "Explore the local market — learn about ingredients for cooking."}, {"time": "09:30 / 14:30", "title": "Transfer to Cam Thanh", "desc": "Drive to Cam Thanh Water Coconut Village by van."}, {"time": "10:00 / 15:00", "title": "Basket Boat Ride", "desc": "Paddle bamboo basket boats through the lush water coconut forest."}, {"time": "11:00 / 16:00", "title": "1.5-hour Cooking Class", "desc": "Cook Banh Xeo, Pho Bo, Banh Cuon, and Che with a local chef."}, {"time": "12:30 / 17:30", "title": "Enjoy Your Meal", "desc": "Taste the dishes you cooked."}, {"time": "13:30 / 18:00", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup & drop-off"}, {"ok": true, "text": "1 bottle of water"}], "meta": [["⏱", "5 hours"], ["📍", "Cam Thanh"], ["🍳", "Cooking"]], "notes": "Duration: 5 hours. Morning (8:00–13:30) or Afternoon (13:00–18:00). By Hoi An Cooking School."},
+    't02': {"title": "Sidewalk Food Tour of Hoi An", "badge": "🥘 Street Food", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Discover Hoi An street food with an English-speaking guide — taste 9 signature dishes at the most beloved local spots. Small group (max 6).", "highlights": ["🍜 9 Local Dishes", "☕ Vietnamese Coffee", "🥖 Banh Mi", "🍲 Cao Lau", "🦆 Balut Egg", "🚶 Walking Tour"], "itinerary": [{"time": "07:00 / 15:30", "title": "Hotel Pickup", "desc": "Meet at your hotel or a designated point."}, {"time": "+15m", "title": "Walking Through Old Town", "desc": "Stroll through the atmospheric streets of Hoi An."}, {"time": "+30m", "title": "9 Dishes Tasting", "desc": "Vietnamese Coffee, Banh Mi, Banh Uot, Mi Quang/Cao Lau, Banh Xeo, Grilled Meat, Chicken Rice, Sugarcane Juice, Balut Egg."}, {"time": "+2hrs", "title": "History & Culture", "desc": "Learn about Hoi An history and food culture along the way."}, {"time": "10:00 / 18:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Transportation (pickup/drop-off)"}, {"ok": true, "text": "9 dishes & drinks"}, {"ok": true, "text": "English-speaking guide"}, {"ok": true, "text": "Insurance"}], "meta": [["⏱", "3–4 hours"], ["📍", "Old Town"], ["🍜", "9 Dishes"]], "notes": "3–4 hours. Morning (7:00–10:00) or Afternoon (15:30–18:30). Max 6 guests."},
+    't03': {"title": "Buffalo Riding & Basket Boat & Cycling", "badge": "🐃 Eco", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Explore rural Hoi An by bicycle — ride through rice paddies, ride a water buffalo, paddle basket boats, and enjoy a traditional local lunch.", "highlights": ["🚲 Cycling", "🐃 Buffalo Riding", "🛶 Basket Boat", "🌾 Rice Paddies", "🍽️ Local Lunch", "📸 Photos"], "itinerary": [{"time": "08:15 / 13:15", "title": "Hotel Pickup by Bicycle", "desc": "Cycle from your hotel through the countryside."}, {"time": "+30m", "title": "Eco Village", "desc": "Visit the eco village — see rice fields, ride a water buffalo."}, {"time": "+1h 30m", "title": "Basket Boat in Coconut Forest", "desc": "Paddle basket boats through the water coconut canals."}, {"time": "+2h 30m", "title": "Traditional Lunch/Dinner", "desc": "At a local restaurant. Deep Fried Spring Rolls, Steamed Red Snapper, Banana Salad, Stir Fried Morning Glory, Dessert."}, {"time": "12:30 / 18:00", "title": "Hotel Drop-off", "desc": "Return to your hotel by bicycle."}], "included": [{"ok": true, "text": "Bicycle"}, {"ok": true, "text": "Buffalo riding"}, {"ok": true, "text": "Basket boat"}, {"ok": true, "text": "Lunch/Dinner (5 dishes)"}, {"ok": true, "text": "English guide"}], "meta": [["⏱", "5 hours"], ["📍", "Eco Village"], ["🚲", "Cycling"]], "notes": ""},
+    't04': {"title": "Basket Boat Ride & Coconut Tour", "badge": "🛶 Fun", "region": "hoian", "image": "hoian_eco_signature.png", "desc_card": "Experience bamboo basket boats on the water coconut canals. Enjoy spinning boats, folk singing, fishing nets, and crab catching. Fun for all ages!", "highlights": ["🛶 Basket Boat", "🎶 Folk Music", "🦀 Crab Catching", "🎡 Boat Spinning", "📸 Photos", "👨‍👩‍👧 Family Friendly"], "itinerary": [{"time": "Flexible", "title": "Hotel Pickup", "desc": "Driver picks you up at your hotel (available 8:00–16:00 daily)."}, {"time": "+15m", "title": "Welcome at Dragon Restaurant", "desc": "Greeted at the coconut forest entrance."}, {"time": "+30m", "title": "1 Hour Basket Boat Ride", "desc": "Spinning basket boats, karaoke on water, fishing nets, crab catching."}, {"time": "+1h 15m", "title": "Traditional Music Show", "desc": "Enjoy a traditional folk music performance."}, {"time": "+1h 30m", "title": "End of Tour", "desc": "Return to the dock and transfer back to hotel."}], "included": [{"ok": true, "text": "Hotel pickup & drop-off"}, {"ok": true, "text": "1 hour basket boat ride"}, {"ok": true, "text": "1 bottle of water"}], "meta": [["⏱", "1 hour"], ["📍", "Coconut Forest"], ["🦀", "Crabs"]], "notes": ""},
+    't05': {"title": "Basket Boat Ride & Vietnamese Food", "badge": "🍲 Combo", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Combine a basket boat ride in the historic water coconut forest with a traditional Vietnamese meal at a local restaurant.", "highlights": ["🛶 Basket Boat", "🍲 Vietnamese Lunch", "🦀 Crab Catching", "🎶 Karaoke", "🌿 Forest", "📸 Photos"], "itinerary": [{"time": "09:30 / 15:00", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "+30m", "title": "Historic Coconut Forest", "desc": "Transfer to the historic water coconut forest."}, {"time": "+45m", "title": "1 Hour Basket Boat", "desc": "Spinning boats, karaoke, fishing nets, crab catching."}, {"time": "+1h 45m", "title": "Vietnamese Lunch/Dinner", "desc": "Steamed Red Snapper, Spring Rolls, Morning Glory, Banana Flower Salad at local restaurant."}, {"time": "11:30 / 17:00", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup & drop-off"}, {"ok": true, "text": "1 hour basket boat ride"}, {"ok": true, "text": "Vietnamese meal (4 dishes)"}, {"ok": true, "text": "1 bottle of water"}], "meta": [["⏱", "2 hours"], ["📍", "Coconut Forest"], ["🍽️", "Meal"]], "notes": ""},
+    't06': {"title": "Lantern Making, Market, Cooking & Basket Boat", "badge": "🏮 Ultimate", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The most complete Hoi An experience: handmade lantern workshop, market visit, cooking class, and basket boat ride — all in one tour!", "highlights": ["🏮 Lantern Making", "🛒 Market Tour", "👨‍🍳 Cooking Class", "🛶 Basket Boat", "🎨 Handcraft", "📸 Souvenirs"], "itinerary": [{"time": "08:30 / 13:30", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "+30m", "title": "Local Market Visit", "desc": "Explore the market and buy cooking ingredients."}, {"time": "+1h 30m", "title": "Basket Boat Ride", "desc": "Paddle through the water coconut forest."}, {"time": "+2h 30m", "title": "Cooking Class", "desc": "Cook Pho Bo, Banh Xeo, Banh Cuon, and Che."}, {"time": "+3h 15m", "title": "Enjoy Your Meal", "desc": "Taste your handmade dishes."}, {"time": "+3h 30m", "title": "Lantern Making Workshop", "desc": "Create your own handmade Hoi An silk lantern to take home."}, {"time": "12:30 / 18:00", "title": "Drop-off", "desc": "End at the lantern workshop in the Old Town."}], "included": [{"ok": true, "text": "Hotel pickup"}, {"ok": true, "text": "Basket boat & cooking class"}, {"ok": true, "text": "1 handmade lantern"}, {"ok": true, "text": "All ingredients & meal"}], "meta": [["⏱", "4 hours"], ["📍", "Old Town & Forest"], ["🎨", "Craft"]], "notes": ""},
+    't07': {"title": "Cham Island Snorkeling Daily Tour", "badge": "🌟 Popular", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Explore the stunning biosphere reserve. Includes speedboat, snorkeling at Bai Xep (45 mins), and a fresh seafood BBQ lunch on the island.", "highlights": ["🚤 Speedboat", "🤿 Snorkeling", "🦞 Seafood BBQ", "🏝️ Beach", "⛩️ Culture", "🐠 UNESCO"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Pick up at your hotel in Hoi An (or Da Nang/Port)."}, {"time": "08:30", "title": "Speedboat to Cham Island", "desc": "Depart from Cua Dai Port to Cham Island by high-speed boat."}, {"time": "09:00", "title": "Bai Lang Visit", "desc": "Ancient Cham Well, Hai Tang Pagoda, and local market."}, {"time": "10:30", "title": "Snorkeling", "desc": "Snorkeling at Bai Xep or Hon Dai."}, {"time": "12:00", "title": "Lunch", "desc": "Seafood Set Menu Lunch at an island restaurant."}, {"time": "13:00", "title": "Beach Relaxation", "desc": "Swimming and resting on the beach."}, {"time": "14:00", "title": "Return", "desc": "Return to Hoi An. Hotel drop-off."}], "included": [{"ok": true, "text": "Round-trip transport (vehicle & speedboat)"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Snorkeling gear"}, {"ok": true, "text": "Lunch"}, {"ok": true, "text": "Entrance tickets"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "Full Day"], ["📍", "Cham Island"], ["🌊", "Snorkel"]], "notes": "Cham Island says NO to plastic bags."},
+    't08': {"title": "Cham Island Handicraft Tour", "badge": "🧶 Heritage", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Experience UNESCO-recognized traditional crafts on Cham Island: hammock weaving, fishing net making, Banh It La Gai cake, and visit the Whale Temple.", "highlights": ["🧶 Hammock Weaving", "🎣 Net Making", "🍡 Banh It La Gai", "⛩️ Whale Temple", "🤿 Snorkeling", "🏝️ Island Life"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Pick up in Hoi An."}, {"time": "08:45", "title": "Speedboat to Cham Island", "desc": "Depart from Cua Dai."}, {"time": "09:30", "title": "Traditional Crafts", "desc": "Weave hammocks with rattan, learn fishing net making with locals."}, {"time": "10:30", "title": "Banh It La Gai", "desc": "Learn to make the island's traditional sticky rice cakes."}, {"time": "11:00", "title": "Whale Temple", "desc": "Visit the sacred Whale Temple (Lang Ong)."}, {"time": "11:30", "title": "Snorkeling", "desc": "45 min snorkeling at Bai Xep / Hon Dai."}, {"time": "12:30", "title": "Seafood BBQ Lunch", "desc": "Fresh seafood BBQ."}, {"time": "14:00", "title": "Return to Hoi An", "desc": "Speedboat back, transfer to hotel."}], "included": [{"ok": true, "text": "Vehicle & Speedboat"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Snorkeling gear & Lunch"}, {"ok": true, "text": "Activities fees & Insurance"}], "meta": [["⏱", "8:00–14:00"], ["📍", "Cham Island"], ["🎨", "Heritage"]], "notes": "Min 2, Max 15 pax."},
+    't09': {"title": "Cham Island 2 Days 1 Night (Homestay)", "badge": "🏕️ Overnight", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Stay overnight on Cham Island in a local homestay. Two snorkeling sessions, island exploration, and authentic island dining experience.", "highlights": ["🏕️ Homestay", "🤿 2x Snorkeling", "🏝️ Island Life", "🌅 Nature", "🍽️ All Meals", "🌊 Beach Time"], "itinerary": [{"time": "Day 1", "title": "Transfer & Island Tour", "desc": "Hotel pickup, speedboat to island, visit Bai Lang village."}, {"time": "Day 1 PM", "title": "Snorkeling Session 1", "desc": "Guided snorkeling, lunch, check-in to homestay."}, {"time": "Day 1 Eve", "title": "Free Exploration", "desc": "Free time to explore, dinner at homestay."}, {"time": "Day 2 AM", "title": "Morning & Snorkeling 2", "desc": "Breakfast at homestay, second snorkeling session (10:00–10:30)."}, {"time": "Day 2 PM", "title": "Return", "desc": "Lunch, beach time, speedboat back to Hoi An (14:00–14:30)."}], "included": [{"ok": true, "text": "Hotel pickup/drop-off"}, {"ok": true, "text": "Homestay"}, {"ok": true, "text": "Meals (L, D, B, L)"}, {"ok": true, "text": "Guide & Tickets"}], "meta": [["⏱", "2D 1N"], ["📍", "Cham Island"], ["🏕️", "Homestay"]], "notes": "Min 2 guests."},
+    't10': {"title": "Cham Island Snorkeling Tour", "badge": "🤿 Deep Dive", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Advanced snorkeling at 2 premium spots in Cham Island Marine Park. Includes Vietnamese lunch at Bai Ong and beach swimming.", "highlights": ["🤿 2 Dive Spots", "🐠 Coral Reefs", "🍽️ Lunch", "🏖️ Beach Time", "☕ Tea & Coffee", "📸 Photos"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up in Hoi An."}, {"time": "08:30", "title": "Depart Cua Dai Port", "desc": "Speedboat to Cham Island."}, {"time": "09:30", "title": "Snorkeling Spot 1", "desc": "First intensive snorkeling session."}, {"time": "11:00", "title": "Snorkeling Spot 2", "desc": "Second intensive snorkeling session."}, {"time": "12:30", "title": "Lunch", "desc": "Vietnamese Lunch at Bai Ong or Bai Lang, beach swimming & rest."}, {"time": "14:30", "title": "Depart Island", "desc": "Leave the island."}, {"time": "15:30", "title": "Hotel Drop-off", "desc": "Return to your hotel in Hoi An."}], "included": [{"ok": true, "text": "Transport & Speedboat"}, {"ok": true, "text": "Snorkeling instructor & gear"}, {"ok": true, "text": "Lunch & drinks on boat"}], "meta": [["⏱", "7:30–15:30"], ["📍", "Cham Island"], ["🤿", "2 Spots"]], "notes": ""},
+    't11': {"title": "Cham Island Try Dive Tour (Beginners)", "badge": "🌊 Try Dive", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Scuba diving for absolute beginners — no certification needed. 1-on-1 instructor, max depth 6–12m. Explore vibrant coral gardens.", "highlights": ["🤿 No License Needed", "👤 1-on-1 Guide", "🐠 Coral Gardens", "🏖️ Beach Lunch", "📸 Photos", "🎓 1-2 Dives"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Pick up in Hoi An."}, {"time": "08:45", "title": "Depart Cua Dai", "desc": "Speedboat to Cham Island."}, {"time": "10:00", "title": "Dive Sessions", "desc": "Visit 2 dive spots, minimum 1 hour per spot. 1-to-1 instruction."}, {"time": "12:30", "title": "Beach Lunch", "desc": "Lunch at Bai Chong, swimming and relaxation."}, {"time": "15:00", "title": "Return", "desc": "Leave Bai Chong."}, {"time": "16:00", "title": "Hotel Drop-off", "desc": "Return to Hoi An hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Full dive gear"}, {"ok": true, "text": "English Dive Instructor"}, {"ok": true, "text": "Lunch & Marine Park fee"}], "meta": [["⏱", "8:00–16:00"], ["📍", "Cham Island"], ["🎓", "No Cert"]], "notes": ""},
+    't12': {"title": "Cham Island Fun Dive (Certified Divers)", "badge": "🎓 PADI", "region": "hoian", "image": "hoian_signature.png", "desc_card": "For certified PADI divers. Explore rich marine life: nudibranchs, seahorses, lionfish, and reef sharks. Depth 10–25m.", "highlights": ["🎓 PADI Required", "🦈 Reef Sharks", "🐡 Seahorses", "🪸 Deep Coral", "📸 Photos", "🏖️ Beach Lunch"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Pick up in Hoi An."}, {"time": "08:45", "title": "Depart Cua Dai", "desc": "Speedboat to Cham Island."}, {"time": "10:00", "title": "Fun Dives", "desc": "Visit 2 dive spots, minimum 1 hour per spot at 10-25m depth."}, {"time": "12:30", "title": "Lunch at Bai Chong", "desc": "Lunch and beach relaxation."}, {"time": "15:00", "title": "Return", "desc": "Leave Bai Chong."}, {"time": "16:00", "title": "Hotel Drop-off", "desc": "Return to Hoi An."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Full dive gear"}, {"ok": true, "text": "English Dive Master"}, {"ok": true, "text": "Lunch & Marine Park fee"}], "meta": [["⏱", "8:00–16:00"], ["📍", "Cham Island"], ["🦈", "10-25m"]], "notes": ""},
+    't13': {"title": "Walking Underwater at Cham Island", "badge": "🪖 Seawalker", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Walk on the ocean floor — no swimming or diving skills needed. Wear an air-pumped helmet and stroll among colorful fish and coral.", "highlights": ["🪖 Seawalker Helmet", "🐠 Walk Among Fish", "🪸 Coral Reef", "🤿 Snorkeling", "🍽️ Seafood", "📸 Photos"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up in Hoi An, transfer to Cua Dai Port."}, {"time": "09:00", "title": "Speedboat to Cham Island", "desc": "20-minute ride to the island."}, {"time": "10:00", "title": "Walking Underwater", "desc": "Walk on the seabed at Bai Nhon with air helmet, followed by free snorkeling."}, {"time": "11:00", "title": "Seafood Lunch", "desc": "Fresh seafood lunch at Bai Chong, beach swimming."}, {"time": "14:00", "title": "Return to Hoi An", "desc": "Speedboat back, return to hotel."}], "included": [{"ok": true, "text": "Transport & Speedboat"}, {"ok": true, "text": "Seawalker & Snorkeling gear"}, {"ok": true, "text": "Seafood lunch"}, {"ok": true, "text": "Towel & Guide"}], "meta": [["⏱", "7:30–14:00"], ["📍", "Cham Island"], ["🪸", "No Swimmimg"]], "notes": ""},
+    't14': {"title": "Cam Thanh Village & Basket Boat", "badge": "🎭 Culture", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Navigate the lush coconut waterways in a traditional bamboo basket boat. Experience crab catching and local fishing techniques.", "highlights": ["🛶 Basket Boat", "🎣 Fishing", "🌿 Forest", "🏡 Eco Village", "🍽️ Lunch", "📸 Photos"], "itinerary": [{"time": "09:00 / 15:00", "title": "Hotel Pickup", "desc": "Guide picks you up at your hotel."}, {"time": "09:15 / 15:15", "title": "Transfer to Cam Thanh", "desc": "Travel to Cam Thanh Village by boat or vehicle."}, {"time": "10:00 / 16:00", "title": "Basket Boat Experience", "desc": "History lesson, fishing nets, boat racing, crab catching."}, {"time": "11:00 / 17:00", "title": "Local Lunch/Dinner", "desc": "Visit a local home, welcome drinks, and traditional meal at a local restaurant."}, {"time": "11:30 / 17:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Tour vehicle"}, {"ok": true, "text": "Bamboo basket boat"}, {"ok": true, "text": "English guide"}, {"ok": true, "text": "Lunch & water"}, {"ok": true, "text": "Entrance tickets"}], "meta": [["⏱", "Half Day"], ["📍", "Coconut Forest"], ["🛶", "Adventure"]], "notes": ""},
+    't15': {"title": "Cam Thanh Cooking Tour", "badge": "🍳 Cooking", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Market visit, basket boat ride, and cook 5 traditional Hoi An dishes at Cam Thanh Village.", "highlights": ["🛒 Market Tour", "🛶 Basket Boat", "👨‍🍳 5-Dish Cooking", "🌿 Cam Thanh", "🍽️ Lunch", "📸 Photos"], "itinerary": [{"time": "08:15 / 13:15", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "08:45 / 13:45", "title": "Hoi An Market", "desc": "Visit local market to shop for ingredients."}, {"time": "09:30 / 14:30", "title": "Cam Thanh Basket Boat", "desc": "Basket boat ride through the coconut forest."}, {"time": "10:30 / 15:30", "title": "Cooking Class", "desc": "Cook: Banana Salad, Spring Rolls, Banh Xeo, Pho, Caramelized Fish."}, {"time": "11:30 / 16:30", "title": "Enjoy Your Meal", "desc": "Taste your creations + Morning Glory, Rice, Dessert."}, {"time": "12:40 / 17:00", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Tour vehicle & basket boat"}, {"ok": true, "text": "Cooking class & ingredients"}, {"ok": true, "text": "English guide"}, {"ok": true, "text": "Lunch & water"}], "meta": [["⏱", "4.5 hours"], ["📍", "Cam Thanh"], ["🍽️", "Cooking"]], "notes": ""},
+    't16': {"title": "Hoi An City, Boat & Street Food", "badge": "🏮 Authentic", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Discover the ancient town's secrets, enjoy a romantic flower lantern boat ride, and taste famous local specialties like Banh Mi & Cao Lau.", "highlights": ["🏮 Lantern Release", "⛩️ Fukian Hall", "🌉 Japanese Bridge", "🚣 River Boat", "🍽️ Dinner", "🎭 Art Show"], "itinerary": [{"time": "14:30", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "15:00", "title": "Hoi An Market", "desc": "Visit the bustling local market."}, {"time": "15:30", "title": "Old Town Attractions", "desc": "Fukian Assembly Hall, Ancient Houses (Phung Hung/Tan Ky), Folk Museum."}, {"time": "16:30", "title": "Art Show & Japanese Bridge", "desc": "Traditional art performance and 400-year-old Covered Bridge."}, {"time": "17:30", "title": "Dinner", "desc": "Dinner (1 dish: Chicken Rice / Cao Lau / Mi Quang)."}, {"time": "18:00", "title": "Boat Ride & Flower Lantern", "desc": "Romantic boat ride on Hoai River, release a flower lantern."}, {"time": "18:30", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Hotel pickup/drop-off"}, {"ok": true, "text": "English guide"}, {"ok": true, "text": "All entrance tickets"}, {"ok": true, "text": "Dinner (1 dish)"}, {"ok": true, "text": "Boat ride & lantern"}], "meta": [["⏱", "Afternoon"], ["📍", "Old Town"], ["🍜", "Foodie"]], "notes": "Min 2, Max 15 guests."},
+    't17': {"title": "Cam Thanh Coconut – Hoi An City – Flower Lantern", "badge": "🌃 Combo", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The complete experience: water coconut forest in Cam Thanh, Hoi An Ancient Town walking tour, and evening flower lantern boat ride on the river.", "highlights": ["🛶 Coconut Forest", "🏮 Ancient Town", "🌸 Flower Lantern", "🍽️ Dinner", "🌙 Night Walk", "📸 Photos"], "itinerary": [{"time": "12:00", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "12:30", "title": "Cam Thanh Coconut Forest", "desc": "Basket boat ride through the water coconut channels."}, {"time": "14:30", "title": "Hoi An Ancient Town", "desc": "Fukian Hall, ancient houses, Japanese Bridge, museum."}, {"time": "17:00", "title": "Dinner", "desc": "Enjoy Hoi An specialty set menu dinner."}, {"time": "18:00", "title": "Boat Ride & Flower Lantern", "desc": "Romantic boat ride on Hoai River with flower lantern release."}, {"time": "19:30", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Basket boat & Entrance tickets"}, {"ok": true, "text": "Dinner set menu"}, {"ok": true, "text": "Lantern & boat"}], "meta": [["⏱", "12:00–19:30"], ["📍", "Cam Thanh & Old Town"], ["🌸", "Combo"]], "notes": ""},
+    't18': {"title": "Bicycle Tour: Cam Thanh & Tra Que", "badge": "🚲 Cycling", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Cycle through Hoi An countryside — visit Cam Thanh coconut forest and Tra Que organic vegetable village. Includes basket boat, farming, and cooking class.", "highlights": ["🚲 Cycling", "🛶 Basket Boat", "🌱 Farming", "👨‍🍳 Cooking", "🌾 Rice Fields", "📸 Photos"], "itinerary": [{"time": "08:00 / 13:00", "title": "Hotel Pickup by Bicycle", "desc": "Cycle to Cam Thanh Coconut Forest."}, {"time": "09:00 / 14:00", "title": "Basket Boat & Fishing", "desc": "Basket boat ride, fishing, local culture experience."}, {"time": "10:30 / 15:30", "title": "Cycle to Tra Que", "desc": "Continue cycling to Tra Que Vegetable Village."}, {"time": "11:00 / 16:00", "title": "Farming Experience", "desc": "Work with local farmers in the organic garden."}, {"time": "11:30 / 16:30", "title": "Cooking Class", "desc": "Cook: Papaya Salad, Banh Xeo, Spring Rolls, Caramelized Fish."}, {"time": "12:30 / 17:30", "title": "Enjoy Your Meal", "desc": "Taste your creations."}, {"time": "13:30 / 18:30", "title": "Hotel Drop-off", "desc": "Cycle back to hotel."}], "included": [{"ok": true, "text": "Bicycle & guided tour"}, {"ok": true, "text": "Basket boat"}, {"ok": true, "text": "Farming activity"}, {"ok": true, "text": "Cooking class & meal"}], "meta": [["⏱", "5.5 hours"], ["📍", "Countryside"], ["🚲", "Cycling"]], "notes": "Min 2 guests."},
+    't19': {"title": "Tra Que Cooking Class Tour", "badge": "🌱 Farm-to-Table", "region": "hoian", "image": "hoian_eco_signature.png", "desc_card": "Cooking class at Tra Que Organic Village — market visit, farming, foot massage, and cook 4 traditional dishes.", "highlights": ["🌱 Organic Farm", "👨‍🍳 4-Dish Cooking", "💆 Foot Massage", "🛒 Market Tour", "🌿 Garden", "🍽️ Lunch"], "itinerary": [{"time": "08:30 / 13:30", "title": "Hotel Pickup", "desc": "Pick up and drive to Hoi An Market."}, {"time": "09:00 / 14:00", "title": "Tra Que Village", "desc": "Cycle roughly to Tra Que, explore the organic garden."}, {"time": "09:30 / 14:30", "title": "Farming Experience", "desc": "Work with farmers — dig, sow, plant, and harvest."}, {"time": "10:00 / 15:00", "title": "Foot Massage", "desc": "Traditional herbal foot massage."}, {"time": "10:30 / 15:30", "title": "Cooking Class", "desc": "Cook: Papaya Salad, Banh Xeo, Spring Rolls, Caramelized Fish."}, {"time": "12:00 / 17:00", "title": "Enjoy Meal", "desc": "Taste your creations."}, {"time": "13:30 / 18:00", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Cooking class & Chef"}, {"ok": true, "text": "Herbal foot massage"}, {"ok": true, "text": "Lunch & water"}], "meta": [["⏱", "4.5 hours"], ["📍", "Tra Que Village"], ["💆", "Foot Massage"]], "notes": "Min 2 guests."},
+    't20': {"title": "Lantern Making & Farming at Tra Que Village", "badge": "🏮 Crafts", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Cycle through rice paddies to Tra Que Village for farming, then learn traditional Hoi An lantern making and take home your handmade lantern.", "highlights": ["🏮 Lantern Workshop", "🌱 Farming", "🚲 Cycling", "🌾 Rice Fields", "🎁 Take Home", "🍽️ Lunch"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Cycle through rice paddies and shrimp ponds."}, {"time": "09:00", "title": "Tra Que Village", "desc": "Dig, sow, plant, and harvest vegetables with farmers."}, {"time": "10:00", "title": "Enjoy Local Tea", "desc": "Enjoy Tra Que's special herbal tea."}, {"time": "10:30", "title": "Lantern Workshop", "desc": "Cycle to workshop, learn lantern craft from artisans."}, {"time": "12:00", "title": "Make Your Lantern", "desc": "Create your own handmade silk lantern to take home."}, {"time": "13:00", "title": "Local Lunch", "desc": "Traditional lunch included."}, {"time": "13:30", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Bicycle"}, {"ok": true, "text": "1 handmade lantern"}, {"ok": true, "text": "Farming experience"}, {"ok": true, "text": "Lunch & water"}, {"ok": true, "text": "Guide"}], "meta": [["⏱", "5.5 hours"], ["📍", "Tra Que"], ["🎁", "Take Home"]], "notes": "Min 2 guests."},
+    't21': {"title": "Cycling, Water Buffalo Riding – Farming & Fishing", "badge": "🚲 Village", "region": "hoian", "image": "hoian_eco_signature.png", "desc_card": "A comprehensive bicycle tour: ride to Cam Thanh village, meet farmers, ride a buffalo, paddle a basket boat to catch crabs, and learn about local history.", "highlights": ["🚲 Cycling", "🐃 Buffalo Riding", "🛶 Basket Boat", "🎣 Crab Catching", "👨‍🌾 Farming", "🍽️ Lunch"], "itinerary": [{"time": "08:30 / 14:00", "title": "Hotel Pickup", "desc": "Cycle from hotel to Cam Thanh."}, {"time": "09:00 / 14:30", "title": "Meet Farmers", "desc": "Plough the field, plant rice, ride and feed water buffalos."}, {"time": "10:00 / 15:30", "title": "Fisherman's Home", "desc": "Enjoy coconut jam and tea at a local home."}, {"time": "10:30 / 16:00", "title": "Coconut Forest", "desc": "Basket boat ride, fishing, catching crabs."}, {"time": "11:30 / 17:00", "title": "Local Lunch", "desc": "Lunch at local home, learn to make rice milk and Banh Xeo."}, {"time": "13:00 / 18:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup"}, {"ok": true, "text": "Lunch/Dinner"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Basket boat & bike"}, {"ok": true, "text": "Entrance tickets"}], "meta": [["⏱", "4.5 hours"], ["📍", "Cam Thanh"], ["🐃", "Buffalo"]], "notes": "Min 2 guests."},
+    't22': {"title": "Tra Nhieu Eco Tour – Kim Bong Rural Village", "badge": "🛶 Eco", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Bicycle tour to explore the traditional Kim Bong Carpentry village, see colorful sleep mat weaving, and paddle a basket boat in Tra Nhieu palm forest.", "highlights": ["🪚 Kim Bong Woodcraft", "🧶 Mat Weaving", "🚲 Cycling", "🛶 Basket Boat", "🌿 Tra Nhieu Forest", "🍽️ Lunch"], "itinerary": [{"time": "08:30 / 13:30", "title": "Hotel Pickup", "desc": "Cycle to Kim Bong Carpentry Village."}, {"time": "09:00 / 14:00", "title": "Kim Bong Village", "desc": "Discover the art of traditional shipbuilding and wood carving."}, {"time": "09:45 / 14:45", "title": "Mat Weaving", "desc": "Learn how locals weave colorful traditional sleeping mats."}, {"time": "10:30 / 15:30", "title": "Tra Nhieu Village", "desc": "Cycle through massive rice paddies to Tra Nhieu palm forest."}, {"time": "11:00 / 16:00", "title": "Basket Boat", "desc": "Paddle a basket boat through the water coconut canals."}, {"time": "12:00 / 17:00", "title": "Lunch", "desc": "Local lunch."}, {"time": "13:00 / 18:00", "title": "Hotel Drop-off", "desc": "Return to Hoi An."}], "included": [{"ok": true, "text": "Bicycle"}, {"ok": true, "text": "Basket boat"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Entrance tickets"}, {"ok": true, "text": "Lunch & water"}], "meta": [["⏱", "Afternoon"], ["📍", "Tra Nhieu & Kim Bong"], ["🛶", "Eco"]], "notes": ""},
+    't23': {"title": "Rice Paper Making & Cooking at Kim Bong", "badge": "🍳 Cooking", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Experience traditional handmade rice paper making at Kim Bong village and join a cooking class to prepare 5 traditional Hoi An dishes.", "highlights": ["🥞 Rice Paper Making", "👨‍🍳 5-Dish Cooking", "🍆 Grilled Eggplant", "🍜 Cao Lau", "🍌 Caramel Banana", "🍽️ Lunch"], "itinerary": [{"time": "08:15 / 13:30", "title": "Hotel Pickup", "desc": "Pick up at hotel."}, {"time": "08:45 / 14:00", "title": "Kim Bong Village", "desc": "Transfer to Kim Bong Carpentry Village."}, {"time": "09:15 / 14:30", "title": "Rice Paper craft", "desc": "Learn to make traditional handmade rice paper."}, {"time": "10:15 / 15:30", "title": "2-Hour Cooking Class", "desc": "Cook: Vietnamese Salad, Chicken Cao Lau, Mushroom Banh Xeo, Charcoal Grilled Eggplant, Caramel Banana."}, {"time": "12:15 / 17:30", "title": "Lunch/Dinner", "desc": "Enjoy your cooked meal."}, {"time": "13:00 / 18:00", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Transport (car/motorcycle)"}, {"ok": true, "text": "Guide & Entrance tickets"}, {"ok": true, "text": "Lunch & cooking class"}], "meta": [["⏱", "4.5 hours"], ["📍", "Kim Bong"], ["🍽️", "Cooking"]], "notes": "Min 2 guests."},
+    't24': {"title": "My Son Sunrise Daily Tour", "badge": "🌅 Sunrise", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Beat the crowds and the heat by visiting the My Son Sanctuary at dawn. Explore the 4th-century Hindu temples and enjoy a local breakfast.", "highlights": ["🌅 Best Light for Photos", "🏛️ UNESCO World Heritage", "⛩️ Ancient Cham Temples", "🍜 Breakfast Mi Quang", "🌄 Morning Quiet", "📸 Photography"], "itinerary": [{"time": "05:00-05:20", "title": "Hotel Pickup", "desc": "Pick up at Hoi An hotel."}, {"time": "06:00", "title": "Arrive at My Son", "desc": "Take electric buggy to the ruins."}, {"time": "06:15", "title": "My Son Exploration", "desc": "2-hour guided walking tour among the 4th-13th century Cham pa Hindu temple ruins in the cool morning air."}, {"time": "08:30", "title": "Local Breakfast", "desc": "Enjoy famous Mi Quang noodles for breakfast at a local restaurant."}, {"time": "09:00", "title": "Return", "desc": "Drive back to Hoi An."}, {"time": "10:00", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup & drop-off"}, {"ok": true, "text": "Electric buggy inside My Son"}, {"ok": true, "text": "English guide"}, {"ok": true, "text": "My Son entrance ticket"}, {"ok": true, "text": "Breakfast & water"}], "meta": [["⏱", "5:30–10:00"], ["📍", "My Son"], ["🌅", "Sunrise"]], "notes": "Min 2, Max 10 guests."},
+    't25': {"title": "My Son Sanctuary Discovery", "badge": "🏛️ History", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Journey to the spiritual heart of the Champa Kingdom. Explore ancient Hindu temples nestled in a lush valley with an expert guide.", "highlights": ["🏛️ UNESCO Heritage", "🎭 Cham Dance", "⛩️ Hindu Temples", "🥞 Rice Paper Making", "🚣 River Boat Return", "🌾 Countryside Views"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up at your hotel."}, {"time": "09:00", "title": "My Son Sanctuary", "desc": "Explore the majestic Champa Kingdom ruins and enjoy a traditional Cham Apsara dance performance."}, {"time": "11:15", "title": "Rice Paper Experience", "desc": "Learn to make rice paper at a local home."}, {"time": "11:45", "title": "Lunch", "desc": "Enjoy lunch at a local restaurant."}, {"time": "12:30", "title": "Thu Bon River Cruise", "desc": "Return to Hoi An via a scenic wooden boat cruise on the Thu Bon River."}, {"time": "13:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup/drop-off"}, {"ok": true, "text": "Buggy & wooden boat"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Entrance tickets"}, {"ok": true, "text": "Lunch & water"}], "meta": [["⏱", "7:30–13:30"], ["📍", "Duy Xuyen"], ["🏛️", "Classic"]], "notes": "Min 1, Max 12 guests."},
+    't26': {"title": "My Son Sunset Tour", "badge": "🌇 Sunset", "region": "hoian", "image": "hoian_signature.png", "desc_card": "Visit My Son Sanctuary in the afternoon, catch the traditional Cham dance, and enjoy a breathtaking sunset boat cruise back to Hoi An.", "highlights": ["🌅 Sunset Views", "🎭 Cham Dance", "🏛️ Ancient Ruins", "🚣 River Cruise", "🥖 Banh Mi", "📸 Photos"], "itinerary": [{"time": "13:00", "title": "Hotel Pickup", "desc": "Pick up from hotel."}, {"time": "15:00", "title": "Explore My Son", "desc": "2-hour tour of the sanctuary's ruins, landscapes, and watch the traditional Cham performance."}, {"time": "17:00", "title": "Thu Bon River Cruise", "desc": "Board a wooden boat and cruise back toward Hoi An while enjoying the sunset."}, {"time": "18:00", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Hotel pickup/drop-off"}, {"ok": true, "text": "Buggy & wooden boat"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Entrance ticket"}, {"ok": true, "text": "Vietnamese Banh Mi"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "13:00–18:00"], ["📍", "My Son"], ["🌅", "Sunset"]], "notes": "Min 1, Max 12 guests."},
+    't27': {"title": "Ba Na Hills & Golden Bridge", "badge": "✨ Must See", "region": "danang", "image": "danang_signature_1772543844660.png", "desc_card": "Ride the world's longest cable car to the iconic 'Hands of God' bridge. Explore the French Village and enjoy panoramic mountain views.", "highlights": ["🚠 Cable Car", "🌉 Golden Bridge", "🇫🇷 French Village", "🎠 Fantasy Park", "🍽️ Buffet Lunch", "🌸 French Gardens"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Depart from hotel in Hoi An/Da Nang."}, {"time": "09:00", "title": "Cable Car", "desc": "Dream Stream Cable Car — longest single-track cable car."}, {"time": "10:00", "title": "Golden Bridge & Gardens", "desc": "Golden Bridge, Le Jardin D'amour, Linh Ung Pagoda."}, {"time": "11:30", "title": "French Village", "desc": "Cable car #2 to the French Village, Campanile, Shrine, Carnival show."}, {"time": "12:30", "title": "Buffet Lunch", "desc": "Lava Train to Moon Castle, enjoy Buffet Lunch."}, {"time": "14:00", "title": "Fantasy Park", "desc": "Free time for Fantasy Park indoor rides (90+ games)."}, {"time": "15:00", "title": "Descend", "desc": "Take cable car down."}, {"time": "16:45", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Hotel pickup (Hoi An/Da Nang)"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Cable car round-trip"}, {"ok": true, "text": "Fantasy Park, Golden Bridge, Le Jardin, Funicular tickets"}, {"ok": true, "text": "Buffet Lunch"}], "meta": [["⏱", "7:30–17:30"], ["📍", "Ba Na Hills"], ["🚠", "Full Day"]], "notes": ""},
+    't28': {"title": "Afternoon Ba Na Hills & Dragon Bridge at Night", "badge": "🌌 Night Tour", "region": "danang", "image": "hoian_signature.png", "desc_card": "An epic combo: Ba Na Hills Golden Bridge in the afternoon, followed by dinner in Da Nang and the famous Dragon Bridge fire-breathing show at night.", "highlights": ["🌉 Golden Bridge sunset", "🚠 Cable Car", "🇫🇷 French Village", "🐉 Dragon Bridge Show", "🔥 Fire & Water Jets", "🍽️ Dinner"], "itinerary": [{"time": "12:30", "title": "Hotel Pickup", "desc": "Pick up at hotel."}, {"time": "14:00", "title": "Ba Na Hills", "desc": "Cable car ascent, Golden Bridge, Le Jardin D'amour, French Village."}, {"time": "15:30", "title": "Moon Kingdom", "desc": "Lava train to Helios Waterfall, Time Gate, Moon Kingdom, and Fantasy Park."}, {"time": "17:00", "title": "Descend", "desc": "Take cable car back down."}, {"time": "18:45", "title": "Local Dinner", "desc": "Dinner at a local restaurant in Da Nang."}, {"time": "19:15", "title": "Dragon Bridge", "desc": "Watch the famous Da Nang Dragon Bridge breath fire and water (Fri, Sat, Sun)."}, {"time": "20:00", "title": "Hotel Drop-off", "desc": "Return to Hoi An/Da Nang hotel."}], "included": [{"ok": true, "text": "Transport 2-ways"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Cable car tickets"}, {"ok": true, "text": "Dinner"}, {"ok": true, "text": "All Ba Na entrance fees"}], "meta": [["⏱", "12:30–20:00"], ["📍", "Da Nang"], ["🐉", "Night Tour"]], "notes": "Dragon bridge fire show typically acts on weekends."},
+    't29': {"title": "Da Nang City Sites & Ba Na Hills (Full Day)", "badge": "🚐 Mega Combo", "region": "danang", "image": "hoian_signature.png", "desc_card": "The ultimate Da Nang tour: Marble Mountains, Son Tra Peninsula (Monkey Mountain), Ba Na Hills Golden Bridge, and Dragon Bridge at night.", "highlights": ["🐵 Monkey Mountain", "⛰️ Marble Mountains", "🌉 Golden Bridge", "🎟️ Fantasy Park", "🐉 Dragon Bridge", "🍜 2 Meals"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up at hotel."}, {"time": "08:30", "title": "Monkey Mountain", "desc": "Visit Linh Ung Pagoda and the giant 67m Lady Buddha statue."}, {"time": "09:30", "title": "Marble Mountains", "desc": "Explore Huyen Khong Cave, Tang Chon Cave, and Am Phu Cave."}, {"time": "11:45", "title": "Lunch", "desc": "Mi Quang light lunch at a restaurant."}, {"time": "13:00", "title": "Ba Na Hills", "desc": "Cable car, Golden Bridge, French Village, Fantasy Park."}, {"time": "17:00", "title": "Descend", "desc": "Take cable car back down."}, {"time": "18:30", "title": "Dinner", "desc": "Dinner in Da Nang city."}, {"time": "19:00", "title": "Dragon Bridge", "desc": "Watch the Dragon Bridge display."}, {"time": "20:00", "title": "Hotel Drop-off", "desc": "Return to Hoi An."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Cable car, Marble Mt & Am Phu tickets"}, {"ok": true, "text": "Lunch & Dinner"}], "meta": [["⏱", "7:30–20:00"], ["📍", "Da Nang"], ["⛰️", "Mountains"]], "notes": ""},
+    't30': {"title": "Monkey Mountain, Marble Mountains & Hoi An Night", "badge": "✨ Highlights", "region": "danang", "image": "hoian_signature.png", "desc_card": "Afternoon trip from Da Nang to Son Tra Peninsula, Marble Mountains caves, then head to Hoi An Ancient Town for dinner and a flower lantern boat ride.", "highlights": ["🐵 Monkey Mountain", "⛰️ Marble Mountains", "🏮 Hoi An Old Town", "🛍️ Night Market", "🍜 Local Dinner", "🌸 Lantern Boat"], "itinerary": [{"time": "13:30", "title": "Hotel Pickup", "desc": "Pick up at hotel."}, {"time": "14:30", "title": "Monkey Mountain", "desc": "Visit Linh Ung Pagoda, Lady Buddha statue."}, {"time": "15:30", "title": "Marble Mountains", "desc": "Explore Tang Chon Cave, Non Nuoc Stone Carving Village."}, {"time": "17:00", "title": "Hoi An Ancient Town", "desc": "Japanese Bridge, Ancient House, Fukian Assembly Hall."}, {"time": "18:00", "title": "Hoi An Night Market", "desc": "Stroll Nguyen Hoang night market, lantern street, Hoai River."}, {"time": "18:30", "title": "Dinner", "desc": "Enjoy Hoi An specialty dinner."}, {"time": "20:00", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Entrance tickets"}, {"ok": true, "text": "Dinner"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "13:30–21:00"], ["📍", "Da Nang -> Hoi An"], ["🏮", "Night"]], "notes": ""},
+    't31': {"title": "Marble Mountains, Hoi An City & River Boat", "badge": "🛶 Combo", "region": "danang", "image": "hoian_signature.png", "desc_card": "Explore the mystical cave temples of Marble Mountains before heading to Hoi An's glowing old town for dinner and a flower lantern release.", "highlights": ["⛰️ Marble Caves", "🗿 Stone Carving Village", "🏮 Ancient Town", "🍜 Hoi An Dinner", "🚣 River Boat", "🌸 Flower Lantern"], "itinerary": [{"time": "13:30", "title": "Hotel Pickup", "desc": "Pick up in Da Nang."}, {"time": "14:00", "title": "Marble Mountains", "desc": "Explore Huyen Khong/Tang Chon caves and stone carving village."}, {"time": "15:00", "title": "Hoi An Ancient Town", "desc": "Fukian Assembly Hall, Phung Hung House, Tan Ky, Japanese Bridge."}, {"time": "17:00", "title": "Dinner", "desc": "Taste Hoi An specialty dishes."}, {"time": "18:00", "title": "Boat & Flower Lantern", "desc": "Take a boat ride on Hoai River and release a lantern."}, {"time": "19:30", "title": "Hotel Drop-off", "desc": "Return to Da Nang hotel."}], "included": [{"ok": true, "text": "Hotel pickup Da Nang"}, {"ok": true, "text": "Guide & Tickets"}, {"ok": true, "text": "Hoi An Dinner"}, {"ok": true, "text": "River boat & lantern"}], "meta": [["⏱", "13:30–19:00"], ["📍", "Danang -> Hoian"], ["🏮", "Romance"]], "notes": ""},
+    't32': {"title": "Monkey Mountain, Marble Mt, Hell Cave & River Cruise", "badge": "🚢 Cruise", "region": "danang", "image": "hoian_signature.png", "desc_card": "Visit the highlights of Da Nang: Lady Buddha, Marble Mountains, the fascinating 'Hell Cave' (Am Phu), ending with a Han River night cruise.", "highlights": ["🐵 Monkey Mountain", "⛰️ Hell Cave", "🚢 Han River Cruise", "🌆 Da Nang Night Skyline", "🐉 Dragon Bridge", "🍽️ Dinner"], "itinerary": [{"time": "14:00", "title": "Hotel Pickup", "desc": "Pick up in Da Nang."}, {"time": "14:40", "title": "Monkey Mountain", "desc": "Visit Linh Ung Pagoda & Lady Buddha."}, {"time": "15:40", "title": "Marble Mountains", "desc": "Explore the challenging 'Hell Cave' (Am Phu Cave)."}, {"time": "17:30", "title": "Dinner", "desc": "Local restaurant in Da Nang."}, {"time": "19:00", "title": "Han River Cruise", "desc": "Enjoy a night cruise on the Han River, admire the illuminated bridges and skyline."}, {"time": "21:00", "title": "Dragon Bridge", "desc": "Watch the Dragon Bridge breath fire (weekends only)."}, {"time": "21:30", "title": "Hotel Drop-off", "desc": "Return to hotel."}], "included": [{"ok": true, "text": "Transport (100km)"}, {"ok": true, "text": "Marble Mt & Hell Cave tickets"}, {"ok": true, "text": "Han River Cruise ticket"}, {"ok": true, "text": "Dinner + Drinks"}, {"ok": true, "text": "Guide"}], "meta": [["⏱", "14:00–21:15"], ["📍", "Da Nang"], ["🚢", "Night Skyline"]], "notes": ""},
+    't33': {"title": "Monkey Mountain, Marble Mt & My Son Sanctuary", "badge": "🏺 Heritage", "region": "danang", "image": "hoian_signature.png", "desc_card": "A full-day journey spanning Da Nang's natural landmarks and the ancient Champa ruins of My Son, plus a local rice paper making class.", "highlights": ["🐵 Monkey Mountain", "⛰️ Marble Caves", "🏛️ My Son UNESCO", "💃 Apsara Dance", "🥞 Rice Paper Making", "🍽️ 2 Meals included"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up in Hoi An/Da Nang."}, {"time": "08:30", "title": "Monkey Mountain", "desc": "Linh Ung Pagoda."}, {"time": "09:30", "title": "Marble Mountains", "desc": "Explore Huyen Khong, Tang Chon, and Hell Cave."}, {"time": "12:00", "title": "Lunch", "desc": "Lunch at a restaurant."}, {"time": "13:00", "title": "Drive to My Son", "desc": "Travel to My Son Sanctuary."}, {"time": "14:45", "title": "My Son Ruins", "desc": "2-hour tour of Cham culture, Apsara dance performance."}, {"time": "17:00", "title": "Rice Paper Craft", "desc": "Learn to make rice paper at a local home."}, {"time": "17:30", "title": "Dinner", "desc": "Dinner cooked by local family."}, {"time": "18:45", "title": "Hotel Drop-off", "desc": "Return to Da Nang/Hoi An."}], "included": [{"ok": true, "text": "Transport (190km)"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "All entrance tickets"}, {"ok": true, "text": "Lunch & Dinner"}, {"ok": true, "text": "Rice paper class"}], "meta": [["⏱", "7:30–18:00"], ["📍", "Da Nang & Duy Xuyen"], ["🏛️", "Full Day"]], "notes": ""},
+    't34': {"title": "Marble Mountains, Monkey Mt & Hell Cave (Morning)", "badge": "⛰️ Core", "region": "danang", "image": "hoian_signature.png", "desc_card": "A half-day morning tour covering Da Nang's top three mystical sites: Lady Buddha, Marble Mountains summit, and the sprawling Hell Cave.", "highlights": ["🐵 Lady Buddha 67m", "⛰️ Marble Summit", "🕳️ Hell Cave (Am Phu)", "🍜 Mi Quang Lunch", "📸 Photos", "🏃 Active Trip"], "itinerary": [{"time": "07:30", "title": "Hotel Pickup", "desc": "Pick up in Da Nang/Hoi An."}, {"time": "08:30", "title": "Monkey Mountain", "desc": "Linh Ung Pagoda and sweeping ocean views."}, {"time": "09:30", "title": "Marble Mountains", "desc": "Mountain climbing (optional elevator/cable car). Visit Huyen Khong & Tang Chon caves."}, {"time": "10:30", "title": "Hell Cave", "desc": "Explore Am Phu Cave with its depictions of the afterlife."}, {"time": "11:45", "title": "Lunch", "desc": "Enjoy Mi Quang local noodles."}, {"time": "13:00", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "Guide"}, {"ok": true, "text": "Entrance tickets"}, {"ok": true, "text": "Lunch (Mi Quang)"}], "meta": [["⏱", "7:30–13:00"], ["📍", "Da Nang"], ["⛰️", "Morning"]], "notes": ""},
+    't35': {"title": "Marble Mountains, Monkey Mt & Hell Cave (Sunset)", "badge": "🌇 Magic", "region": "danang", "image": "danang_signature_1772543844660.png", "desc_card": "The afternoon version of Da Nang's core tour — witness the golden sunset light filtering down through the caves of Marble Mountains.", "highlights": ["🌅 Golden Sunset Views", "🐵 Monkey Mountain", "🕳️ Hell Cave", "⛰️ Mountain Echoes", "⛩️ Pagodas", "📸 Great Light"], "itinerary": [{"time": "14:00", "title": "Hotel Pickup", "desc": "Pick up from your Da Nang hotel."}, {"time": "14:40", "title": "Monkey Mountain", "desc": "Visit Linh Ung Pagoda under beautiful afternoon light."}, {"time": "15:40", "title": "Marble Mountains", "desc": "Explore caves and panoramic viewpoints."}, {"time": "16:40", "title": "Hell Cave", "desc": "Descend into Am Phu Cave."}, {"time": "17:45", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Transport (90km)"}, {"ok": true, "text": "Marble Mt & Am Phu tickets"}, {"ok": true, "text": "English Guide"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "14:00–18:15"], ["📍", "Da Nang"], ["🌄", "Sunset"]], "notes": ""},
+    't36': {"title": "Hue Imperial City Tour via Hai Van Pass", "badge": "👑 Royal", "region": "hue", "image": "hue_signature_1772543822350.png", "desc_card": "A majestic full-day journey to the ancient capital. Cross the stunning Hai Van Pass, visit the royal Khai Dinh Tomb, the grand Imperial Citadel, and Thien Mu Pagoda.", "highlights": ["⛰️ Hai Van Pass", "👑 Imperial Citadel", "🏺 Khai Dinh Tomb", "⛩️ Thien Mu Pagoda", "🌊 Lap An Lagoon", "🍽️ Royal Cuisine Lunch"], "itinerary": [{"time": "07:00", "title": "Hotel Pickup", "desc": "Pick up in Hoi An (7:00) or Da Nang (8:00)."}, {"time": "09:00", "title": "Hai Van Pass & Lang Co", "desc": "Drive over Hai Van Pass for epic views. Photo stop at Lap An Lagoon."}, {"time": "11:00", "title": "Khai Dinh Tomb", "desc": "Visit the spectacular, mosaic-filled mausoleum of Emperor Khai Dinh."}, {"time": "12:30", "title": "Lunch", "desc": "Enjoy Hue specialty cuisine at a local restaurant."}, {"time": "13:30", "title": "Imperial Citadel", "desc": "Explore the vast walled Hue Imperial City (Dai Noi)."}, {"time": "15:00", "title": "Thien Mu Pagoda", "desc": "Visit the oldest and most iconic pagoda in Hue on the Perfume River."}, {"time": "16:00", "title": "Return Journey", "desc": "Drive back to Da Nang (18:00) / Hoi An (19:00)."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "All Entrance tickets (~$25 value)"}, {"ok": true, "text": "Hue Specialty Lunch"}, {"ok": true, "text": "Guide"}], "meta": [["⏱", "7:00–19:00"], ["📍", "Hue City"], ["👑", "Full Day"]], "notes": ""},
+    't37': {"title": "The Ultimate Full Day: Danang + Hoi An + Forests", "badge": "💎 Mega", "region": "danang", "image": "hoian_signature.png", "desc_card": "Monkey Mtn, Marble Mountains, Hell Cave, Cam Thanh Coconut Forest, Hoi An Ancient Town walking, and Lantern Boat — literally everything in one day!", "highlights": ["⛰️ Marble Mountains", "🐵 Monkey Mountain", "🛶 Basket Boat Ride", "🏮 Hoi An Ancient Town", "🌸 Lantern Boat Ride", "🍽️ Local Meals"], "itinerary": [{"time": "08:00", "title": "Hotel Pickup", "desc": "Depart for Da Nang landmarks."}, {"time": "09:00", "title": "Monkey Mountain", "desc": "Linh Ung Pagoda."}, {"time": "10:00", "title": "Marble Mountains", "desc": "Caves and Hell Cave (Am Phu)."}, {"time": "12:00", "title": "Lunch", "desc": "Enjoy lunch in Da Nang or Hoi An."}, {"time": "14:00", "title": "Cam Thanh Village", "desc": "Basket boat ride in the water coconut forest."}, {"time": "16:00", "title": "Hoi An Old Town", "desc": "Walking tour of ancient sites."}, {"time": "18:00", "title": "Dinner & River", "desc": "Dinner followed by lantern boat ride on Hoai River."}, {"time": "20:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "Transport"}, {"ok": true, "text": "All Entrance tickets"}, {"ok": true, "text": "Basket boat & Lantern boat"}, {"ok": true, "text": "Guide & Meals"}], "meta": [["⏱", "8:00–20:30"], ["📍", "Multiple"], ["💥", "Action Packed"]], "notes": ""},
+    't38': {"title": "Bay Mau Coconut Forest: Basic Tour", "badge": "🛶 Basic", "region": "hoian", "image": "hoian_signature.png", "desc_card": "A simple and budget-friendly basket boat ride through the Bay Mau coconut forest. Ride on the water and enjoy the greenery.", "highlights": ["🛶 Basket Boat", "🌿 Eco Forest", "💸 Budget Friendly", "📸 Photos"], "itinerary": [{"time": "Flexible", "title": "Arrival", "desc": "Check-in at the Bay Mau Coconut Forest dock."}, {"time": "+15m", "title": "Basket Boat Ride", "desc": "Enjoy a peaceful ride under the canopy of water coconuts."}, {"time": "+1h 15m", "title": "End of Ride", "desc": "Return to the pier."}], "included": [{"ok": true, "text": "Basket boat ticket"}, {"ok": true, "text": "Local boatman"}], "meta": [["⏱", "1 hour"], ["📍", "Cam Thanh"], ["🛶", "Ride Only"]], "notes": "Transport to the dock not included."},
+    't39': {"title": "Bay Mau Coconut Forest: Experience + Spinning", "badge": "🎡 Fun", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The classic Bay Mau experience featuring the thrilling basket boat spinning dance, local crab catching, and fishing net demonstrations.", "highlights": ["🛶 Basket Boat", "🎡 Boat Spinning Show", "🦀 Crab Catching", "🎣 Net Casting", "🎶 Music"], "itinerary": [{"time": "Flexible", "title": "Arrival", "desc": "Welcome at Bay Mau Coconut Forest."}, {"time": "+15m", "title": "Explore Forest", "desc": "Paddle deep into the water coconut channels."}, {"time": "+45m", "title": "Spinning & Fishing", "desc": "Watch the famous boat spinning, participate in crab catching and net casting."}, {"time": "+1h 30m", "title": "End", "desc": "Return to shore."}], "included": [{"ok": true, "text": "Basket boat ticket"}, {"ok": true, "text": "Spinning experience"}, {"ok": true, "text": "Fishing tools"}], "meta": [["⏱", "1.5 hours"], ["📍", "Cam Thanh"], ["🎡", "Spinning"]], "notes": "Transport to the dock not included."},
+    't40': {"title": "Bay Mau Coconut Forest: Full Package & Dining", "badge": "🍽️ Full", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The premium Bay Mau package: hotel pickup, the full spinning basket boat and crab catching experience, followed by a delicious local meal at a riverside restaurant.", "highlights": ["🚐 Transport Included", "🛶 Basket Boat Ride", "🎡 Spinning Show", "🦀 Crab Catching", "🍽️ Riverside Meal", "📸 Photos"], "itinerary": [{"time": "09:00 / 14:00", "title": "Hotel Pickup", "desc": "Pick up by car from Hoi An hotel."}, {"time": "09:30 / 14:30", "title": "Basket Boat Experience", "desc": "Spinning boats, fishing nets, and crab catching in the coconut forest."}, {"time": "11:00 / 16:00", "title": "Riverside Lunch/Dinner", "desc": "Enjoy an authentic local meal by the river."}, {"time": "12:30 / 17:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "2-way Transport"}, {"ok": true, "text": "Basket boat & activities"}, {"ok": true, "text": "Full meal"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "3.5 hours"], ["📍", "Cam Thanh"], ["🍽️", "Dining"]], "notes": ""},
   };
 
   // ===== OPEN TOUR MODAL =====
@@ -2174,17 +2732,13 @@
 
   // ===== FILTER RECOMMENDATIONS =====
   function filterRec(cat, btn) {
-    // Update active tab
     document.querySelectorAll('.rec-tab').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
-
-    // Show/hide cards with animation
     const cards = document.querySelectorAll('#rec-list .rec-card');
     cards.forEach((card, i) => {
       const match = (cat === 'all') || (card.dataset.cat === cat);
       if (match) {
         card.classList.remove('hidden');
-        // Re-trigger fade animation with stagger
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         setTimeout(() => {
@@ -2196,6 +2750,54 @@
         card.classList.add('hidden');
       }
     });
+  }
+
+  // ===== FILTER TOURS BY REGION =====
+  function filterTour(region, btn) {
+    // Animate tab switch
+    document.querySelectorAll('#tour-view .rec-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const container = document.getElementById('tour-list-container');
+    const cards = container.querySelectorAll('.tour-card');
+    
+    // Fade out container first
+    container.style.transition = 'opacity 0.2s ease';
+    container.style.opacity = '0';
+    
+    setTimeout(() => {
+      let visibleIndex = 0;
+      cards.forEach((card) => {
+        const match = (region === 'all') || (card.dataset.region === region);
+        if (match) {
+          card.classList.remove('hidden');
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(30px) scale(0.95)';
+          visibleIndex++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      
+      // Fade in container
+      container.style.opacity = '1';
+      
+      // Stagger animate each visible card
+      let delay = 0;
+      cards.forEach((card) => {
+        if (!card.classList.contains('hidden')) {
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.45s cubic-bezier(0.4,0,0.2,1), transform 0.45s cubic-bezier(0.4,0,0.2,1)';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, delay);
+          delay += 60;
+        }
+      });
+      
+      // Scroll to top of tour list
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
   }
   </script>
 </body>

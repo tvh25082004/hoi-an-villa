@@ -1,0 +1,42 @@
+﻿[OK] tour_cooking_class.jpg (153KB)
+[OK] tour_street_food.jpg (76KB)
+[OK] tour_buffalo_cycling.jpg (52KB)
+[OK] tour_basket_boat_coconut.jpg (123KB)
+[OK] tour_basket_boat_food.jpg (99KB)
+[OK] tour_lantern_cooking.jpg (106KB)
+[OK] tour_cham_daily.jpg (65KB)
+[FAIL] tour_cham_handicraft.jpg: HTTP Error 404: Not Found
+[OK] tour_cham_homestay.jpg (78KB)
+[OK] tour_cham_snorkeling.jpg (111KB)
+[OK] tour_cham_trydive.jpg (21KB)
+[OK] tour_cham_fundive.jpg (56KB)
+[OK] tour_cham_walkingunder.jpg (67KB)
+[OK] tour_camthanh_eco.jpg (123KB)
+[OK] tour_camthanh_cooking.jpg (153KB)
+[OK] tour_hoian_city_boat.jpg (106KB)
+[OK] tour_hoian_lantern_night.jpg (106KB)
+[OK] tour_bicycle_camthanh.jpg (52KB)
+[OK] tour_traque_cooking.jpg (153KB)
+[FAIL] tour_lantern_farming.jpg: HTTP Error 404: Not Found
+[OK] tour_cycling_buffalo.jpg (52KB)
+[FAIL] tour_tranhieu_kimbong.jpg: HTTP Error 404: Not Found
+[OK] tour_ricepaper_kimbong.jpg (153KB)
+[FAIL] tour_myson_sunrise.jpg: HTTP Error 404: Not Found
+[FAIL] tour_myson_luxury.jpg: HTTP Error 404: Not Found
+[FAIL] tour_myson_sunset.jpg: HTTP Error 404: Not Found
+[OK] tour_runggdua_basic.jpg (123KB)
+[OK] tour_runggdua_experience.jpg (99KB)
+[OK] tour_runggdua_allincl.jpg (99KB)
+[OK] tour_hue_citytour.jpg (83KB)
+[OK] tour_bana_fullday.jpg (52KB)
+[OK] tour_bana_dragon.jpg (142KB)
+[OK] tour_danang_bana_full.jpg (52KB)
+[OK] tour_nkhe_nhs_hoian.jpg (97KB)
+[OK] tour_nhs_hoian_lantern.jpg (106KB)
+[OK] tour_nkhe_nhs_cruise.jpg (142KB)
+[FAIL] tour_nkhe_nhs_myson.jpg: HTTP Error 404: Not Found
+[OK] tour_nhs_morning.jpg (97KB)
+[OK] tour_nhs_sunset.jpg (97KB)
+[OK] tour_monkey_full.jpg (52KB)
+
+Done: 33 success, 7 failed
