@@ -104,7 +104,14 @@ const I18N_MAP = {
     tour_tab_all: '🌏 ALL',
     tour_tab_hoian: '🏮 Hoi An',
     tour_tab_hue: '🏯 Hue',
-    tour_tab_danang: '🌉 Da Nang'
+    tour_tab_danang: '🌉 Da Nang',
+    // tour modal labels
+    modal_highlights_title: '✨ Highlights',
+    modal_itinerary_title: '🗓️ Itinerary',
+    modal_included_title: "✅ What's Included",
+    modal_notes_title: '📋 Important Notes',
+    modal_book_zalo: '📲 Book via Zalo — +84 862 852 258',
+    modal_book_whatsapp: '💬 Chat via WhatsApp'
   },
   vi: {
     support_link: 'Hỗ Trợ Nhanh',
@@ -143,7 +150,14 @@ const I18N_MAP = {
     tour_tab_all: '🌏 Tất Cả',
     tour_tab_hoian: '🏮 Hội An',
     tour_tab_hue: '🏯 Huế',
-    tour_tab_danang: '🌉 Đà Nẵng'
+    tour_tab_danang: '🌉 Đà Nẵng',
+    // tour modal labels
+    modal_highlights_title: '✨ Điểm nổi bật',
+    modal_itinerary_title: '🗓️ Lịch trình chi tiết',
+    modal_included_title: '✅ Dịch vụ bao gồm',
+    modal_notes_title: '📋 Lưu ý quan trọng',
+    modal_book_zalo: '📲 Đặt tour qua Zalo — +84 862 852 258',
+    modal_book_whatsapp: '💬 Chat qua WhatsApp'
   }
 };
 
@@ -163,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // cache bilingual content for tour cards
   const tourCardState = [];
+  const tourCardStateById = {};
   const tourCards = document.querySelectorAll('#tour-list-container .tour-card');
   tourCards.forEach((card) => {
     const onclick = card.getAttribute('onclick') || '';
@@ -175,17 +190,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const titleEl = card.querySelector('.tour-info h3');
     const descEl = card.querySelector('.tour-info p');
     const metaEls = card.querySelectorAll('.tour-meta-item');
+    const badgeEl = card.querySelector('.tour-badge');
 
     const viTitle = titleEl ? titleEl.textContent.trim() : '';
     const viDesc = descEl ? descEl.textContent.trim() : '';
     const viMeta = Array.from(metaEls).map(el => el.textContent.trim());
+    const viBadge = badgeEl ? badgeEl.textContent.trim() : '';
 
     const enTitle = tour.title || viTitle;
     const enDesc = tour.desc_card || tour.description || viDesc;
     const enMeta = (tour.meta || []).map(pair => Array.isArray(pair) ? (pair[0] + ' ' + pair[1]) : String(pair));
+    const enBadge = tour.badge || viBadge;
 
-    tourCardState.push({ titleEl, descEl, metaEls, viTitle, viDesc, viMeta, enTitle, enDesc, enMeta });
+    const state = { titleEl, descEl, metaEls, badgeEl, viTitle, viDesc, viMeta, viBadge, enTitle, enDesc, enMeta, enBadge };
+    tourCardState.push(state);
+    tourCardStateById[tourId] = {
+      viTitle,
+      viDesc,
+      viMeta,
+      viBadge,
+      enTitle,
+      enDesc,
+      enMeta,
+      enBadge
+    };
   });
+
+  // expose for modal usage
+  window.TOUR_CARD_STATE_BY_ID = tourCardStateById;
 
   function setTourCardsLang(lang) {
     tourCardState.forEach((state) => {
@@ -196,12 +228,18 @@ document.addEventListener('DOMContentLoaded', function () {
         state.metaEls.forEach((el, idx) => {
           if (state.viMeta[idx]) el.textContent = state.viMeta[idx];
         });
+        if (state.badgeEl) {
+          state.badgeEl.textContent = state.viBadge || state.enBadge || state.badgeEl.textContent;
+        }
       } else {
         state.titleEl.textContent = state.enTitle;
         state.descEl.textContent = state.enDesc;
         state.metaEls.forEach((el, idx) => {
           if (state.enMeta[idx]) el.textContent = state.enMeta[idx];
         });
+        if (state.badgeEl) {
+          state.badgeEl.textContent = state.enBadge || state.viBadge || state.badgeEl.textContent;
+        }
       }
     });
   }

@@ -2666,6 +2666,15 @@
     const tour = TOUR_DATA[tourId];
     if (!tour) return;
 
+    const lang = document.documentElement.getAttribute('data-lang') || 'en';
+    const dict = (typeof I18N_MAP !== 'undefined' && I18N_MAP[lang]) ? I18N_MAP[lang] : I18N_MAP.en;
+    const cardStateMap = window.TOUR_CARD_STATE_BY_ID || {};
+    const cardState = cardStateMap[tourId] || null;
+
+    const displayTitle = (lang === 'vi' && cardState && cardState.viTitle) ? cardState.viTitle : (tour.title || (cardState ? cardState.enTitle : ''));
+    const displayDesc = (lang === 'vi' && cardState && cardState.viDesc) ? cardState.viDesc : (tour.description || tour.desc_card || (cardState ? cardState.enDesc : ''));
+    const displayBadge = (lang === 'vi' && cardState && cardState.viBadge) ? cardState.viBadge : (tour.badge || (cardState ? cardState.enBadge : ''));
+
     const overlay = document.getElementById('tour-modal-overlay');
     const content = document.getElementById('tour-modal-content');
 
@@ -2696,33 +2705,33 @@
 
     content.innerHTML = `
       <div class="tour-modal-hero">
-        <img src="${tour.image}" alt="${tour.title}">
+        <img src="${tour.image}" alt="${displayTitle}">
         <button class="tour-modal-close" onclick="closeTourModal(null, true)">✕</button>
         <div class="tour-modal-hero-overlay">
-          <span class="tour-modal-badge">${tour.badge}</span>
-          <h2>${tour.title}</h2>
+          <span class="tour-modal-badge">${displayBadge}</span>
+          <h2>${displayTitle}</h2>
         </div>
       </div>
       <div class="tour-modal-body">
-        <p class="tour-modal-desc">${tour.description || tour.desc_card || ''}</p>
+        <p class="tour-modal-desc">${displayDesc}</p>
 
-        <div class="modal-section-title">✨ Highlights</div>
+        <div class="modal-section-title">${dict.modal_highlights_title}</div>
         <div class="highlights-row">${highlightsHTML}</div>
 
-        <div class="modal-section-title">🗓️ Itinerary</div>
+        <div class="modal-section-title">${dict.modal_itinerary_title}</div>
         <div class="itinerary-list">${itineraryHTML}</div>
 
-        <div class="modal-section-title">✅ What's Included</div>
+        <div class="modal-section-title">${dict.modal_included_title}</div>
         <div class="included-grid">${includedHTML}</div>
 
-        <div class="modal-section-title">📋 Important Notes</div>
+        <div class="modal-section-title">${dict.modal_notes_title}</div>
         <div class="tour-notes"><p>${tour.notes}</p></div>
 
         <a href="https://zalo.me/84862852258" target="_blank" class="tour-modal-book-btn">
-          📲 Book via Zalo — +84 862 852 258
+          ${dict.modal_book_zalo}
         </a>
         <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="tour-modal-book-btn">
-          💬 Chat via WhatsApp
+          ${dict.modal_book_whatsapp}
         </a>
       </div>
     `;
