@@ -33,4 +33,3 @@ jobs:
 
       - name: Deploy prebuilt artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
-
