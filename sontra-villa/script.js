@@ -29,7 +29,11 @@ function toggleView(view) {
   } else if (view === 'tour') {
     supportBtn.style.display = 'none';
     if (langToggle) langToggle.style.display = 'none';
-    if (tourView) tourView.style.display = 'block';
+    if (tourView) {
+      tourView.style.display = 'block';
+      // Re-verify auto-slides when opening tour view
+      if (typeof initAutoSlides === 'function') initAutoSlides();
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     mainView.style.display = 'block';
@@ -37,6 +41,22 @@ function toggleView(view) {
     if (langToggle) langToggle.style.display = 'flex';
   }
 }
+
+// ===== BACK TO TOP FUNCTIONALITY =====
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', function() {
+  const btn = document.getElementById('back-to-top');
+  if (btn) {
+    if (window.pageYOffset > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+});
 
 function toggleWifi() {
   const panel = document.getElementById('wifi-details');
@@ -290,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gallery.setAttribute('data-idx', newIdx);
   }
   // Auto-slide functionality
-  var autoSlideInterval = 4000; // 4 seconds
+  var autoSlideInterval = 3000; // 3 seconds
   var galleryIntervals = {};
 
   function startAutoSlide(gallery) {
@@ -315,16 +335,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Initial start for all galleries
-  function initAutoSlides() {
+  window.initAutoSlides = function() {
     var galleries = document.querySelectorAll('.tour-gallery');
+    if (galleries.length === 0) return;
+    
     galleries.forEach(function(g) {
       if (!g.id) {
-          // Ensure every gallery has an ID for tracking the interval
           g.id = 'tg-' + Math.random().toString(36).substr(2, 9);
       }
-      startAutoSlide(g);
+      // Only start if not already running
+      if (!galleryIntervals[g.id]) {
+        startAutoSlide(g);
+      }
     });
-  }
+  };
 
   window.tgPrev = function(e, btn) {
     e.stopPropagation();
