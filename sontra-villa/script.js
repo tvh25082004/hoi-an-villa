@@ -289,23 +289,65 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     gallery.setAttribute('data-idx', newIdx);
   }
+  // Auto-slide functionality
+  var autoSlideInterval = 4000; // 4 seconds
+  var galleryIntervals = {};
+
+  function startAutoSlide(gallery) {
+    var id = gallery.id;
+    if (!id) return;
+    if (galleryIntervals[id]) clearInterval(galleryIntervals[id]);
+    
+    galleryIntervals[id] = setInterval(function() {
+      var s = getState(gallery);
+      if (s.slides.length > 1) {
+        goTo(gallery, s.idx + 1);
+      }
+    }, autoSlideInterval);
+  }
+
+  function stopAutoSlide(gallery) {
+    var id = gallery.id;
+    if (id && galleryIntervals[id]) {
+        clearInterval(galleryIntervals[id]);
+        delete galleryIntervals[id];
+    }
+  }
+
+  // Initial start for all galleries
+  function initAutoSlides() {
+    var galleries = document.querySelectorAll('.tour-gallery');
+    galleries.forEach(function(g) {
+      if (!g.id) {
+          // Ensure every gallery has an ID for tracking the interval
+          g.id = 'tg-' + Math.random().toString(36).substr(2, 9);
+      }
+      startAutoSlide(g);
+    });
+  }
+
   window.tgPrev = function(e, btn) {
     e.stopPropagation();
     var gallery = btn.closest('.tour-gallery');
     var s = getState(gallery);
     goTo(gallery, s.idx - 1);
+    // Restart timer on manual interaction
+    startAutoSlide(gallery);
   };
   window.tgNext = function(e, btn) {
     e.stopPropagation();
     var gallery = btn.closest('.tour-gallery');
     var s = getState(gallery);
     goTo(gallery, s.idx + 1);
+    // Restart timer on manual interaction
+    startAutoSlide(gallery);
   };
 
   // Touch/swipe support
   document.addEventListener('touchstart', function(e) {
     var gallery = e.target.closest('.tour-gallery');
     if (!gallery) return;
+    stopAutoSlide(gallery); // Stop auto-slide while swiping
     gallery._touchStartX = e.touches[0].clientX;
     gallery._touchStartY = e.touches[0].clientY;
     gallery._swiping = false;
@@ -334,5 +376,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     gallery._touchStartX = null;
     gallery._swiping = false;
+    startAutoSlide(gallery); // Resume auto-slide after swipe
   }, { passive: true });
+
+  // Start automation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAutoSlides);
+  } else {
+    initAutoSlides();
+  }
 })();
