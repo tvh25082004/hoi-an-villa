@@ -269,3 +269,70 @@ document.addEventListener('DOMContentLoaded', function () {
   // initial render: default English (also for tour cards)
   setLang('en');
 });
+
+// ===== Tour Gallery Slider =====
+(function() {
+  function getState(gallery) {
+    var track = gallery.querySelector('.tg-track');
+    var slides = track.querySelectorAll('.tg-slide');
+    var dots = gallery.querySelectorAll('.tg-dot');
+    var idx = parseInt(gallery.getAttribute('data-idx') || '0');
+    return { track, slides, dots, idx };
+  }
+  function goTo(gallery, newIdx) {
+    var s = getState(gallery);
+    var total = s.slides.length;
+    newIdx = ((newIdx % total) + total) % total;
+    s.track.style.transform = 'translateX(-' + (newIdx * 100) + '%)';
+    s.dots.forEach(function(d, i) {
+      d.classList.toggle('tg-active', i === newIdx);
+    });
+    gallery.setAttribute('data-idx', newIdx);
+  }
+  window.tgPrev = function(e, btn) {
+    e.stopPropagation();
+    var gallery = btn.closest('.tour-gallery');
+    var s = getState(gallery);
+    goTo(gallery, s.idx - 1);
+  };
+  window.tgNext = function(e, btn) {
+    e.stopPropagation();
+    var gallery = btn.closest('.tour-gallery');
+    var s = getState(gallery);
+    goTo(gallery, s.idx + 1);
+  };
+
+  // Touch/swipe support
+  document.addEventListener('touchstart', function(e) {
+    var gallery = e.target.closest('.tour-gallery');
+    if (!gallery) return;
+    gallery._touchStartX = e.touches[0].clientX;
+    gallery._touchStartY = e.touches[0].clientY;
+    gallery._swiping = false;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', function(e) {
+    var gallery = e.target.closest('.tour-gallery');
+    if (!gallery || gallery._touchStartX == null) return;
+    var dx = e.touches[0].clientX - gallery._touchStartX;
+    var dy = e.touches[0].clientY - gallery._touchStartY;
+    if (!gallery._swiping && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
+      gallery._swiping = true;
+    }
+    if (gallery._swiping) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  document.addEventListener('touchend', function(e) {
+    var gallery = e.target.closest('.tour-gallery');
+    if (!gallery || gallery._touchStartX == null) return;
+    var dx = e.changedTouches[0].clientX - gallery._touchStartX;
+    if (gallery._swiping && Math.abs(dx) > 40) {
+      var s = getState(gallery);
+      goTo(gallery, dx < 0 ? s.idx + 1 : s.idx - 1);
+    }
+    gallery._touchStartX = null;
+    gallery._swiping = false;
+  }, { passive: true });
+})();
