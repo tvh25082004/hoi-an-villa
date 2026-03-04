@@ -26,7 +26,6 @@ translations = {
     "Select a contact method below for assistance": "Vui vòng chọn phương thức hỗ trợ bạn đi theo bên dưới này",
     "Direct Call": "Gặp mặt nói chuyện gọi hỏi thẳng",
     "WhatsApp Chat": "Nói chuyện bên Whatsapp",
-    "KakaoTalk (Coming Soon)": "KakaoTalk Hàng Mới Điển ra ngay",
     "Local Highlights": "Sức hấp dẫn ở Địa Phương",
     "hand-picked spots for food, drinks": "Các địa điểm ăn ngọt và uống do thủ chong (cầm tay)",
     "80+ hand-picked spots for food, drinks &amp; vibes in Hoi An": "Có hơn khoảng 80+ địa điểm của đồ ăn , Các điểm đến ngọt thanh thán trên cho mình một sự thoải mát ở TP. Hội An",

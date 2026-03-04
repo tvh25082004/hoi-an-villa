@@ -114,7 +114,6 @@ const I18N_MAP = {
     support_call: 'Direct Call (+84 862 852 258)',
     support_zalo: 'Zalo (+84862852258)',
     support_whatsapp: 'WhatsApp Chat',
-    support_kakao: 'KakaoTalk (Coming Soon)',
     // recommendations view
     rec_title: '🌟 Local Highlights',
     rec_subtitle: '80+ hand-picked spots for food, drinks & vibes in Hoi An',
@@ -161,7 +160,6 @@ const I18N_MAP = {
     support_call: 'Gọi Trực Tiếp (+84 862 852 258)',
     support_zalo: 'Zalo (+84862852258)',
     support_whatsapp: 'Chat WhatsApp',
-    support_kakao: 'KakaoTalk (Sắp Có)',
     // recommendations view
     rec_title: '🌟 Gợi Ý Địa Phương',
     rec_subtitle: 'Hơn 80 địa điểm ăn uống, vui chơi được chọn lọc tại Hội An',
