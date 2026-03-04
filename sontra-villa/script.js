@@ -47,14 +47,21 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
   const btn = document.getElementById('back-to-top');
   if (btn) {
-    if (window.pageYOffset > 300) {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Scrolling UP and depth > 300
+    if (st < lastScrollTop && st > 300) {
       btn.classList.add('visible');
     } else {
+      // Scrolling DOWN or at top
       btn.classList.remove('visible');
     }
+    
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   }
 });
 

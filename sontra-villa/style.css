@@ -1290,24 +1290,23 @@ body {
 .back-to-top {
   position: fixed;
   bottom: 25px;
-  left: 20px; /* User specifically asked for left corner */
+  left: 50%;
+  margin-left: -220px; /* Aligns with the left edge of the 480px container */
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--surface);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  background: white; /* Use solid white for better visibility */
+  border: 1px solid rgba(4, 120, 87, 0.2);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .back-to-top.visible {
@@ -1335,12 +1334,14 @@ body {
   transform: translateY(-2px);
 }
 
-/* Adjust for small screens if needed */
+/* Adjust for small screens to stay inside viewport/frame */
 @media (max-width: 480px) {
   .back-to-top {
+    left: 20px;
+    margin-left: 0;
     bottom: 20px;
-    left: 15px;
     width: 44px;
     height: 44px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   }
 }
