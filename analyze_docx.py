@@ -1,94 +1,57 @@
-"""
-Analyze the docx file to understand the order of paragraphs and images as they appear in the document.
-This reads the XML directly to see when images appear relative to text.
-"""
-import zipfile
-import xml.etree.ElementTree as ET
-import re
-import os
+import sys, os
+sys.stdout.reconfigure(encoding='utf-8')
+from docx import Document
+from docx.oxml.ns import qn
+import lxml.etree as etree
 
-docx_path = r"c:\Users\TranHuy_WIN\Desktop\booking-vietnam\picture.docx"
+doc = Document(r'c:\Users\TranHuy_WIN\Desktop\booking-vietnam\DaNang_HoiAn_Experience_Guide.docx')
 
-ns = {
-    'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',
-    'wp': 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing',
-    'a': 'http://schemas.openxmlformats.org/drawingml/2006/main',
-    'pic': 'http://schemas.openxmlformats.org/drawingml/2006/picture',
-    'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships',
-    'v': 'urn:schemas-microsoft-com:vml',
-}
+# We need to walk through the document body elements in ORDER
+# to correlate text headings with images
 
-with zipfile.ZipFile(docx_path, 'r') as z:
-    # Read relationships to map rId to image filenames
-    with z.open('word/_rels/document.xml.rels') as f:
-        rels_tree = ET.parse(f)
-    rels_root = rels_tree.getroot()
+body = doc.element.body
+elem_index = 0
+img_counter = 0
+
+print("=== FULL DOCUMENT STRUCTURE ===\n")
+
+for elem in body:
+    tag = elem.tag.split('}')[-1] if '}' in elem.tag else elem.tag
     
-    rId_to_img = {}
-    for rel in rels_root:
-        target = rel.get('Target', '')
-        rId = rel.get('Id', '')
-        if 'media/' in target:
-            rId_to_img[rId] = os.path.basename(target)
-    
-    print("Relationships (rId -> image):")
-    for k, v in sorted(rId_to_img.items()):
-        print(f"  {k}: {v}")
-    
-    # Read main document
-    with z.open('word/document.xml') as f:
-        doc_tree = ET.parse(f)
-    doc_root = doc_tree.getroot()
-
-import os
-
-# Walk through body children and extract text + image references in order
-body = doc_root.find('.//w:body', ns)
-print("\n\n=== DOCUMENT STRUCTURE (in order) ===\n")
-
-item_index = 0
-for child in body:
-    tag = child.tag.split('}')[-1] if '}' in child.tag else child.tag
-    
-    if tag == 'p':  # paragraph
-        # Get text
-        texts = []
-        for t in child.findall('.//w:t', ns):
-            texts.append(t.text or '')
-        text = ''.join(texts).strip()
+    if tag == 'p':
+        # It's a paragraph - get text
+        text = ''.join(r.text or '' for r in elem.findall('.//' + qn('w:t')))
         
-        # Check for inline images (drawing or pict)
-        images = []
-        for blip in child.findall('.//a:blip', ns):
-            rEmbed = blip.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
-            if rEmbed and rEmbed in rId_to_img:
-                images.append(rId_to_img[rEmbed])
+        # Check for images inside this paragraph
+        blips = elem.findall('.//' + qn('a:blip'))
+        rIds = [b.get(qn('r:embed')) for b in blips if b.get(qn('r:embed'))]
         
-        # Also check for v:imagedata
-        for imgdata in child.findall('.//v:imagedata', ns):
-            rId = imgdata.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id')
-            if rId and rId in rId_to_img:
-                images.append(rId_to_img[rId])
+        if text.strip():
+            print(f"TEXT: {text.strip()[:100]}")
         
-        if text or images:
-            print(f"[Item {item_index}] TEXT: '{text}' | IMAGES: {images}")
-            item_index += 1
+        if rIds:
+            for rId in rIds:
+                img_counter += 1
+                # Get the actual part
+                part = doc.part.related_parts.get(rId)
+                filename = os.path.basename(part.partname) if part else rId
+                print(f"  → IMAGE #{img_counter}: rId={rId}, file={filename}")
     
-    elif tag == 'tbl':  # table
-        print(f"[Item {item_index}] TABLE:")
-        item_index += 1
-        for row_idx, row in enumerate(child.findall('.//w:tr', ns)):
-            for cell_idx, cell in enumerate(row.findall('.//w:tc', ns)):
-                texts = []
-                for t in cell.findall('.//w:t', ns):
-                    texts.append(t.text or '')
-                cell_text = ''.join(texts).strip()
-                
-                images = []
-                for blip in cell.findall('.//a:blip', ns):
-                    rEmbed = blip.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
-                    if rEmbed and rEmbed in rId_to_img:
-                        images.append(rId_to_img[rEmbed])
-                
-                if cell_text or images:
-                    print(f"  Row {row_idx}, Col {cell_idx}: text='{cell_text[:100]}' images={images}")
+    elif tag == 'tbl':
+        # Table - check cells for text and images
+        print(f"[TABLE]")
+        for row in elem.findall('.//' + qn('w:tr')):
+            for cell in row.findall('.//' + qn('w:tc')):
+                cell_text = ''.join(t.text or '' for t in cell.findall('.//' + qn('w:t')))
+                blips = cell.findall('.//' + qn('a:blip'))
+                rIds = [b.get(qn('r:embed')) for b in blips if b.get(qn('r:embed'))]
+                if cell_text.strip():
+                    print(f"  CELL TEXT: {cell_text.strip()[:80]}")
+                if rIds:
+                    for rId in rIds:
+                        img_counter += 1
+                        part = doc.part.related_parts.get(rId)
+                        filename = os.path.basename(part.partname) if part else rId
+                        print(f"    → IMAGE #{img_counter}: rId={rId}, file={filename}")
+
+print(f"\n=== TOTAL IMAGES FOUND: {img_counter} ===")

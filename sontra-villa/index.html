@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sơn Trà Villa Hội An | Biệt Thự Hồ Bơi</title>
-  <meta name="description" content="Sơn Trà Villa Hội An - Biệt Thự Hồ Bơi Yên Tĩnh Gần Phố Cổ">
+  <title>Son Tra Villa Hoi An | Pool Villa Near Old Town</title>
+  <meta name="description" content="Son Tra Villa Hoi An - Quiet private pool villa near the Ancient Town">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -120,8 +120,17 @@
           </div>
           <div class="link-text" data-i18n="local_rec_link">Local Recommendations</div>
         </a>
+
+        <!-- 5. Services / Rentals -->
+        <a href="#" class="link-card link-card-services" onclick="toggleView('services'); return false;">
+          <div class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="link-text" data-i18n="services_link">🛵 Villa Services &amp; Rentals</div>
+        </a>
       </div>
     </div>
+
 
     <!-- SUPPORT VIEW -->
     <div id="support-view" class="fade-in" style="display: none;">
@@ -160,8 +169,125 @@
       </div>
     </div>
 
+    <!-- SERVICES VIEW (Vehicle Rentals) -->
+    <div id="services-view" class="fade-in" style="display: none;">
+      <button class="back-btn" onclick="toggleView('main')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span data-i18n="back_btn">Go Back</span>
+      </button>
+
+      <div class="profile">
+        <h2 class="title" style="margin-top: 20px;" data-i18n="services_title">🛵 Villa Services &amp; Rentals</h2>
+        <p class="subtitle" data-i18n="services_subtitle">On-site vehicle rentals — please ask reception to book for you</p>
+      </div>
+
+      <!-- Rental Cards Grid -->
+      <div class="rental-grid">
+
+        <!-- Motorbike -->
+        <div class="rental-card rental-card--moto">
+          <div class="rental-icon-wrap">
+            <span class="rental-emoji">🛵</span>
+          </div>
+          <div class="rental-name" data-i18n="services_moto_name">Motorbike</div>
+          <div class="rental-subtitle" data-i18n="services_moto_subtitle">Manual / Semi-automatic</div>
+          <div class="rental-price">
+            <span class="rental-price-num">150k</span>
+            <span class="rental-price-unit" data-i18n="services_moto_price_unit">per day (24 hours)</span>
+          </div>
+          <div class="rental-tags">
+            <span class="rental-tag rental-tag--warn" data-i18n="services_moto_tag">⚠️ Driver's license required</span>
+          </div>
+          <div class="rental-features">
+            <div class="rental-feat" data-i18n="services_moto_feat_1">✅ Best for longer coastal rides</div>
+            <div class="rental-feat" data-i18n="services_moto_feat_2">✅ Fast &amp; flexible</div>
+            <div class="rental-feat" data-i18n="services_moto_feat_3">✅ Great for exploring the beach road</div>
+          </div>
+        </div>
+
+        <!-- 49cc Scooter -->
+        <div class="rental-card rental-card--scooter">
+          <div class="rental-icon-wrap">
+            <span class="rental-emoji">🛺</span>
+          </div>
+          <div class="rental-name" data-i18n="services_49cc_name">49cc Scooter</div>
+          <div class="rental-subtitle" data-i18n="services_49cc_subtitle">Beginner friendly</div>
+          <div class="rental-price">
+            <span class="rental-price-num">200k</span>
+            <span class="rental-price-unit" data-i18n="services_49cc_price_unit">per day (24 hours)</span>
+          </div>
+          <div class="rental-tags">
+            <span class="rental-tag rental-tag--ok" data-i18n="services_49cc_tag">✅ No license required</span>
+          </div>
+          <div class="rental-features">
+            <div class="rental-feat" data-i18n="services_49cc_feat_1">✅ Easy to ride for first-timers</div>
+            <div class="rental-feat" data-i18n="services_49cc_feat_2">✅ Moderate, comfortable speed</div>
+            <div class="rental-feat" data-i18n="services_49cc_feat_3">✅ Safe &amp; convenient around town</div>
+          </div>
+        </div>
+
+        <!-- Electric Bike -->
+        <div class="rental-card rental-card--electric">
+          <div class="rental-icon-wrap">
+            <span class="rental-emoji">⚡</span>
+          </div>
+          <div class="rental-name" data-i18n="services_electric_name">Electric Bike</div>
+          <div class="rental-subtitle" data-i18n="services_electric_subtitle">Eco-friendly</div>
+          <div class="rental-price">
+            <span class="rental-price-num">150k</span>
+            <span class="rental-price-unit" data-i18n="services_electric_price_unit">per day (24 hours)</span>
+          </div>
+          <div class="rental-tags">
+            <span class="rental-tag rental-tag--ok" data-i18n="services_electric_tag">✅ No license required</span>
+          </div>
+          <div class="rental-features">
+            <div class="rental-feat" data-i18n="services_electric_feat_1">✅ Eco-friendly &amp; quiet</div>
+            <div class="rental-feat" data-i18n="services_electric_feat_2">✅ Smooth, silent ride</div>
+            <div class="rental-feat" data-i18n="services_electric_feat_3">✅ Perfect inside the Old Town</div>
+          </div>
+        </div>
+
+        <!-- Bicycle -->
+        <div class="rental-card rental-card--bicycle">
+          <div class="rental-icon-wrap">
+            <span class="rental-emoji">🚴</span>
+          </div>
+          <div class="rental-name" data-i18n="services_bike_name">Bicycle</div>
+          <div class="rental-subtitle" data-i18n="services_bike_subtitle">For villa guests</div>
+          <div class="rental-price">
+            <span class="rental-price-num rental-price-free">FREE</span>
+            <span class="rental-price-unit" data-i18n="services_bike_price_unit">Free for guests</span>
+          </div>
+          <div class="rental-tags">
+            <span class="rental-tag rental-tag--free" data-i18n="services_bike_tag">🎁 Complimentary service</span>
+          </div>
+          <div class="rental-features">
+            <div class="rental-feat" data-i18n="services_bike_feat_1">✅ Leisurely rides around Old Town</div>
+            <div class="rental-feat" data-i18n="services_bike_feat_2">✅ Healthy &amp; relaxing</div>
+            <div class="rental-feat" data-i18n="services_bike_feat_3">✅ Priority for villa guests</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Contact banner -->
+      <div class="rental-contact-banner">
+        <span class="rental-contact-icon">💬</span>
+        <div class="rental-contact-text">
+          <strong data-i18n="services_contact_title">Book a vehicle now</strong>
+          <span data-i18n="services_contact_desc">Contact reception or message us on Zalo / WhatsApp to reserve in advance</span>
+        </div>
+        <div class="rental-contact-btns">
+          <a href="https://zalo.me/84862852258" target="_blank" class="rental-contact-btn" data-i18n="services_contact_btn_zalo">Zalo</a>
+          <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" class="rental-contact-btn rental-contact-btn-whatsapp" data-i18n="services_contact_btn_whatsapp">WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
     <!-- RECOMMENDATIONS VIEW -->
     <div id="recommendations-view" class="fade-in" style="display: none;">
+
       <button class="back-btn" onclick="toggleView('main')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         <span data-i18n="back_btn">Go Back</span>
@@ -2815,6 +2941,144 @@
         </div>
 
 
+        <!-- t41: Nui Than Tai Hot Springs (Da Nang) -->
+        <div class="tour-card fade-in-up" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t41')">
+          <div class="tour-badge">♨️ Suối Khoáng</div>
+          <div class="tour-gallery" id="tg-t41">
+              <div class="tg-track">
+              <div class="tg-slide"><img src="picture/docx_ntt1.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_ntt2.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_ntt3.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_ntt4.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_ntt5.png" alt="Tour Photo" loading="lazy"></div>
+              </div>
+              <button class="tg-arrow tg-prev" onclick="tgPrev(event, this)" aria-label="prev">&#8249;</button>
+              <button class="tg-arrow tg-next" onclick="tgNext(event, this)" aria-label="next">&#8250;</button>
+              <div class="tg-dots"><span class="tg-dot tg-active"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span></div>
+            </div>
+          <div class="tour-info">
+            <h3>Núi Thần Tài – Suối Khoáng Nóng &amp; Công Viên Nước</h3>
+            <p>Resort suối khoáng nóng 60 ha trong Khu Bảo tồn Bà Nà – Núi Chúa. Tắm bùn, onsen Nhật, công viên nước Dragon Slide 235m, hang Long Tiên, khu khủng long Jurassic.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Cả Ngày</div>
+              <div class="tour-meta-item">📍 Đà Nẵng</div>
+              <div class="tour-meta-item">♨️ Khoáng Nóng</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint" data-i18n="tour_card_hint">Tap to see details →</div>
+        </div>
+
+
+        <!-- t42: VinWonders Nam Hoi An (Hoi An) -->
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t42')">
+          <div class="tour-badge">🎡 Công Viên</div>
+          <div class="tour-gallery" id="tg-t42">
+              <div class="tg-track">
+              <div class="tg-slide"><img src="picture/docx_vinwonders1.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_vinwonders2.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_vinwonders3.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_vinwonders4.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_vinwonders5.png" alt="Tour Photo" loading="lazy"></div>
+              </div>
+              <button class="tg-arrow tg-prev" onclick="tgPrev(event, this)" aria-label="prev">&#8249;</button>
+              <button class="tg-arrow tg-next" onclick="tgNext(event, this)" aria-label="next">&#8250;</button>
+              <div class="tg-dots"><span class="tg-dot tg-active"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span></div>
+            </div>
+          <div class="tour-info">
+            <h3>VinWonders Nam Hội An – Công Viên Giải Trí Lớn Nhất Việt Nam</h3>
+            <p>Phức hợp giải trí khổng lồ: công viên nước, trò chơi mạo hiểm, Safari sông đầu tiên tại Việt Nam, làng văn hóa dân tộc và show diễn ngoài trời đặc sắc.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Cả Ngày</div>
+              <div class="tour-meta-item">📍 Hội An</div>
+              <div class="tour-meta-item">🎡 Theme Park</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint" data-i18n="tour_card_hint">Tap to see details →</div>
+        </div>
+
+
+        <!-- t43: Da Nang Dolphin Show (Da Nang) -->
+        <div class="tour-card fade-in-up" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t43')">
+          <div class="tour-badge">🐬 Show Cá Heo</div>
+          <div class="tour-gallery" id="tg-t43">
+              <div class="tg-track">
+              <div class="tg-slide"><img src="picture/docx_dolphin1.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_dolphin2.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_dolphin3.png" alt="Tour Photo" loading="lazy"></div>
+              </div>
+              <button class="tg-arrow tg-prev" onclick="tgPrev(event, this)" aria-label="prev">&#8249;</button>
+              <button class="tg-arrow tg-next" onclick="tgNext(event, this)" aria-label="next">&#8250;</button>
+              <div class="tg-dots"><span class="tg-dot tg-active"></span><span class="tg-dot"></span><span class="tg-dot"></span></div>
+            </div>
+          <div class="tour-info">
+            <h3>Show Cá Heo &amp; Hải Cẩu Đà Nẵng</h3>
+            <p>Show biểu diễn cá heo và hải cẩu đầu tiên tại miền Trung Việt Nam tại Công viên Co Co Paradise. Nhào lộn, màn ảo thuật nước, tương tác khán giả – 35-40 phút không cần phiên dịch.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 35-40 Phút</div>
+              <div class="tour-meta-item">📍 Đà Nẵng</div>
+              <div class="tour-meta-item">🐬 Show Biển</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint" data-i18n="tour_card_hint">Tap to see details →</div>
+        </div>
+
+
+        <!-- t44: Hoi An Memories Show (Hoi An) -->
+        <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t44')">
+          <div class="tour-badge">🏮 Kỳ Ức Hội An</div>
+          <div class="tour-gallery" id="tg-t44">
+              <div class="tg-track">
+              <div class="tg-slide"><img src="picture/docx_memories1.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_memories2.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_memories3.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_memories4.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_memories5.png" alt="Tour Photo" loading="lazy"></div>
+              </div>
+              <button class="tg-arrow tg-prev" onclick="tgPrev(event, this)" aria-label="prev">&#8249;</button>
+              <button class="tg-arrow tg-next" onclick="tgNext(event, this)" aria-label="next">&#8250;</button>
+              <div class="tg-dots"><span class="tg-dot tg-active"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span></div>
+            </div>
+          <div class="tour-info">
+            <h3>Kỳ Ức Hội An – Đại Show Sân Khấu Ngoài Trời</h3>
+            <p>Show ngoài trời lớn nhất Việt Nam – 500+ nghệ sĩ trên sân khấu 25.000m² bên sông, tái hiện 400 năm lịch sử Hội An qua ánh đèn, âm nhạc và vũ đạo huyền ảo. ~65 phút, tối 8 giờ.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 8:00 PM (~65 phút)</div>
+              <div class="tour-meta-item">📍 Đảo Ký Ức</div>
+              <div class="tour-meta-item">🏮 Sân Khấu Nước</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint" data-i18n="tour_card_hint">Tap to see details →</div>
+        </div>
+
+
+        <!-- t45: Han River Night Cruise (Da Nang) -->
+        <div class="tour-card fade-in-up" data-region="danang" style="animation-delay: 0.0s;" onclick="openTourModal('t45')">
+          <div class="tour-badge">🚢 Du Thuyền Đêm</div>
+          <div class="tour-gallery" id="tg-t45">
+              <div class="tg-track">
+              <div class="tg-slide"><img src="picture/docx_hanriver1.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_hanriver2.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_hanriver3.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_hanriver4.png" alt="Tour Photo" loading="lazy"></div>
+              <div class="tg-slide"><img src="picture/docx_hanriver5.png" alt="Tour Photo" loading="lazy"></div>
+              </div>
+              <button class="tg-arrow tg-prev" onclick="tgPrev(event, this)" aria-label="prev">&#8249;</button>
+              <button class="tg-arrow tg-next" onclick="tgNext(event, this)" aria-label="next">&#8250;</button>
+              <div class="tg-dots"><span class="tg-dot tg-active"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span><span class="tg-dot"></span></div>
+            </div>
+          <div class="tour-info">
+            <h3>Du Thuyền Đêm Sông Hàn – Cầu Rồng Phun Lửa</h3>
+            <p>Du thuyền đêm trên sông Hàn Đà Nẵng, lướt qua các cây cầu lung linh ánh đèn: Cầu Rồng phun lửa, Cầu Quay, Cầu Tình Yêu. Múa Chăm Apsara trực tiếp trên tàu. Lựa chọn tham quan 45-50 phút hoặc gói ăn tối 90-120 phút.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 45-120 Phút</div>
+              <div class="tour-meta-item">📍 Sông Hàn – Đà Nẵng</div>
+              <div class="tour-meta-item">🌉 Cầu Rồng</div>
+            </div>
+          </div>
+          <div class="tour-card-click-hint" data-i18n="tour_card_hint">Tap to see details →</div>
+        </div>
+
+
         <!-- t40 -->
         <div class="tour-card fade-in-up" data-region="hoian" style="animation-delay: 0.0s;" onclick="openTourModal('t40')">
           <div class="tour-badge">🍽️ Trọn Gói</div>
@@ -2901,7 +3165,13 @@
     't38': {"title": "Bay Mau Coconut Forest: Basic Tour", "badge": "🛶 Basic", "region": "hoian", "image": "hoian_signature.png", "desc_card": "A simple and budget-friendly basket boat ride through the Bay Mau coconut forest. Ride on the water and enjoy the greenery.", "highlights": ["🛶 Basket Boat", "🌿 Eco Forest", "💸 Budget Friendly", "📸 Photos"], "itinerary": [{"time": "Flexible", "title": "Arrival", "desc": "Check-in at the Bay Mau Coconut Forest dock."}, {"time": "+15m", "title": "Basket Boat Ride", "desc": "Enjoy a peaceful ride under the canopy of water coconuts."}, {"time": "+1h 15m", "title": "End of Ride", "desc": "Return to the pier."}], "included": [{"ok": true, "text": "Basket boat ticket"}, {"ok": true, "text": "Local boatman"}], "meta": [["⏱", "1 hour"], ["📍", "Cam Thanh"], ["🛶", "Ride Only"]], "notes": "Transport to the dock not included."},
     't39': {"title": "Bay Mau Coconut Forest: Experience + Spinning", "badge": "🎡 Fun", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The classic Bay Mau experience featuring the thrilling basket boat spinning dance, local crab catching, and fishing net demonstrations.", "highlights": ["🛶 Basket Boat", "🎡 Boat Spinning Show", "🦀 Crab Catching", "🎣 Net Casting", "🎶 Music"], "itinerary": [{"time": "Flexible", "title": "Arrival", "desc": "Welcome at Bay Mau Coconut Forest."}, {"time": "+15m", "title": "Explore Forest", "desc": "Paddle deep into the water coconut channels."}, {"time": "+45m", "title": "Spinning & Fishing", "desc": "Watch the famous boat spinning, participate in crab catching and net casting."}, {"time": "+1h 30m", "title": "End", "desc": "Return to shore."}], "included": [{"ok": true, "text": "Basket boat ticket"}, {"ok": true, "text": "Spinning experience"}, {"ok": true, "text": "Fishing tools"}], "meta": [["⏱", "1.5 hours"], ["📍", "Cam Thanh"], ["🎡", "Spinning"]], "notes": "Transport to the dock not included."},
     't40': {"title": "Bay Mau Coconut Forest: Full Package & Dining", "badge": "🍽️ Full", "region": "hoian", "image": "hoian_signature.png", "desc_card": "The premium Bay Mau package: hotel pickup, the full spinning basket boat and crab catching experience, followed by a delicious local meal at a riverside restaurant.", "highlights": ["🚐 Transport Included", "🛶 Basket Boat Ride", "🎡 Spinning Show", "🦀 Crab Catching", "🍽️ Riverside Meal", "📸 Photos"], "itinerary": [{"time": "09:00 / 14:00", "title": "Hotel Pickup", "desc": "Pick up by car from Hoi An hotel."}, {"time": "09:30 / 14:30", "title": "Basket Boat Experience", "desc": "Spinning boats, fishing nets, and crab catching in the coconut forest."}, {"time": "11:00 / 16:00", "title": "Riverside Lunch/Dinner", "desc": "Enjoy an authentic local meal by the river."}, {"time": "12:30 / 17:30", "title": "Hotel Drop-off", "desc": "Return to your hotel."}], "included": [{"ok": true, "text": "2-way Transport"}, {"ok": true, "text": "Basket boat & activities"}, {"ok": true, "text": "Full meal"}, {"ok": true, "text": "Water"}], "meta": [["⏱", "3.5 hours"], ["📍", "Cam Thanh"], ["🍽️", "Dining"]], "notes": ""},
+    't41': {"title": "Nui Than Tai Hot Springs Park – Da Nang", "badge": "♨️ Hot Springs", "region": "danang", "image": "picture/docx_ntt1.png", "desc_card": "A 60-hectare nature and wellness resort inside the Ba Na – Nui Chua Nature Reserve, ~30km from Da Nang. Natural mineral hot springs, Japanese onsen, specialty baths (mud, green tea, milk, coffee), Dragon Slide 235m water park, mystical Long Tien Cave, and Jurassic dinosaur zone.", "highlights": ["♨️ Natural Mineral Springs", "🏯 Japanese Onsen Tower", "🧖 Mud & Specialty Baths", "🌊 Dragon Slide 235m", "🦕 Jurassic Dinosaur Zone", "🕳️ Long Tien Cave"], "itinerary": [{"time": "08:00", "title": "Depart Da Nang / Hoi An", "desc": "~40–50 min drive to Nui Than Tai."}, {"time": "09:00", "title": "Arrive & Check In", "desc": "Collect locker and waterproof wristband."}, {"time": "09:15", "title": "Water Park", "desc": "Dragon Slide and Wave Pool — go early before crowds."}, {"time": "10:30", "title": "Long Tien Cave", "desc": "Float on a tube through a mystical lit cave with stalactites."}, {"time": "11:30", "title": "Jacuzzi & Sauna Zone", "desc": "Turkish, Russian and Himalayan Rock Salt saunas plus outdoor Jacuzzi."}, {"time": "13:00", "title": "Lunch", "desc": "Vietnamese buffet at on-site restaurant."}, {"time": "14:00", "title": "Specialty Bath", "desc": "Choose: Mud / Green Tea / Milk / Coffee / Wine / Lemongrass Bath."}, {"time": "15:00", "title": "Japanese Onsen Tower", "desc": "Multi-floor onsen managed by Japanese experts. Multiple temperature pool options."}, {"time": "16:30", "title": "Jurassic Park & 9D Cinema", "desc": "Life-sized roaring dinosaurs and immersive motion cinema."}, {"time": "17:30", "title": "Depart", "desc": "Return to Da Nang / Hoi An."}], "included": [{"ok": true, "text": "Mineral spring pools & jacuzzi"}, {"ok": true, "text": "Water park access"}, {"ok": true, "text": "Long Tien Cave"}, {"ok": true, "text": "9D Cinema"}, {"ok": false, "text": "Specialty baths (extra fee)"}, {"ok": false, "text": "Transport (join tour or self-drive)"}], "meta": [["⏱", "Full Day"], ["📍", "Đà Nẵng"], ["♨️", "Khoáng Nóng"]], "notes": "Best season: November to March. Dragon Slide restrictions: height 1.3–1.9m, weight 40–75kg. Arrive early — slides get busy after 11 AM on weekends. No public transport — join a tour or hire a car."},
+    't42': {"title": "VinWonders Nam Hoi An – Vietnam's Largest Theme Park", "badge": "🎡 Theme Park", "region": "hoian", "image": "picture/docx_vinwonders1.png", "desc_card": "Vietnam's largest integrated entertainment complex — a full-day theme park combining a water park, 20+ adventure rides, Vietnam's first river safari, traditional cultural villages, live shows, and 95+ indoor arcade games. About 17km from Hoi An Ancient Town. Plan for 8–10 hours.", "highlights": ["🌊 Water World (Dragon Slide 120m)", "🦒 Vietnam's First River Safari", "🎡 20+ Adventure Rides", "🏮 Harbor Corner (Trading Port)", "🎭 Live Folk Shows", "🎮 95+ Arcade Games"], "itinerary": [{"time": "09:00", "title": "Arrive & Explore Harbor Corner", "desc": "Recreated 16th–17th century trading port with giant ships and lantern-lit streets."}, {"time": "10:00", "title": "Water World", "desc": "Dragon Slide (120m), Wave Pool, Lazy River, Boomerang, Tornado, kids aqua playground. Go early!"}, {"time": "12:30", "title": "Lunch", "desc": "On-site restaurants."}, {"time": "14:00", "title": "River Safari", "desc": "Vietnam's first river safari — 550+ animals, 50+ species including elephants and giraffes."}, {"time": "15:30", "title": "Folk Culture Island", "desc": "Traditional villages from North, Central and South Vietnam. Craft workshops and folk music."}, {"time": "17:00", "title": "Adventure Land", "desc": "20+ outdoor thrill rides and 95+ indoor arcade games."}, {"time": "19:00", "title": "Evening Shows (Sat–Sun)", "desc": "Legends of Great Viet 3D mapping show, Sailing Home water performance, Musical Water Fountain."}], "included": [{"ok": true, "text": "All zones & rides (except specialty)"}, {"ok": true, "text": "Water park access"}, {"ok": true, "text": "River safari"}, {"ok": true, "text": "Live shows (weekends)"}, {"ok": false, "text": "Food & drinks (extra)"}, {"ok": false, "text": "Transport (free shuttle from Da Nang & Hoi An)"}], "meta": [["⏱", "Full Day (8–10h)"], ["📍", "Hội An"], ["🎡", "Theme Park"]], "notes": "Open Mon–Fri: 9AM–6PM. Sat–Sun: 9AM–7PM. Best day: weekend for all evening shows. Free shuttle buses from Da Nang and Hoi An — check vinwonders.com. Children under 1m free."},
+    't43': {"title": "Da Nang Dolphin & Seal Show – Co Co Paradise Park", "badge": "🐬 Marine Show", "region": "danang", "image": "picture/docx_dolphin1.png", "desc_card": "Central Vietnam's first dolphin and seal performance — a thrilling indoor aquatic show in a modern 2,000-seat arena at Co Co Paradise Park. Aerial acrobatics, synchronized swimming, audience interaction, and a marine conservation message. ~35–40 minutes. No dialogue or translation needed.", "highlights": ["🐬 Dolphin Aerial Acrobatics", "🦭 Seal Comedy Acts", "💦 Audience Splash Interaction", "🎶 Synchronized Swimming", "🌊 Ocean Conservation Message", "📸 Photography Welcome"], "itinerary": [{"time": "14:30", "title": "Arrive at Co Co Paradise Park", "desc": "Allow time to find your seats inside the Dolphinarium arena."}, {"time": "14:45", "title": "Take Your Seats", "desc": "Front rows are most exciting — but expect to get splashed by dolphins!"}, {"time": "15:00", "title": "Ocean Dance Show", "desc": "35–40 minutes of world-class dolphin and seal performance."}, {"time": "16:00", "title": "Photo Opportunity", "desc": "Photo opportunity with seals after the show."}, {"time": "16:30", "title": "Explore the Park", "desc": "Jurassic dinosaur zone and other park attractions."}], "included": [{"ok": true, "text": "Dolphin & seal show ticket"}, {"ok": false, "text": "Transport to Co Co Paradise Park"}, {"ok": false, "text": "Park entrance (separate if needed)"}], "meta": [["⏱", "35–40 phút"], ["📍", "Đà Nẵng"], ["🐬", "Show Biển"]], "notes": "Shows: 3:00 PM & 8:00 PM daily (closed Tuesday). Evening show (8 PM) has spectacular stage lighting. Arrive 15–20 min early. No food or drinks inside the arena. Front rows — you WILL get wet!"},
+    't44': {"title": "Hoi An Memories Show – Vietnam's Largest Outdoor Performance", "badge": "🏮 Ky Uc Hoi An", "region": "hoian", "image": "picture/docx_memories1.png", "desc_card": "Vietnam's largest outdoor live performance — Hoi An Memories Show (Ky Uc Hoi An) weaves 400 years of Hoi An history through dance, light, sound and spectacle. 500+ professional performers on a 25,000m² riverside stage. No dialogue needed — the story speaks to every language.", "highlights": ["💃 500+ Performers", "🌊 25,000m² Riverside Stage", "🕯️ Act III: Lanterns & Sea (most emotional)", "👑 Royal Wedding with Elephants", "🎭 5 Historical Acts", "🏮 Ao Dai Finale (100+ women)"], "itinerary": [{"time": "16:00", "title": "Gates Open", "desc": "Free mini-shows, food stalls, and cultural exhibits inside the park."}, {"time": "17:00", "title": "Pre-Show Entertainment", "desc": "Arrive by 5 PM to enjoy free pre-show mini performances."}, {"time": "19:30", "title": "Take Your Seats", "desc": "Enter the riverside amphitheatre."}, {"time": "20:00", "title": "Hoi An Memories Show Begins", "desc": "Act I: Genesis (Cham civilization). Act II: Royal Wedding (elephants!). Act III: Lanterns & Sea (most emotional). Act IV: Trading Port (golden age of Hoi An). Act V: Ao Dai Finale."}, {"time": "21:05", "title": "Show Ends", "desc": "~65 minutes. Walk back to Old Town in ~10 minutes."}], "included": [{"ok": true, "text": "Show ticket (ECO or VIP seat)"}, {"ok": false, "text": "Pre-show food & drinks (extra)"}, {"ok": false, "text": "Transport to Hoi An Memories Island"}], "meta": [["⏱", "8:00 PM (~65 phút)"], ["📍", "Đảo Ký Ức, Hội An"], ["🏮", "Sân Khấu Nước"]], "notes": "Show runs 6 nights per week — CLOSED on Tuesdays. May cancel in heavy rain. ECO seats = closer and more immersive; VIP = best overall view. Book in advance — sells out on peak nights and weekends. No Vietnamese needed — entirely visual."},
+    't45': {"title": "Han River Night Cruise – Dragon Bridge Fire Show", "badge": "🚢 Night Cruise", "region": "danang", "image": "picture/docx_hanriver1.png", "desc_card": "One of Da Nang's most popular evening experiences — a relaxing 45 to 90-minute boat journey along the Han River, gliding past the city's iconic illuminated bridges while enjoying live Cham Apsara dance, music, and fresh fruit on board. Two options: Sightseeing Cruise (45–50 min) or Dinner Cruise (90–120 min).", "highlights": ["🐉 Dragon Bridge Fire & Water Show", "🌉 5 Illuminated Bridges", "💃 Live Cham Apsara Dance", "🚢 Choose Sightseeing or Dinner Cruise", "🔄 Han River Swing Bridge (rotating!)", "❤️ Love Bridge with Love Locks"], "itinerary": [{"time": "18:10", "title": "First Departure", "desc": "Board from Bach Dang riverside wharf."}, {"time": "19:10", "title": "Second Departure", "desc": "Popular departure for a relaxing evening cruise."}, {"time": "20:10", "title": "Third Departure (Recommended)", "desc": "Standard evening departure. Best time for bridge views."}, {"time": "20:20", "title": "Fri/Sat/Sun Special Departure", "desc": "Timed to catch Dragon Bridge fire and water show at ~9 PM. Book early — sells out fast!"}, {"time": "21:10", "title": "Last Departure", "desc": "Final cruise of the evening."}, {"time": "~21:00", "title": "Dragon Bridge Fire Show", "desc": "Fri, Sat & Sun evenings only at ~9 PM — 666m steel dragon breathes real fire and water. BEST viewed from the river."}], "included": [{"ok": true, "text": "River cruise ticket"}, {"ok": true, "text": "Live Cham Apsara dance performance"}, {"ok": true, "text": "Fresh fruit (sightseeing cruise)"}, {"ok": false, "text": "Dinner (Dinner Cruise — extra)"}, {"ok": false, "text": "Drinks at on-board bar (extra)"}], "meta": [["⏱", "45–120 phút"], ["📍", "Sông Hàn, Đà Nẵng"], ["🌉", "Cầu Rồng"]], "notes": "Best departure: 8:10–8:20 PM on Fri, Sat or Sun to see Dragon Bridge fire from the water. Sit on the upper open deck for best photos. Dinner cruise worth it for couples or groups — book in advance. Walk along Bach Dang riverside promenade before boarding."},
   };
+
 
   // ===== OPEN TOUR MODAL =====
   function openTourModal(tourId) {

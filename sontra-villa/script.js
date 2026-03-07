@@ -3,6 +3,7 @@ function toggleView(view) {
   const supportView = document.getElementById('support-view');
   const recommendationsView = document.getElementById('recommendations-view');
   const tourView = document.getElementById('tour-view');
+  const servicesView = document.getElementById('services-view');
   const supportBtn = document.getElementById('support-link-btn');
   const langToggle = document.querySelector('.lang-toggle');
 
@@ -16,6 +17,10 @@ function toggleView(view) {
   
   if (tourView) {
       tourView.style.display = 'none';
+  }
+
+  if (servicesView) {
+      servicesView.style.display = 'none';
   }
 
   if (view === 'support') {
@@ -34,6 +39,11 @@ function toggleView(view) {
       // Re-verify auto-slides when opening tour view
       if (typeof initAutoSlides === 'function') initAutoSlides();
     }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (view === 'services') {
+    supportBtn.style.display = 'none';
+    if (langToggle) langToggle.style.display = 'none';
+    if (servicesView) servicesView.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     mainView.style.display = 'block';
@@ -144,7 +154,48 @@ const I18N_MAP = {
     modal_included_title: "✅ What's Included",
     modal_notes_title: '📋 Important Notes',
     modal_book_zalo: '📲 Book via Zalo — +84 862 852 258',
-    modal_book_whatsapp: '💬 Chat via WhatsApp'
+    modal_book_whatsapp: '💬 Chat via WhatsApp',
+    // services view
+    services_link: '🛵 Villa Services & Rentals',
+    services_title: '🛵 Villa Services & Rentals',
+    services_subtitle: 'On-site vehicle rentals — please ask reception to book for you',
+    // motorbike
+    services_moto_name: 'Motorbike',
+    services_moto_subtitle: 'Manual / Semi-automatic',
+    services_moto_price_unit: 'per day (24 hours)',
+    services_moto_tag: "⚠️ Driver's license required",
+    services_moto_feat_1: '✅ Best for longer coastal rides',
+    services_moto_feat_2: '✅ Fast & flexible',
+    services_moto_feat_3: '✅ Great for exploring the beach road',
+    // 49cc scooter
+    services_49cc_name: '49cc Scooter',
+    services_49cc_subtitle: 'Beginner friendly',
+    services_49cc_price_unit: 'per day (24 hours)',
+    services_49cc_tag: '✅ No license required',
+    services_49cc_feat_1: '✅ Easy to ride for first-timers',
+    services_49cc_feat_2: '✅ Moderate, comfortable speed',
+    services_49cc_feat_3: '✅ Safe & convenient around town',
+    // electric bike
+    services_electric_name: 'Electric Bike',
+    services_electric_subtitle: 'Eco-friendly',
+    services_electric_price_unit: 'per day (24 hours)',
+    services_electric_tag: '✅ No license required',
+    services_electric_feat_1: '✅ Eco-friendly & quiet',
+    services_electric_feat_2: '✅ Smooth, silent ride',
+    services_electric_feat_3: '✅ Perfect inside the Old Town',
+    // bicycle
+    services_bike_name: 'Bicycle',
+    services_bike_subtitle: 'For villa guests',
+    services_bike_price_unit: 'Free for guests',
+    services_bike_tag: '🎁 Complimentary service',
+    services_bike_feat_1: '✅ Leisurely rides around Old Town',
+    services_bike_feat_2: '✅ Healthy & relaxing',
+    services_bike_feat_3: '✅ Priority for villa guests',
+    // services contact
+    services_contact_title: 'Book a vehicle now',
+    services_contact_desc: 'Contact reception or message us on Zalo / WhatsApp to reserve in advance',
+    services_contact_btn_zalo: 'Zalo',
+    services_contact_btn_whatsapp: 'WhatsApp'
   },
   vi: {
     support_link: 'Hỗ Trợ Nhanh',
@@ -196,7 +247,48 @@ const I18N_MAP = {
     modal_included_title: '✅ Dịch vụ bao gồm',
     modal_notes_title: '📋 Lưu ý quan trọng',
     modal_book_zalo: '📲 Đặt tour qua Zalo — +84 862 852 258',
-    modal_book_whatsapp: '💬 Chat qua WhatsApp'
+    modal_book_whatsapp: '💬 Chat qua WhatsApp',
+    // services view
+    services_link: '🛵 Dịch Vụ & Thuê Xe Villa',
+    services_title: '🛵 Dịch Vụ & Thuê Xe Villa',
+    services_subtitle: 'Dịch vụ cho thuê xe từ villa — liên hệ lễ tân để đặt',
+    // motorbike
+    services_moto_name: 'Xe Máy',
+    services_moto_subtitle: 'Số / tay ga',
+    services_moto_price_unit: '/ 24 giờ',
+    services_moto_tag: '⚠️ Cần bằng lái',
+    services_moto_feat_1: '✅ Phù hợp chạy đường biển dài',
+    services_moto_feat_2: '✅ Nhanh & linh hoạt',
+    services_moto_feat_3: '✅ Khám phá bờ biển Đà Nẵng',
+    // 49cc scooter
+    services_49cc_name: 'Xe 49cc',
+    services_49cc_subtitle: 'Dễ lái cho người mới',
+    services_49cc_price_unit: '/ 24 giờ',
+    services_49cc_tag: '✅ Không cần bằng lái',
+    services_49cc_feat_1: '✅ Phù hợp cho người mới tập lái',
+    services_49cc_feat_2: '✅ Tốc độ vừa phải, an toàn',
+    services_49cc_feat_3: '✅ Tiện di chuyển quanh Hội An',
+    // electric bike
+    services_electric_name: 'Xe Điện',
+    services_electric_subtitle: 'Thân thiện môi trường',
+    services_electric_price_unit: '/ 24 giờ',
+    services_electric_tag: '✅ Không cần bằng lái',
+    services_electric_feat_1: '✅ Thân thiện môi trường',
+    services_electric_feat_2: '✅ Êm ái, không tiếng ồn',
+    services_electric_feat_3: '✅ Rất hợp đi trong phố cổ',
+    // bicycle
+    services_bike_name: 'Xe Đạp',
+    services_bike_subtitle: 'Ưu tiên khách villa',
+    services_bike_price_unit: 'Miễn phí',
+    services_bike_tag: '🎁 Dịch vụ miễn phí',
+    services_bike_feat_1: '✅ Thoải mái dạo phố cổ',
+    services_bike_feat_2: '✅ Tốt cho sức khỏe',
+    services_bike_feat_3: '✅ Ưu tiên cho khách Villa',
+    // services contact
+    services_contact_title: 'Đặt xe ngay',
+    services_contact_desc: 'Liên hệ lễ tân hoặc nhắn Zalo / WhatsApp để đặt trước',
+    services_contact_btn_zalo: 'Zalo',
+    services_contact_btn_whatsapp: 'WhatsApp'
   }
 };
 
