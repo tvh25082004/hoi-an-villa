@@ -1558,6 +1558,11 @@ body {
   color: #6b7280;
   line-height: 1.4;
 }
+.rental-contact-btns {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
 .rental-contact-btn {
   background: var(--primary);
   color: white;
@@ -1566,12 +1571,18 @@ body {
   padding: 8px 16px;
   border-radius: 20px;
   text-decoration: none;
-  flex-shrink: 0;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(4,120,87,0.25);
+  white-space: nowrap;
 }
 .rental-contact-btn:hover {
   background: #065f46;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(4,120,87,0.35);
+}
+.rental-contact-btn-whatsapp {
+  background: #25d366;
+}
+.rental-contact-btn-whatsapp:hover {
+  background: #20ba5a;
 }
