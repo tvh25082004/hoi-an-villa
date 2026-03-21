@@ -95,6 +95,28 @@ function toggleWifi() {
   }
 }
 
+// ===== SERVICE ACCORDION TOGGLE =====
+function toggleServiceAccordion(id) {
+  var panel = document.getElementById('accordion-' + id);
+  if (!panel) return;
+  var btn = panel.previousElementSibling;
+  var isOpen = panel.classList.contains('open');
+
+  // Close all panels first
+  document.querySelectorAll('.service-accordion-panel').forEach(function(p) {
+    p.classList.remove('open');
+  });
+  document.querySelectorAll('.service-accordion-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+
+  // Toggle the clicked one
+  if (!isOpen) {
+    panel.classList.add('open');
+    if (btn) btn.classList.add('active');
+  }
+}
+
 // Safety: prevent clicking the "Get Directions" button from also triggering the parent card's onclick
 document.addEventListener('click', function (e) {
   const target = e.target;
@@ -158,7 +180,11 @@ const I18N_MAP = {
     // services view
     services_link: '🛵 Villa Services & Rentals',
     services_title: '🛵 Villa Services & Rentals',
-    services_subtitle: 'On-site vehicle rentals — please ask reception to book for you',
+    services_subtitle: 'Explore our on-site services — tap each category below',
+    // accordion labels
+    services_acc_vehicles: 'Vehicle Rentals',
+    services_acc_laundry: 'Laundry Service',
+    services_acc_transfer: 'Airport Transfer',
     // motorbike
     services_moto_name: 'Motorbike',
     services_moto_subtitle: 'Manual / Semi-automatic',
@@ -195,7 +221,20 @@ const I18N_MAP = {
     services_contact_title: 'Book a vehicle now',
     services_contact_desc: 'Contact reception or message us on Zalo / WhatsApp to reserve in advance',
     services_contact_btn_zalo: 'Zalo',
-    services_contact_btn_whatsapp: 'WhatsApp'
+    services_contact_btn_whatsapp: 'WhatsApp',
+    // laundry service
+    services_laundry_title: 'Laundry Service',
+    services_laundry_price_unit: 'per kilogram',
+    services_laundry_detail_1: '📍 Drop off your clothes at the reception desk',
+    services_laundry_detail_2: '⏰ Pick up clean clothes by 10:00 AM next morning',
+    services_laundry_detail_3: '🌙 If dropped off late evening → available next afternoon or evening',
+    services_laundry_detail_4: '✨ Professionally washed, dried & folded',
+    // airport transfer
+    services_transfer_title: 'Private Car Transfer',
+    services_transfer_route: 'Hoi An ↔ Airport ↔ Da Nang',
+    services_transfer_detail_1: '🚘 Private car, comfortable & air-conditioned',
+    services_transfer_detail_2: '⏱️ Approx. 30-40 min drive to Da Nang Airport',
+    services_transfer_detail_3: '📞 Contact us via Zalo or WhatsApp to book'
   },
   vi: {
     support_link: 'Hỗ Trợ Nhanh',
@@ -251,7 +290,11 @@ const I18N_MAP = {
     // services view
     services_link: '🛵 Dịch Vụ & Thuê Xe Villa',
     services_title: '🛵 Dịch Vụ & Thuê Xe Villa',
-    services_subtitle: 'Dịch vụ cho thuê xe từ villa — liên hệ lễ tân để đặt',
+    services_subtitle: 'Khám phá dịch vụ tại chỗ — nhấn vào từng mục bên dưới',
+    // accordion labels
+    services_acc_vehicles: 'Thuê Xe',
+    services_acc_laundry: 'Dịch Vụ Giặt Ủi',
+    services_acc_transfer: 'Đưa Đón Sân Bay',
     // motorbike
     services_moto_name: 'Xe Máy',
     services_moto_subtitle: 'Số / tay ga',
@@ -288,7 +331,20 @@ const I18N_MAP = {
     services_contact_title: 'Đặt xe ngay',
     services_contact_desc: 'Liên hệ lễ tân hoặc nhắn Zalo / WhatsApp để đặt trước',
     services_contact_btn_zalo: 'Zalo',
-    services_contact_btn_whatsapp: 'WhatsApp'
+    services_contact_btn_whatsapp: 'WhatsApp',
+    // laundry service
+    services_laundry_title: 'Dịch Vụ Giặt Ủi',
+    services_laundry_price_unit: 'mỗi kilogram',
+    services_laundry_detail_1: '📍 Gửi quần áo tại quầy lễ tân',
+    services_laundry_detail_2: '⏰ Nhận quần áo sạch lúc 10:00 sáng hôm sau',
+    services_laundry_detail_3: '🌙 Nếu gửi muộn buổi tối → nhận chiều hoặc tối hôm sau',
+    services_laundry_detail_4: '✨ Giặt, sấy & gấp chuyên nghiệp',
+    // airport transfer
+    services_transfer_title: 'Xe Đưa Đón Riêng',
+    services_transfer_route: 'Hội An ↔ Sân Bay ↔ Đà Nẵng',
+    services_transfer_detail_1: '🚘 Xe riêng, thoải mái & có điều hòa',
+    services_transfer_detail_2: '⏱️ Khoảng 30-40 phút đến sân bay Đà Nẵng',
+    services_transfer_detail_3: '📞 Liên hệ qua Zalo hoặc WhatsApp để đặt'
   }
 };
 

@@ -1586,3 +1586,258 @@ body {
 .rental-contact-btn-whatsapp:hover {
   background: #20ba5a;
 }
+
+/* ===== SERVICE ACCORDION ===== */
+.service-accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.service-accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,244,0.95));
+  border: 1.5px solid rgba(4,120,87,0.15);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-accordion-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: 0.5s;
+}
+
+.service-accordion-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(4,120,87,0.12);
+  border-color: rgba(4,120,87,0.3);
+  color: var(--primary);
+}
+
+.service-accordion-btn:hover::before {
+  transform: translateX(200%);
+}
+
+.service-accordion-btn.active {
+  background: linear-gradient(135deg, var(--primary), #059669);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(4,120,87,0.25);
+}
+
+.service-accordion-emoji {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4,120,87,0.08);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.service-accordion-btn.active .service-accordion-emoji {
+  background: rgba(255,255,255,0.2);
+}
+
+.service-accordion-label {
+  flex: 1;
+  text-align: left;
+}
+
+.service-accordion-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.service-accordion-btn.active .service-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.service-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.35s ease;
+  opacity: 0;
+  padding: 0 4px;
+}
+
+.service-accordion-panel.open {
+  max-height: 2000px;
+  opacity: 1;
+  padding: 12px 4px 4px;
+}
+
+/* Laundry service card */
+.laundry-card {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  border-radius: 24px;
+  padding: 24px;
+  color: #1e1b4b;
+  box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+}
+
+.laundry-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.laundry-emoji {
+  font-size: 36px;
+}
+
+.laundry-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.laundry-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.laundry-price-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.laundry-price-unit {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6366f1;
+}
+
+.laundry-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.laundry-detail {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+/* Airport Transfer card */
+.transfer-card {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 24px;
+  padding: 24px;
+  color: #78350f;
+  box-shadow: 0 8px 24px rgba(245,158,11,0.12);
+}
+
+.transfer-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.transfer-emoji {
+  font-size: 36px;
+}
+
+.transfer-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.transfer-route {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 14px;
+  letter-spacing: 0.5px;
+}
+
+.transfer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.transfer-detail {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.45);
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.transfer-contact-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.transfer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.transfer-btn-zalo {
+  background: #0068ff;
+  color: white;
+}
+
+.transfer-btn-zalo:hover {
+  background: #0050cc;
+  transform: translateY(-2px);
+}
+
+.transfer-btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.transfer-btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}

@@ -169,7 +169,7 @@
       </div>
     </div>
 
-    <!-- SERVICES VIEW (Vehicle Rentals) -->
+    <!-- SERVICES VIEW (Villa Services & Rentals) -->
     <div id="services-view" class="fade-in" style="display: none;">
       <button class="back-btn" onclick="toggleView('main')">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
@@ -178,111 +178,158 @@
 
       <div class="profile">
         <h2 class="title" style="margin-top: 20px;" data-i18n="services_title">🛵 Villa Services &amp; Rentals</h2>
-        <p class="subtitle" data-i18n="services_subtitle">On-site vehicle rentals — please ask reception to book for you</p>
+        <p class="subtitle" data-i18n="services_subtitle">Explore our on-site services — tap each category below</p>
       </div>
 
-      <!-- Rental Cards Grid -->
-      <div class="rental-grid">
+      <!-- Accordion Buttons -->
+      <div class="service-accordions">
 
-        <!-- Motorbike -->
-        <div class="rental-card rental-card--moto">
-          <div class="rental-icon-wrap">
-            <span class="rental-emoji">🛵</span>
+        <!-- 1. Vehicle Rentals Accordion -->
+        <button class="service-accordion-btn" onclick="toggleServiceAccordion('vehicles')">
+          <span class="service-accordion-emoji">🏍️</span>
+          <span class="service-accordion-label" data-i18n="services_acc_vehicles">Vehicle Rentals</span>
+          <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div id="accordion-vehicles" class="service-accordion-panel">
+          <div class="rental-grid">
+            <!-- Motorbike -->
+            <div class="rental-card rental-card--moto">
+              <div class="rental-icon-wrap"><span class="rental-emoji">🛵</span></div>
+              <div class="rental-name" data-i18n="services_moto_name">Motorbike</div>
+              <div class="rental-subtitle" data-i18n="services_moto_subtitle">Manual / Semi-automatic</div>
+              <div class="rental-price">
+                <span class="rental-price-num">150k</span>
+                <span class="rental-price-unit" data-i18n="services_moto_price_unit">per day (24 hours)</span>
+              </div>
+              <div class="rental-tags">
+                <span class="rental-tag rental-tag--warn" data-i18n="services_moto_tag">⚠️ Driver's license required</span>
+              </div>
+              <div class="rental-features">
+                <div class="rental-feat" data-i18n="services_moto_feat_1">✅ Best for longer coastal rides</div>
+                <div class="rental-feat" data-i18n="services_moto_feat_2">✅ Fast &amp; flexible</div>
+                <div class="rental-feat" data-i18n="services_moto_feat_3">✅ Great for exploring the beach road</div>
+              </div>
+            </div>
+            <!-- 49cc Scooter -->
+            <div class="rental-card rental-card--scooter">
+              <div class="rental-icon-wrap"><span class="rental-emoji">🛺</span></div>
+              <div class="rental-name" data-i18n="services_49cc_name">49cc Scooter</div>
+              <div class="rental-subtitle" data-i18n="services_49cc_subtitle">Beginner friendly</div>
+              <div class="rental-price">
+                <span class="rental-price-num">200k</span>
+                <span class="rental-price-unit" data-i18n="services_49cc_price_unit">per day (24 hours)</span>
+              </div>
+              <div class="rental-tags">
+                <span class="rental-tag rental-tag--ok" data-i18n="services_49cc_tag">✅ No license required</span>
+              </div>
+              <div class="rental-features">
+                <div class="rental-feat" data-i18n="services_49cc_feat_1">✅ Easy to ride for first-timers</div>
+                <div class="rental-feat" data-i18n="services_49cc_feat_2">✅ Moderate, comfortable speed</div>
+                <div class="rental-feat" data-i18n="services_49cc_feat_3">✅ Safe &amp; convenient around town</div>
+              </div>
+            </div>
+            <!-- Electric Bike -->
+            <div class="rental-card rental-card--electric">
+              <div class="rental-icon-wrap"><span class="rental-emoji">⚡</span></div>
+              <div class="rental-name" data-i18n="services_electric_name">Electric Bike</div>
+              <div class="rental-subtitle" data-i18n="services_electric_subtitle">Eco-friendly</div>
+              <div class="rental-price">
+                <span class="rental-price-num">150k</span>
+                <span class="rental-price-unit" data-i18n="services_electric_price_unit">per day (24 hours)</span>
+              </div>
+              <div class="rental-tags">
+                <span class="rental-tag rental-tag--ok" data-i18n="services_electric_tag">✅ No license required</span>
+              </div>
+              <div class="rental-features">
+                <div class="rental-feat" data-i18n="services_electric_feat_1">✅ Eco-friendly &amp; quiet</div>
+                <div class="rental-feat" data-i18n="services_electric_feat_2">✅ Smooth, silent ride</div>
+                <div class="rental-feat" data-i18n="services_electric_feat_3">✅ Perfect inside the Old Town</div>
+              </div>
+            </div>
+            <!-- Bicycle -->
+            <div class="rental-card rental-card--bicycle">
+              <div class="rental-icon-wrap"><span class="rental-emoji">🚴</span></div>
+              <div class="rental-name" data-i18n="services_bike_name">Bicycle</div>
+              <div class="rental-subtitle" data-i18n="services_bike_subtitle">For villa guests</div>
+              <div class="rental-price">
+                <span class="rental-price-num rental-price-free">FREE</span>
+                <span class="rental-price-unit" data-i18n="services_bike_price_unit">Free for guests</span>
+              </div>
+              <div class="rental-tags">
+                <span class="rental-tag rental-tag--free" data-i18n="services_bike_tag">🎁 Complimentary service</span>
+              </div>
+              <div class="rental-features">
+                <div class="rental-feat" data-i18n="services_bike_feat_1">✅ Leisurely rides around Old Town</div>
+                <div class="rental-feat" data-i18n="services_bike_feat_2">✅ Healthy &amp; relaxing</div>
+                <div class="rental-feat" data-i18n="services_bike_feat_3">✅ Priority for villa guests</div>
+              </div>
+            </div>
           </div>
-          <div class="rental-name" data-i18n="services_moto_name">Motorbike</div>
-          <div class="rental-subtitle" data-i18n="services_moto_subtitle">Manual / Semi-automatic</div>
-          <div class="rental-price">
-            <span class="rental-price-num">150k</span>
-            <span class="rental-price-unit" data-i18n="services_moto_price_unit">per day (24 hours)</span>
-          </div>
-          <div class="rental-tags">
-            <span class="rental-tag rental-tag--warn" data-i18n="services_moto_tag">⚠️ Driver's license required</span>
-          </div>
-          <div class="rental-features">
-            <div class="rental-feat" data-i18n="services_moto_feat_1">✅ Best for longer coastal rides</div>
-            <div class="rental-feat" data-i18n="services_moto_feat_2">✅ Fast &amp; flexible</div>
-            <div class="rental-feat" data-i18n="services_moto_feat_3">✅ Great for exploring the beach road</div>
+          <!-- Quick Contact banner -->
+          <div class="rental-contact-banner" style="margin-top: 16px;">
+            <span class="rental-contact-icon">💬</span>
+            <div class="rental-contact-text">
+              <strong data-i18n="services_contact_title">Book a vehicle now</strong>
+              <span data-i18n="services_contact_desc">Contact reception or message us on Zalo / WhatsApp to reserve in advance</span>
+            </div>
+            <div class="rental-contact-btns">
+              <a href="https://zalo.me/84862852258" target="_blank" class="rental-contact-btn" data-i18n="services_contact_btn_zalo">Zalo</a>
+              <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" class="rental-contact-btn rental-contact-btn-whatsapp" data-i18n="services_contact_btn_whatsapp">WhatsApp</a>
+            </div>
           </div>
         </div>
 
-        <!-- 49cc Scooter -->
-        <div class="rental-card rental-card--scooter">
-          <div class="rental-icon-wrap">
-            <span class="rental-emoji">🛺</span>
-          </div>
-          <div class="rental-name" data-i18n="services_49cc_name">49cc Scooter</div>
-          <div class="rental-subtitle" data-i18n="services_49cc_subtitle">Beginner friendly</div>
-          <div class="rental-price">
-            <span class="rental-price-num">200k</span>
-            <span class="rental-price-unit" data-i18n="services_49cc_price_unit">per day (24 hours)</span>
-          </div>
-          <div class="rental-tags">
-            <span class="rental-tag rental-tag--ok" data-i18n="services_49cc_tag">✅ No license required</span>
-          </div>
-          <div class="rental-features">
-            <div class="rental-feat" data-i18n="services_49cc_feat_1">✅ Easy to ride for first-timers</div>
-            <div class="rental-feat" data-i18n="services_49cc_feat_2">✅ Moderate, comfortable speed</div>
-            <div class="rental-feat" data-i18n="services_49cc_feat_3">✅ Safe &amp; convenient around town</div>
-          </div>
-        </div>
-
-        <!-- Electric Bike -->
-        <div class="rental-card rental-card--electric">
-          <div class="rental-icon-wrap">
-            <span class="rental-emoji">⚡</span>
-          </div>
-          <div class="rental-name" data-i18n="services_electric_name">Electric Bike</div>
-          <div class="rental-subtitle" data-i18n="services_electric_subtitle">Eco-friendly</div>
-          <div class="rental-price">
-            <span class="rental-price-num">150k</span>
-            <span class="rental-price-unit" data-i18n="services_electric_price_unit">per day (24 hours)</span>
-          </div>
-          <div class="rental-tags">
-            <span class="rental-tag rental-tag--ok" data-i18n="services_electric_tag">✅ No license required</span>
-          </div>
-          <div class="rental-features">
-            <div class="rental-feat" data-i18n="services_electric_feat_1">✅ Eco-friendly &amp; quiet</div>
-            <div class="rental-feat" data-i18n="services_electric_feat_2">✅ Smooth, silent ride</div>
-            <div class="rental-feat" data-i18n="services_electric_feat_3">✅ Perfect inside the Old Town</div>
+        <!-- 2. Laundry Service Accordion -->
+        <button class="service-accordion-btn" onclick="toggleServiceAccordion('laundry')">
+          <span class="service-accordion-emoji">👔</span>
+          <span class="service-accordion-label" data-i18n="services_acc_laundry">Laundry Service</span>
+          <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div id="accordion-laundry" class="service-accordion-panel">
+          <div class="laundry-card">
+            <div class="laundry-header">
+              <span class="laundry-emoji">🧺</span>
+              <div class="laundry-title" data-i18n="services_laundry_title">Laundry Service</div>
+            </div>
+            <div class="laundry-price">
+              <span class="laundry-price-num">40,000₫</span>
+              <span class="laundry-price-unit" data-i18n="services_laundry_price_unit">per kilogram</span>
+            </div>
+            <div class="laundry-details">
+              <div class="laundry-detail" data-i18n="services_laundry_detail_1">📍 Drop off your clothes at the reception desk</div>
+              <div class="laundry-detail" data-i18n="services_laundry_detail_2">⏰ Pick up clean clothes by 10:00 AM next morning</div>
+              <div class="laundry-detail" data-i18n="services_laundry_detail_3">🌙 If dropped off late evening → available next afternoon or evening</div>
+              <div class="laundry-detail" data-i18n="services_laundry_detail_4">✨ Professionally washed, dried &amp; folded</div>
+            </div>
           </div>
         </div>
 
-        <!-- Bicycle -->
-        <div class="rental-card rental-card--bicycle">
-          <div class="rental-icon-wrap">
-            <span class="rental-emoji">🚴</span>
-          </div>
-          <div class="rental-name" data-i18n="services_bike_name">Bicycle</div>
-          <div class="rental-subtitle" data-i18n="services_bike_subtitle">For villa guests</div>
-          <div class="rental-price">
-            <span class="rental-price-num rental-price-free">FREE</span>
-            <span class="rental-price-unit" data-i18n="services_bike_price_unit">Free for guests</span>
-          </div>
-          <div class="rental-tags">
-            <span class="rental-tag rental-tag--free" data-i18n="services_bike_tag">🎁 Complimentary service</span>
-          </div>
-          <div class="rental-features">
-            <div class="rental-feat" data-i18n="services_bike_feat_1">✅ Leisurely rides around Old Town</div>
-            <div class="rental-feat" data-i18n="services_bike_feat_2">✅ Healthy &amp; relaxing</div>
-            <div class="rental-feat" data-i18n="services_bike_feat_3">✅ Priority for villa guests</div>
+        <!-- 3. Airport Transfer Accordion -->
+        <button class="service-accordion-btn" onclick="toggleServiceAccordion('transfer')">
+          <span class="service-accordion-emoji">✈️</span>
+          <span class="service-accordion-label" data-i18n="services_acc_transfer">Airport Transfer</span>
+          <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div id="accordion-transfer" class="service-accordion-panel">
+          <div class="transfer-card">
+            <div class="transfer-header">
+              <span class="transfer-emoji">🚗</span>
+              <div class="transfer-title" data-i18n="services_transfer_title">Private Car Transfer</div>
+            </div>
+            <div class="transfer-route" data-i18n="services_transfer_route">Hoi An ↔ Airport ↔ Da Nang</div>
+            <div class="transfer-details">
+              <div class="transfer-detail" data-i18n="services_transfer_detail_1">🚘 Private car, comfortable &amp; air-conditioned</div>
+              <div class="transfer-detail" data-i18n="services_transfer_detail_2">⏱️ Approx. 30-40 min drive to Da Nang Airport</div>
+              <div class="transfer-detail" data-i18n="services_transfer_detail_3">📞 Contact us via Zalo or WhatsApp to book</div>
+            </div>
+            <div class="transfer-contact-btns">
+              <a href="https://zalo.me/84862852258" target="_blank" class="transfer-contact-btn transfer-btn-zalo">📲 Zalo</a>
+              <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="transfer-contact-btn transfer-btn-whatsapp">💬 WhatsApp</a>
+            </div>
           </div>
         </div>
 
       </div>
-
-      <!-- Quick Contact banner -->
-      <div class="rental-contact-banner">
-        <span class="rental-contact-icon">💬</span>
-        <div class="rental-contact-text">
-          <strong data-i18n="services_contact_title">Book a vehicle now</strong>
-          <span data-i18n="services_contact_desc">Contact reception or message us on Zalo / WhatsApp to reserve in advance</span>
-        </div>
-        <div class="rental-contact-btns">
-          <a href="https://zalo.me/84862852258" target="_blank" class="rental-contact-btn" data-i18n="services_contact_btn_zalo">Zalo</a>
-          <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" class="rental-contact-btn rental-contact-btn-whatsapp" data-i18n="services_contact_btn_whatsapp">WhatsApp</a>
-        </div>
-      </div>
-
     </div>
 
     <!-- RECOMMENDATIONS VIEW -->
@@ -1743,200 +1790,281 @@
 
 
 
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Yaly%20Couture%20Hoi%20An%20Vietnam','_blank')">
-
-          <div class="rec-icon">👗</div>
-
-          <div class="rec-content">
-
-            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
-            <h4>Yaly Couture</h4>
-
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-
-            <p class="rec-comment">&quot;Most renowned tailor in Hoi An. Custom ao dai and suits in 24-48 hrs.&quot;</p>
-
-            <a class="rec-map-btn" href="https://www.google.com/maps/search/Yaly%20Couture%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Reaching%20Out%20Arts%20Crafts%20Hoi%20An%20Vietnam','_blank')">
-
+        <!-- SHOPS: 25 unique shops (no tailors) -->
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Reaching%20Out%20Arts%20Crafts%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">🏮</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
-            <h4>Reaching Out Arts Crafts</h4>
-
+            <h4>Reaching Out Arts & Crafts</h4>
             <div class="rec-stars">★★★★★ <span>4.9</span></div>
-
             <p class="rec-comment">&quot;Magical shop staffed by deaf artisans. Handmade silk lanterns.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Reaching%20Out%20Arts%20Crafts%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
-
         </div>
 
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Be%20Be%20Tailor%20Hoi%20An%20Vietnam','_blank')">
-
-          <div class="rec-icon">🧵</div>
-
-          <div class="rec-content">
-
-            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
-            <h4>Be Be Tailor</h4>
-
-            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-
-            <p class="rec-comment">&quot;Friendly, affordable custom clothing. Fast turnaround.&quot;</p>
-
-            <a class="rec-map-btn" href="https://www.google.com/maps/search/Be%20Be%20Tailor%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/A%20Dong%20Silk%20Hoi%20An%20Vietnam','_blank')">
-
-          <div class="rec-icon">🎨</div>
-
-          <div class="rec-content">
-
-            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
-            <h4>A Dong Silk</h4>
-
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-
-            <p class="rec-comment">&quot;World-class silk scarves, custom dresses, Vietnamese silk souvenirs.&quot;</p>
-
-            <a class="rec-map-btn" href="https://www.google.com/maps/search/A%20Dong%20Silk%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Central%20Market%20Hoi%20An%20Vietnam','_blank')">
-
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Central%20Market%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">🛒</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
             <h4>Hoi An Central Market</h4>
-
             <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-
             <p class="rec-comment">&quot;Heart of Hoi An. Fresh produce, handicrafts, spices, street food.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Central%20Market%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
-
         </div>
 
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Tra%20Que%20Herb%20Village%20Shop%20Hoi%20An%20Vietnam','_blank')">
-
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Tra%20Que%20Herb%20Village%20Shop%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">🌸</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
             <h4>Tra Que Herb Village Shop</h4>
-
             <div class="rec-stars">★★★★★ <span>4.7</span></div>
-
             <p class="rec-comment">&quot;Fresh herbs, organic teas and natural skincare from the village.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Tra%20Que%20Herb%20Village%20Shop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
-
         </div>
 
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Handmade%20Souvenirs%20Hoi%20An%20Vietnam','_blank')">
-
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Handmade%20Souvenirs%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">📿</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
             <h4>Hoi An Handmade Souvenirs</h4>
-
             <div class="rec-stars">★★★★☆ <span>4.3</span></div>
-
             <p class="rec-comment">&quot;Handwoven baskets, lacquerware, ceramic bowls, embroidered pouches.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Handmade%20Souvenirs%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
-
         </div>
 
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Metiseko%20Boutique%20Hoi%20An%20Vietnam','_blank')">
-
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Metiseko%20Boutique%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">🪭</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
             <h4>Metiseko Boutique</h4>
-
             <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-
             <p class="rec-comment">&quot;Eco-friendly fashion with Vietnamese prints. Beautiful silk scarves.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Metiseko%20Boutique%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
-
         </div>
 
-
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Lantern%20Company%20Hoi%20An%20Vietnam','_blank')">
-
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Lantern%20Company%20Hoi%20An%20Vietnam','_blank')">
           <div class="rec-icon">🎭</div>
-
           <div class="rec-content">
-
             <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
-
             <h4>Hoi An Lantern Company</h4>
-
             <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-
             <p class="rec-comment">&quot;Handmade silk lanterns in every color and shape. Ships worldwide.&quot;</p>
-
             <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Lantern%20Company%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-
           </div>
+        </div>
 
+        <!-- New shops below -->
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Rehahn%20Art%20Gallery%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🖼️</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Réhahn Art Gallery</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">&quot;Stunning fine-art photography of Vietnam's 54 ethnic groups.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Rehahn%20Art%20Gallery%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Friendly%20Shoe%20Leather%20Shop%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">👞</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Friendly Shoe Leather Shop</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">&quot;Custom-made leather shoes, bags & jackets. High quality craftsmanship.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Friendly%20Shoe%20Leather%20Shop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Blue%20Lotus%20Leather%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">👜</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Blue Lotus Leather</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">&quot;Wide range of leather products — shoes, bags, wallets, jackets.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Blue%20Lotus%20Leather%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.50s" onclick="window.open('https://www.google.com/maps/search/Da%20Bao%20Real%20Leather%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🎒</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Da Bao Real Leather</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">&quot;One of the oldest leather boutiques. 100% real buffalo leather goods.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Da%20Bao%20Real%20Leather%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.55s" onclick="window.open('https://www.google.com/maps/search/Cocobox%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🎁</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Cocobox</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">&quot;Beautifully packaged made-in-Vietnam goodies, coffee & coconut products.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cocobox%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.60s" onclick="window.open('https://www.google.com/maps/search/Cotic%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">💎</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Cotic</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">&quot;Art installations, essential oils, silver jewelry in a stunning old building.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cotic%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.65s" onclick="window.open('https://www.google.com/maps/search/Mekong%20Quilts%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🧶</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Mekong Quilts</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">&quot;Beautiful bedding handmade by disadvantaged women. Social enterprise.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mekong%20Quilts%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.70s" onclick="window.open('https://www.google.com/maps/search/Lifestart%20Foundation%20Shop%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🧸</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Lifestart Foundation Shop</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">&quot;Handmade toys & body lotions. Supports local scholarships.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Lifestart%20Foundation%20Shop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.75s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Night%20Market%20Nguyen%20Hoang%20Street%20Vietnam','_blank')">
+          <div class="rec-icon">🌙</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Hoi An Night Market</h4>
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+            <p class="rec-comment">&quot;Bustling night market along the river. Apparel, accessories & snacks.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Night%20Market%20Nguyen%20Hoang%20Street%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.80s" onclick="window.open('https://www.google.com/maps/search/Cui%20Lu%20Art%20Space%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🎨</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Cui Lu Art Space</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">&quot;Curated art space with silver jewelry, textiles, ceramics & fine art.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cui%20Lu%20Art%20Space%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.85s" onclick="window.open('https://www.google.com/maps/search/March%20Gallery%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🎪</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>March Gallery</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">&quot;Contemporary Vietnamese art. Vibrant watercolors of landscapes.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/March%20Gallery%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.90s" onclick="window.open('https://www.google.com/maps/search/Au%20Lac%20Wood%20Art%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🪵</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Âu Lạc Wood Art</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">&quot;Intricately carved wooden statues, souvenirs & traditional art pieces.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Au%20Lac%20Wood%20Art%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.95s" onclick="window.open('https://www.google.com/maps/search/Thanh%20Ha%20Pottery%20Village%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🏺</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Thanh Ha Pottery Village</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">&quot;Traditional pottery village. Buy handcrafted vases, figurines & teapots.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Thanh%20Ha%20Pottery%20Village%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.00s" onclick="window.open('https://www.google.com/maps/search/Cocobana%20Tearoom%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🍵</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>The Cocobana Tearoom</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">&quot;Beautifully displayed & packaged teas. Perfect gift from Hoi An.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cocobana%20Tearoom%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.05s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Handicraft%20Workshop%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">✂️</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Hoi An Handicraft Workshop</h4>
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+            <p class="rec-comment">&quot;Try embroidery, mask painting & lantern-making. Buy handmade crafts.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Handicraft%20Workshop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.10s" onclick="window.open('https://www.google.com/maps/search/Ngan%20Xua%20Gallery%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🖌️</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Ngan Xua Gallery</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">&quot;Authentic Vietnamese lacquer artworks on wood using traditional techniques.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Ngan%20Xua%20Gallery%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.15s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Soul%20Leather%20Shop%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🧳</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Hoi An Soul Leather</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">&quot;Full-grain leather goods — bags, belts, wallets. Handmade quality.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Soul%20Leather%20Shop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.20s" onclick="window.open('https://www.google.com/maps/search/Precious%20Heritage%20Museum%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">📸</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Precious Heritage Museum</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">&quot;Free museum by Réhahn — portraits, costumes of Vietnam's ethnic groups.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Precious%20Heritage%20Museum%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:1.25s" onclick="window.open('https://www.google.com/maps/search/Taboo%20Bamboo%20Workshop%20Hoi%20An%20Vietnam','_blank')">
+          <div class="rec-icon">🎋</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge" data-i18n="rec_badge_shop">Shop</div>
+            <h4>Taboo Bamboo Workshop</h4>
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+            <p class="rec-comment">&quot;Sustainable bamboo products — lamps, baskets & kitchenware.&quot;</p>
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Taboo%20Bamboo%20Workshop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
         </div>
 
 
