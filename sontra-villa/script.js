@@ -1,4 +1,4 @@
-function toggleView(view) {
+function toggleView(view, skipHistory) {
   const mainView = document.getElementById('main-view');
   const supportView = document.getElementById('support-view');
   const recommendationsView = document.getElementById('recommendations-view');
@@ -50,7 +50,35 @@ function toggleView(view) {
     supportBtn.style.display = 'flex';
     if (langToggle) langToggle.style.display = 'flex';
   }
+
+  // Push hash to browser history for back-button support
+  if (!skipHistory) {
+    var hash = (view === 'main') ? '' : '#' + view;
+    if (window.location.hash !== hash) {
+      history.pushState({ view: view }, '', hash || window.location.pathname);
+    }
+  }
 }
+
+// Handle browser back/forward button to restore the correct view
+window.addEventListener('popstate', function(e) {
+  var view = 'main';
+  if (e.state && e.state.view) {
+    view = e.state.view;
+  } else if (window.location.hash) {
+    view = window.location.hash.replace('#', '');
+  }
+  toggleView(view, true);
+});
+
+// On page load, check URL hash and restore view
+(function() {
+  var hash = window.location.hash.replace('#', '');
+  if (hash && ['support', 'recommendations', 'tour', 'services'].indexOf(hash) !== -1) {
+    // Delay to ensure DOM is ready
+    setTimeout(function() { toggleView(hash, true); }, 0);
+  }
+})();
 
 // ===== BACK TO TOP FUNCTIONALITY =====
 function scrollToTop() {
